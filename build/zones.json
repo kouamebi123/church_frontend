@@ -1,0 +1,22 @@
+[
+  {
+    "nom": "Zone Nord-Ouest",
+    "regions": ["Bretagne", "Normandie", "Pays de la Loire", "Centre-Val de Loire"]
+  },
+  {
+    "nom": "Zone Nord-Est",
+    "regions": ["Hauts-de-France", "Grand Est", "Bourgogne-Franche-Comté"]
+  },
+  {
+    "nom": "Zone Sud-Ouest",
+    "regions": ["Nouvelle-Aquitaine", "Occitanie"]
+  },
+  {
+    "nom": "Zone Sud-Est",
+    "regions": ["Provence-Alpes-Côte d'Azur", "Auvergne-Rhône-Alpes"]
+  },
+  {
+    "nom": "Zone Centre",
+    "regions": ["Île-de-France", "Centre-Val de Loire", "Auvergne-Rhône-Alpes"]
+  }
+]
