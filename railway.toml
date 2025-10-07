@@ -12,8 +12,8 @@ restartPolicyMaxRetries = 10
 NODE_ENV = "production"
 
 # ⚠️ IMPORTANT: Configurez ces variables dans Railway Dashboard (Variables → Raw Editor)
-# VITE_API_URL = "https://church-production-9a34.up.railway.app"
-# VITE_BACKEND_URL = "https://church-production-9a34.up.railway.app"
+# VITE_API_URL = "https://churchbackend-production.up.railway.app"
+# VITE_BACKEND_URL = "https://churchbackend-production.up.railway.app"
 # VITE_HIDE_CONSOLE = "true"
 # VITE_PERFORMANCE_TRACKING = "false"
 #
