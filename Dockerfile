@@ -11,8 +11,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Installer TOUTES les dépendances (dev + prod pour Vite)
-RUN --mount=type=cache,id=npm-cache,target=/root/.npm \
-    npm ci --silent && \
+RUN npm ci --silent && \
     npm cache clean --force
 
 # Stage de build séparé
@@ -32,9 +31,8 @@ COPY vite.config.js ./
 COPY vitest.config.js ./
 COPY scripts/ ./scripts/
 
-# Construire l'application avec Vite (cache des modules)
-RUN --mount=type=cache,id=vite-cache,target=/app/node_modules/.vite \
-    npm run build
+# Construire l'application avec Vite
+RUN npm run build
 
 # Stage de production optimisé
 FROM nginx:alpine AS production
