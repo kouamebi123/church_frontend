@@ -15,19 +15,21 @@ COPY . .
 # Build l'application
 RUN npm run build
 
-# Production stage
+# Production stage - Utiliser directement Vite preview
 FROM node:20-alpine
 
 WORKDIR /app
 
-# Installer serve localement (pas globalement)
-RUN npm install serve
+# Copier package.json et installer SEULEMENT les dépendances de production + vite
+COPY --from=build /app/package*.json ./
+RUN npm ci --only=production && npm install vite
 
 # Copier les fichiers buildés
 COPY --from=build /app/build ./build
+COPY --from=build /app/vite.config.js ./
 
-# Exposer le port (Railway utilise $PORT)
+# Exposer le port
 EXPOSE 3000
 
-# Démarrer l'application avec npx et logs détaillés
-CMD npx serve -s build -l $PORT --no-clipboard
+# Utiliser vite preview pour servir les fichiers buildés
+CMD ["npx", "vite", "preview", "--host", "0.0.0.0", "--port", "3000"]
