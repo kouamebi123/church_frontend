@@ -28,8 +28,8 @@ RUN npm ci --only=production && npm install vite
 COPY --from=build /app/build ./build
 COPY --from=build /app/vite.config.js ./
 
-# Exposer le port
+# Exposer le port (Railway injecte $PORT)
 EXPOSE 3000
 
-# Utiliser vite preview pour servir les fichiers buildés
-CMD ["npx", "vite", "preview", "--host", "0.0.0.0", "--port", "3000"]
+# Utiliser vite preview avec le port dynamique de Railway
+CMD sh -c "npx vite preview --host 0.0.0.0 --port ${PORT:-3000}"
