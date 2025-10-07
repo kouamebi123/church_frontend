@@ -41,8 +41,8 @@ FROM nginx:alpine AS production
 RUN apk add --no-cache tzdata && \
     rm -rf /var/cache/apk/*
 
-# Copier la configuration Nginx
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Copier la configuration Nginx (utiliser nginx.railway.conf pour Railway)
+COPY nginx.railway.conf /etc/nginx/conf.d/default.conf
 
 # Copier les fichiers buildés
 COPY --from=build /app/build /usr/share/nginx/html
