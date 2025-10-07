@@ -1,4 +1,5 @@
 // Système de registre de modules pour une architecture modulaire avancée
+
 class ModuleRegistry {
   constructor() {
     this.modules = new Map();
@@ -125,7 +126,7 @@ class ModuleRegistry {
       try {
         result = await middleware(result, context);
       } catch (error) {
-        // console.error('Erreur dans le middleware:', error);
+        // logger.error('Erreur dans le middleware:', error);
       }
     }
 
@@ -183,7 +184,7 @@ class ModuleRegistry {
           try {
             callback(data);
           } catch (error) {
-            // console.error('Erreur dans le callback d\'événement:', error);
+            // logger.error('Erreur dans le callback d\'événement:', error);
           }
         });
     }
@@ -294,6 +295,7 @@ class ModuleRegistry {
 
 // Instance singleton
 const moduleRegistry = new ModuleRegistry();
+
 
 // Hooks système par défaut
 moduleRegistry.registerHook('moduleRegistered', (moduleName) => {

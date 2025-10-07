@@ -1,4 +1,6 @@
 import authAxios from './authService';
+import logger from '@utils/logger';
+
 
 class MessageService {
   // Envoyer un message
@@ -16,7 +18,7 @@ class MessageService {
         throw new Error(response.data.message || 'Erreur lors de l\'envoi du message');
       }
     } catch (error) {
-      // console.error('❌ MessageService - Erreur envoi:', error);
+      // logger.error('❌ MessageService - Erreur envoi:', error);
       throw error;
     }
   }
@@ -35,7 +37,7 @@ class MessageService {
         throw new Error(response.data.message || 'Erreur lors de la récupération des messages');
       }
     } catch (error) {
-      // console.error('❌ MessageService - Erreur récupération messages reçus:', error);
+      // logger.error('❌ MessageService - Erreur récupération messages reçus:', error);
       throw error;
     }
   }
@@ -54,7 +56,7 @@ class MessageService {
         throw new Error(response.data.message || 'Erreur lors de la récupération des messages envoyés');
       }
     } catch (error) {
-      // console.error('❌ MessageService - Erreur récupération messages envoyés:', error);
+      // logger.error('❌ MessageService - Erreur récupération messages envoyés:', error);
       throw error;
     }
   }
@@ -73,7 +75,7 @@ class MessageService {
         throw new Error(response.data.message || 'Erreur lors du marquage du message');
       }
     } catch (error) {
-      // console.error('❌ MessageService - Erreur marquage lu:', error);
+      // logger.error('❌ MessageService - Erreur marquage lu:', error);
       throw error;
     }
   }
@@ -95,7 +97,7 @@ class MessageService {
         throw new Error(response.data.message || 'Erreur lors du marquage des messages');
       }
     } catch (error) {
-      // console.error('❌ MessageService - Erreur marquage multiple comme lu:', error);
+      // logger.error('❌ MessageService - Erreur marquage multiple comme lu:', error);
       throw error;
     }
   }
@@ -114,7 +116,7 @@ class MessageService {
         throw new Error(response.data.message || 'Erreur lors de l\'accusé de réception');
       }
     } catch (error) {
-      // console.error('❌ MessageService - Erreur accusé de réception:', error);
+      // logger.error('❌ MessageService - Erreur accusé de réception:', error);
       throw error;
     }
   }
@@ -133,7 +135,7 @@ class MessageService {
         throw new Error(response.data.message || 'Erreur lors de la récupération des statistiques');
       }
     } catch (error) {
-      // console.error('❌ MessageService - Erreur statistiques:', error);
+      // logger.error('❌ MessageService - Erreur statistiques:', error);
       throw error;
     }
   }
@@ -154,7 +156,7 @@ class MessageService {
         throw new Error(response.data.message || 'Erreur lors de la récupération des utilisateurs');
       }
     } catch (error) {
-      // console.error('❌ MessageService - Erreur utilisateurs:', error);
+      // logger.error('❌ MessageService - Erreur utilisateurs:', error);
       throw error;
     }
   }
@@ -173,7 +175,7 @@ class MessageService {
         throw new Error(response.data.message || 'Erreur lors de la récupération des conversations');
       }
     } catch (error) {
-      // console.error('❌ MessageService - Erreur conversations:', error);
+      // logger.error('❌ MessageService - Erreur conversations:', error);
       throw error;
     }
   }
@@ -189,7 +191,7 @@ class MessageService {
         throw new Error(response.data.message || 'Erreur lors de la récupération de la conversation');
       }
     } catch (error) {
-      // console.error('❌ MessageService - Erreur conversation:', error);
+      // logger.error('❌ MessageService - Erreur conversation:', error);
       throw error;
     }
   }
@@ -208,7 +210,7 @@ class MessageService {
         throw new Error(response.data.message || 'Erreur lors de la récupération du statut de lecture');
       }
     } catch (error) {
-      // console.error('❌ MessageService - Erreur statut de lecture:', error);
+      // logger.error('❌ MessageService - Erreur statut de lecture:', error);
       throw error;
     }
   }

@@ -1,5 +1,5 @@
 // Configuration de l'API backend
-export const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://church-production-9a34.up.railway.app' || 'http://localhost:5001';
+export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
 export const API_URL = `${API_BASE_URL}/api`;
 
 // Configuration pour les images

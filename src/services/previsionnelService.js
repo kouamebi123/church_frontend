@@ -1,4 +1,6 @@
 import authAxios from './authService';
+import logger from '@utils/logger';
+
 
 class PrevisionnelService {
   // Créer un nouveau prévisionnel
@@ -75,8 +77,8 @@ class PrevisionnelService {
       const response = await authAxios.get(url);
       return response.data;
     } catch (error) {
-      //console.error('❌ PrevisionnelService - Erreur dans getStats:', error);
-      /* console.error('❌ PrevisionnelService - Détails de l\'erreur:', {
+      //logger.error('❌ PrevisionnelService - Erreur dans getStats:', error);
+      /* logger.error('❌ PrevisionnelService - Détails de l\'erreur:', {
         message: error.message,
         response: error.response?.data,
         status: error.response?.status,

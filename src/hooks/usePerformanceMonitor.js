@@ -37,7 +37,7 @@ export const usePerformanceMonitor = (componentName) => {
     performanceMetrics.apiCalls++;
     
     // Envoyer les métriques au backend si configuré
-    if (process.env.REACT_APP_PERFORMANCE_TRACKING === 'true') {
+    if (import.meta.env.VITE_PERFORMANCE_TRACKING === 'true') {
       // Envoyer les métriques au backend
       fetch('/api/performance/metrics', {
         method: 'POST',

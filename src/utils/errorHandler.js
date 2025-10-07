@@ -1,6 +1,7 @@
 /**
  * Gestionnaire d'erreurs centralisé pour l'application
  */
+import logger from './logger';
 
 /**
  * Gère les erreurs API de manière uniforme
@@ -10,7 +11,7 @@
  */
 export const handleApiError = (error, context = '') => {
   // Log de l'erreur pour le debugging
-  // console.error(`Erreur API [${context}]:`, error);
+  logger.error(`Erreur API [${context}]`, error);
 
   // Gestion des différents types d'erreurs
   if (error.response) {
@@ -179,7 +180,7 @@ export const handleError = (error, options = {}) => {
 
   // Log de l'erreur si demandé
   if (logError) {
-    // console.error(`Erreur [${context}]:`, error);
+    logger.error(`Erreur [${context}]`, error);
   }
 
   // Tentative de classification automatique de l'erreur
@@ -202,6 +203,52 @@ export const handleError = (error, options = {}) => {
   return handleGenericError(error, fallbackMessage);
 };
 
+/**
+ * Extrait le message d'erreur d'un objet Error
+ * @param {Error|string|Object} error - L'erreur à analyser
+ * @param {string} fallbackMessage - Message de fallback
+ * @returns {string} Message d'erreur
+ */
+export const getErrorMessage = (error, fallbackMessage = 'Une erreur inattendue s\'est produite') => {
+  if (error && typeof error === 'object' && error.message) {
+    return error.message;
+  }
+  
+  if (typeof error === 'string') {
+    return error;
+  }
+
+  return fallbackMessage;
+};
+
+/**
+ * Log une erreur avec un contexte optionnel
+ * @param {Error} error - L'erreur à logger
+ * @param {string} context - Contexte de l'erreur
+ */
+export const logError = (error, context = '') => {
+  const message = context ? `Erreur [${context}]:` : 'Erreur:';
+  console.error(message, error);
+};
+
+/**
+ * Gère les erreurs de timeout
+ * @param {Error} error - Erreur de timeout
+ * @returns {string} Message d'erreur formaté
+ */
+export const handleTimeoutError = (error) => {
+  return 'Délai d\'attente dépassé. Le serveur met trop de temps à répondre.';
+};
+
+/**
+ * Gère les erreurs de connexion
+ * @param {Error} error - Erreur de connexion
+ * @returns {string} Message d'erreur formaté
+ */
+export const handleConnectionError = (error) => {
+  return 'Impossible de se connecter au serveur. Vérifiez votre connexion internet.';
+};
+
 export default {
   handleApiError,
   handleValidationError,
@@ -210,5 +257,9 @@ export default {
   handleDatabaseError,
   handleSecurityError,
   handleGenericError,
-  handleError
+  handleError,
+  getErrorMessage,
+  logError,
+  handleTimeoutError,
+  handleConnectionError
 };

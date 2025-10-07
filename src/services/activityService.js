@@ -1,4 +1,6 @@
 import authAxios from './authService';
+import logger from '@utils/logger';
+
 
 const activityService = {
   // Récupérer l'historique des activités
@@ -7,7 +9,7 @@ const activityService = {
       const response = await authAxios.get('/activities/history', { params });
       return response.data;
     } catch (error) {
-      console.error('Erreur lors de la récupération de l\'historique:', error);
+      logger.error('Erreur lors de la récupération de l\'historique:', error);
       throw error;
     }
   },
@@ -18,7 +20,7 @@ const activityService = {
       const response = await authAxios.get('/activities/stats', { params });
       return response.data;
     } catch (error) {
-      console.error('Erreur lors de la récupération des statistiques:', error);
+      logger.error('Erreur lors de la récupération des statistiques:', error);
       throw error;
     }
   },

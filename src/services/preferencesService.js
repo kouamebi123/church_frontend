@@ -1,4 +1,5 @@
 // Service de gestion des préférences utilisateur
+import logger from '@utils/logger';
 class PreferencesService {
   constructor() {
     this.storageKey = 'user_preferences';
@@ -20,7 +21,7 @@ class PreferencesService {
         this.preferences = { ...this.defaultPreferences };
       }
     } catch (error) {
-      // console.warn('Erreur lors du chargement des préférences:', error);
+      // logger.warn('Erreur lors du chargement des préférences:', error);
       this.preferences = { ...this.defaultPreferences };
     }
   }
@@ -30,7 +31,7 @@ class PreferencesService {
     try {
       localStorage.setItem(this.storageKey, JSON.stringify(this.preferences));
     } catch (error) {
-      // console.error('Erreur lors de la sauvegarde des préférences:', error);
+      // logger.error('Erreur lors de la sauvegarde des préférences:', error);
     }
   }
 
@@ -102,5 +103,6 @@ class PreferencesService {
 
 // Instance singleton
 const preferencesService = new PreferencesService();
+
 
 export default preferencesService;

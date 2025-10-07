@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getMe } from '../features/auth/authSlice';
+import { getMe } from '@features/auth/authSlice';
+import logger from '@utils/logger';
+
 
 /**
  * Hook pour gérer les mises à jour de rôle en temps réel
@@ -19,9 +21,9 @@ export const useRoleUpdate = () => {
     setIsUpdating(true);
     try {
       await dispatch(getMe()).unwrap();
-      console.log('✅ Données utilisateur mises à jour après changement de rôle');
+      logger.debug('✅ Données utilisateur mises à jour après changement de rôle');
     } catch (error) {
-      console.error('❌ Erreur lors de la mise à jour des données utilisateur:', error);
+      logger.error('❌ Erreur lors de la mise à jour des données utilisateur:', error);
     } finally {
       setIsUpdating(false);
     }
@@ -30,7 +32,7 @@ export const useRoleUpdate = () => {
   // Détecter les changements de rôle
   useEffect(() => {
     if (user?.current_role && user.current_role !== lastRoleChange) {
-      console.log(`🔄 Rôle changé de ${lastRoleChange} vers ${user.current_role}`);
+      logger.debug(`🔄 Rôle changé de ${lastRoleChange} vers ${user.current_role}`);
       setLastRoleChange(user.current_role);
       
       // Forcer la mise à jour des données

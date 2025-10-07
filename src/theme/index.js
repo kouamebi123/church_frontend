@@ -1,8 +1,8 @@
 // Export des services de thème
-export { default as themeService } from './themeService';
-
 // Import du CSS global
 import './globalTheme.css';
+
+export { default as themeService } from './themeService';
 
 // Export des constantes de thème
 export const THEME_CONSTANTS = {
@@ -127,7 +127,7 @@ export const importThemeConfig = (config) => {
 };
 
 // Export par défaut
-export default {
+const themeExports = {
   themeService: themeService,
   THEME_CONSTANTS,
   getThemeClass,
@@ -143,3 +143,5 @@ export default {
   exportThemeConfig,
   importThemeConfig
 };
+
+export default themeExports;

@@ -1,6 +1,6 @@
 import { io } from 'socket.io-client';
 import { toast } from 'react-toastify';
-import logger from '../utils/logger';
+import logger from '@utils/logger';
 import { API_URL } from '../config/apiConfig';
 
 class SocketService {
@@ -78,7 +78,7 @@ class SocketService {
       } else {
         // Pour les autres erreurs (comme WebSocket fermé), ne pas afficher d'erreur
         // La reconnexion automatique se chargera de rétablir la connexion
-        console.log('Tentative de reconnexion Socket.IO...');
+        logger.debug('Tentative de reconnexion Socket.IO...');
       }
     });
 

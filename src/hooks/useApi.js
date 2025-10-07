@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
-import { handleApiError } from '../utils/errorHandler';
-import { apiService } from '../services/apiService';
+import { handleApiError } from '@utils/errorHandler';
+import { apiService } from '@services/apiService';
 
 // Cache global pour stocker les données
 const cache = new Map();

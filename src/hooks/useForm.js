@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { handleApiError } from '../utils/errorHandler';
+import { handleApiError } from '@utils/errorHandler';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 

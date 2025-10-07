@@ -143,3 +143,5 @@ export const usePermissions = () => {
     canDeleteCarousel: permissions.canDeleteCarousel
   };
 };
+
+export default usePermissions;

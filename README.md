@@ -74,14 +74,22 @@ API → Services → Hooks → Composants → UI
 # Installer les dépendances
 npm install
 
-# Démarrer en mode développement
+# Démarrer en mode développement (Vite)
+npm run dev
+# ou
 npm start
 
-# Construire pour la production
+# Construire pour la production (Vite)
 npm run build
 
-# Lancer les tests
-npm test
+# Prévisualiser le build de production
+npm run preview
+
+# Lancer les tests (Vitest)
+npm run test
+
+# Lancer les tests avec couverture
+npm run test:coverage
 ```
 
 ## 📁 Structure du projet
@@ -275,24 +283,37 @@ describe('useOptimizedData', () => {
 
 ## 🚀 Déploiement
 
-### Variables d'environnement
+### Variables d'environnement (Vite)
 ```env
-REACT_APP_API_URL=http://localhost:5000
-REACT_APP_ENVIRONMENT=development
-REACT_APP_VERSION=1.0.0
+VITE_API_URL=http://localhost:5001
+VITE_BACKEND_URL=http://localhost:5001
+VITE_ENVIRONMENT=development
+VITE_VERSION=1.0.0
+VITE_HIDE_CONSOLE=false
+VITE_PERFORMANCE_TRACKING=false
 ```
 
 ### Scripts de déploiement
 ```bash
-# Build de production
+# Build de production (Vite)
 npm run build
 
-# Analyse du bundle
-npm run analyze
+# Prévisualiser le build
+npm run preview
 
-# Déploiement sur serveur
-npm run deploy
+# Déploiement sur Railway
+railway up
+
+# Déploiement sur Vercel
+vercel --prod
 ```
+
+### Configuration Vite
+Le projet utilise **Vite** avec les optimisations suivantes :
+- ⚡ **Build ultra-rapide** : 5-10x plus rapide que Webpack
+- 🔥 **HMR instantané** : Hot reload en millisecondes
+- 📦 **Code splitting** : Chunks optimisés automatiquement
+- 🌐 **ES modules natifs** : Support moderne du JavaScript
 
 ## 📊 Monitoring
 
@@ -356,7 +377,17 @@ Pour toute question ou problème :
 
 ---
 
-**Version**: 1.0.0  
-**Dernière mise à jour**: 2024  
-**Maintenu par**: Équipe de développement
-# church_frontend
+**Version**: 2.0.0  
+**Dernière mise à jour**: 2025  
+**Maintenu par**: Équipe de développement  
+**Stack**: React 19 + Vite + Vitest + Material-UI + Redux Toolkit
+
+## 🎉 Migration vers Vite (v2.0.0)
+
+### Changements majeurs :
+- ✅ **Vite** remplace `react-scripts` (build 5-10x plus rapide)
+- ✅ **Vitest** remplace Jest (tests plus rapides)
+- ✅ **Variables d'environnement** : `REACT_APP_*` → `VITE_*`
+- ✅ **Aliases d'import** : Chemins absolus avec `@/`
+- ✅ **Zero vulnérabilité** : Dépendances nettoyées
+- ✅ **Build optimisé** : Chunks automatiques et code splitting

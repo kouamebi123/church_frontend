@@ -3,20 +3,20 @@
 
 /* ===== THÈME CLAIR (DÉFAUT) ===== */
 [data-theme="light"] {
-  /* Couleurs principales */
-  --primary-color: #4B0082;
-  --primary-light: #8A2BE2;
-  --primary-dark: #2D004D;
-  --secondary-color: #8A2BE2;
-  --secondary-light: #B19CD9;
-  --secondary-dark: #6A1B9A;
+  /* Couleurs principales - Palette spirituelle et moderne */
+  --primary-color: #5B21B6;
+  --primary-light: #8B5CF6;
+  --primary-dark: #4C1D95;
+  --secondary-color: #7C3AED;
+  --secondary-light: #A78BFA;
+  --secondary-dark: #6D28D9;
   
-  /* Couleurs de fond */
-  --background-primary: #FFFFFF;
-  --background-secondary: #F8F9FA;
-  --background-tertiary: #E9ECEF;
+  /* Couleurs de fond - Ambiance lumineuse et accueillante */
+  --background-primary: #FDFCFE;
+  --background-secondary: #F5F3FF;
+  --background-tertiary: #EDE9FE;
   --background-elevated: #FFFFFF;
-  --background-overlay: rgba(0, 0, 0, 0.5);
+  --background-overlay: rgba(91, 33, 182, 0.15);
   
   /* Couleurs de texte */
   --text-primary: #212529;
@@ -45,10 +45,12 @@
   --info-light: #D1ECF1;
   --info-dark: #117A8B;
   
-  /* Couleurs d'ombre */
-  --shadow-light: rgba(0, 0, 0, 0.1);
-  --shadow-medium: rgba(0, 0, 0, 0.15);
-  --shadow-heavy: rgba(0, 0, 0, 0.25);
+  /* Couleurs d'ombre - Ombres douces et colorées */
+  --shadow-light: rgba(91, 33, 182, 0.08);
+  --shadow-medium: rgba(91, 33, 182, 0.12);
+  --shadow-heavy: rgba(91, 33, 182, 0.20);
+  --shadow-glow: rgba(139, 92, 246, 0.35);
+  --shadow-elevation: 0 10px 40px rgba(91, 33, 182, 0.12);
   
   /* Couleurs de composants */
   --card-background: #FFFFFF;
@@ -90,6 +92,68 @@
   --scrollbar-track: #F1F3F4;
   --scrollbar-thumb: #C1C1C1;
   --scrollbar-thumb-hover: #A8A8A8;
+  
+  /* Couleurs d'overlay pour les images de fond */
+  --overlay-light: rgba(255, 255, 255, 0.1);
+  --overlay-medium: rgba(255, 255, 255, 0.3);
+  --overlay-heavy: rgba(255, 255, 255, 0.5);
+  --overlay-bottom: rgba(75, 0, 130, 0.8);
+  --overlay-middle: rgba(75, 0, 130, 0.6);
+  
+  /* Couleurs de modal et de composants spéciaux */
+  --modal-bg: rgba(255, 255, 255, 0.95);
+  --modal-shadow: rgba(0, 0, 0, 0.1);
+  --modal-border-light: rgba(255, 255, 255, 0.2);
+  
+  /* Gradients - Dégradés élégants et spirituels */
+  --gradient-primary: linear-gradient(135deg, #5B21B6 0%, #7C3AED 50%, #8B5CF6 100%);
+  --gradient-header: linear-gradient(135deg, #4C1D95 0%, #5B21B6 50%, #6D28D9 100%);
+  --gradient-hero: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 50%, #DDD6FE 100%);
+  --gradient-card: linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%);
+  
+  /* Ombres de texte */
+  --text-shadow: rgba(0, 0, 0, 0.3);
+  --drop-shadow: rgba(0, 0, 0, 0.2);
+  
+  /* Variables pour les composants */
+  --upload-bg: rgba(248, 249, 250, 0.8);
+  --upload-hover-bg: rgba(75, 0, 130, 0.05);
+  --upload-shadow: rgba(75, 0, 130, 0.1);
+  
+  /* Boutons */
+  --gradient-button: linear-gradient(135deg, #4B0082, #8A2BE2);
+  --gradient-button-hover: linear-gradient(135deg, #2D004D, #4B0082);
+  --button-shadow: rgba(75, 0, 130, 0.3);
+  --button-hover-shadow: rgba(75, 0, 130, 0.4);
+  --button-disabled: #E9ECEF;
+  --button-disabled-text: #6C757D;
+  
+  /* Cartes */
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --card-hover-shadow: rgba(0, 0, 0, 0.15);
+  
+  /* Info boxes */
+  --info-bg: rgba(75, 0, 130, 0.05);
+  --info-border: rgba(75, 0, 130, 0.2);
+  --info-shadow: rgba(75, 0, 130, 0.1);
+  
+  /* Chips */
+  --chip-bg: rgba(75, 0, 130, 0.1);
+  --chip-border: rgba(75, 0, 130, 0.3);
+  
+  /* Scrollbar */
+  --scrollbar-white: rgba(255, 255, 255, 0.3);
+  --scrollbar-white-hover: rgba(255, 255, 255, 0.5);
+  
+  /* Success modal */
+  --gradient-success: linear-gradient(135deg, #28A745, #20C997);
+  --gradient-success-hover: linear-gradient(135deg, #1E7E34, #17A2B8);
+  --success-gradient: linear-gradient(135deg, #28A745, #20C997);
+  --white-overlay: rgba(255, 255, 255, 0.2);
+  --white-shadow: rgba(255, 255, 255, 0.3);
+  --white-text-shadow: rgba(0, 0, 0, 0.2);
+  --success-button-shadow: rgba(40, 167, 69, 0.3);
+  --success-hover-shadow: rgba(40, 167, 69, 0.4);
 }
 
 /* ===== THÈME SOMBRE ===== */
@@ -181,6 +245,66 @@
   --scrollbar-track: #2D2D2D;
   --scrollbar-thumb: #404040;
   --scrollbar-thumb-hover: #505050;
+  
+  /* Couleurs d'overlay pour les images de fond */
+  --overlay-light: rgba(0, 0, 0, 0.3);
+  --overlay-medium: rgba(0, 0, 0, 0.5);
+  --overlay-heavy: rgba(0, 0, 0, 0.7);
+  --overlay-bottom: rgba(18, 18, 18, 0.9);
+  --overlay-middle: rgba(45, 45, 45, 0.8);
+  
+  /* Couleurs de modal et de composants spéciaux */
+  --modal-bg: rgba(45, 45, 45, 0.95);
+  --modal-shadow: rgba(0, 0, 0, 0.3);
+  --modal-border-light: rgba(255, 255, 255, 0.1);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #8A2BE2, #B19CD9);
+  --gradient-header: linear-gradient(135deg, #8A2BE2, #B19CD9);
+  
+  /* Ombres de texte */
+  --text-shadow: rgba(0, 0, 0, 0.5);
+  --drop-shadow: rgba(0, 0, 0, 0.4);
+  
+  /* Variables pour les composants */
+  --upload-bg: rgba(45, 45, 45, 0.8);
+  --upload-hover-bg: rgba(138, 43, 226, 0.1);
+  --upload-shadow: rgba(138, 43, 226, 0.2);
+  
+  /* Boutons */
+  --gradient-button: linear-gradient(135deg, #8A2BE2, #B19CD9);
+  --gradient-button-hover: linear-gradient(135deg, #4B0082, #8A2BE2);
+  --button-shadow: rgba(138, 43, 226, 0.3);
+  --button-hover-shadow: rgba(138, 43, 226, 0.4);
+  --button-disabled: #404040;
+  --button-disabled-text: #808080;
+  
+  /* Cartes */
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --card-hover-shadow: rgba(0, 0, 0, 0.4);
+  
+  /* Info boxes */
+  --info-bg: rgba(138, 43, 226, 0.1);
+  --info-border: rgba(138, 43, 226, 0.3);
+  --info-shadow: rgba(138, 43, 226, 0.2);
+  
+  /* Chips */
+  --chip-bg: rgba(138, 43, 226, 0.2);
+  --chip-border: rgba(138, 43, 226, 0.4);
+  
+  /* Scrollbar */
+  --scrollbar-white: rgba(255, 255, 255, 0.2);
+  --scrollbar-white-hover: rgba(255, 255, 255, 0.3);
+  
+  /* Success modal */
+  --gradient-success: linear-gradient(135deg, #4CAF50, #26A69A);
+  --gradient-success-hover: linear-gradient(135deg, #2E7D32, #00695C);
+  --success-gradient: linear-gradient(135deg, #4CAF50, #26A69A);
+  --white-overlay: rgba(255, 255, 255, 0.1);
+  --white-shadow: rgba(255, 255, 255, 0.2);
+  --white-text-shadow: rgba(0, 0, 0, 0.3);
+  --success-button-shadow: rgba(76, 175, 80, 0.3);
+  --success-hover-shadow: rgba(76, 175, 80, 0.4);
 }
 
 /* ===== STYLES GLOBAUX BASÉS SUR LES VARIABLES ===== */
@@ -250,18 +374,37 @@ body {
   box-shadow: 0 0 0 2px var(--focus-ring);
 }
 
-/* Cartes */
+/* Cartes - Design moderne et élévé */
 .card {
-  background-color: var(--card-background);
+  background: var(--gradient-card);
   border: 1px solid var(--card-border);
-  border-radius: 8px;
-  padding: 16px;
-  box-shadow: 0 2px 4px var(--shadow-light);
-  transition: box-shadow 0.3s ease;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-elevation);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .card:hover {
-  box-shadow: 0 4px 8px var(--shadow-medium);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(91, 33, 182, 0.20);
+}
+
+.card:hover::before {
+  opacity: 1;
 }
 
 /* Navigation */

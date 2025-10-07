@@ -1,0 +1,86 @@
+import { Box, Typography, Paper } from '@mui/material';
+import i18nService from '@services/i18nService';
+
+const ErrorMessage = ({ error, onRetry }) => (
+  <Box sx={{ 
+    minHeight: '60vh', 
+    display: 'flex', 
+    flexDirection: 'column', 
+    alignItems: 'center', 
+    justifyContent: 'center'
+  }}>
+    <Paper 
+      elevation={0}
+      sx={{ 
+        p: 5, 
+        background: 'rgba(255, 255, 255, 0.95)',
+        backdropFilter: 'blur(20px)',
+        border: '2px solid rgba(239, 68, 68, 0.2)', 
+        borderRadius: '30px',
+        boxShadow: '0 20px 60px rgba(239, 68, 68, 0.15)',
+        display: 'flex', 
+        flexDirection: 'column', 
+        alignItems: 'center',
+        animation: 'fadeIn 0.8s ease-out',
+        maxWidth: 500
+      }}
+    >
+      <Box sx={{
+        width: 80,
+        height: 80,
+        borderRadius: '50%',
+        background: 'linear-gradient(135deg, #EF4444, #DC2626)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        mb: 3,
+        boxShadow: '0 8px 24px rgba(239, 68, 68, 0.25)',
+        animation: 'scaleIn 0.6s ease-out'
+      }}>
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 7v5" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
+          <circle cx="12" cy="16" r="1" fill="#fff" />
+        </svg>
+      </Box>
+      <Typography variant="h5" sx={{ 
+        fontWeight: 800, 
+        mb: 2,
+        background: 'linear-gradient(135deg, #EF4444, #DC2626)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent'
+      }}>
+        {i18nService.t('loading.error')}
+      </Typography>
+      <Typography variant="subtitle1" sx={{ color: 'text.secondary', mb: 3, textAlign: 'center' }}>
+        {error}
+      </Typography>
+      <button
+        style={{
+          padding: '12px 32px',
+          background: 'linear-gradient(135deg, #EF4444, #DC2626)',
+          color: '#fff',
+          border: 'none',
+          borderRadius: 12,
+          fontWeight: 700,
+          cursor: 'pointer',
+          fontSize: 16,
+          boxShadow: '0 4px 12px rgba(239, 68, 68, 0.25)',
+          transition: 'all 0.3s ease'
+        }}
+        onMouseEnter={(e) => {
+          e.target.style.transform = 'translateY(-2px)';
+          e.target.style.boxShadow = '0 8px 20px rgba(239, 68, 68, 0.35)';
+        }}
+        onMouseLeave={(e) => {
+          e.target.style.transform = 'translateY(0)';
+          e.target.style.boxShadow = '0 4px 12px rgba(239, 68, 68, 0.25)';
+        }}
+        onClick={onRetry || (() => window.location.reload())}
+      >
+        {i18nService.t('common.actions.retry')}
+      </button>
+    </Paper>
+  </Box>
+);
+
+export default ErrorMessage;

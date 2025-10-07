@@ -1,0 +1,409 @@
+/* ========================================
+   STYLES GLOBAUX POUR DASHBOARD SECTIONS
+   ======================================== */
+
+/* Tables et DataTables */
+.MuiTableContainer-root {
+  border-radius: 20px !important;
+  border: 2px solid rgba(91, 33, 182, 0.1) !important;
+  box-shadow: 0 10px 40px rgba(91, 33, 182, 0.08) !important;
+  overflow: hidden !important;
+}
+
+.MuiTableHead-root {
+  background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
+}
+
+.MuiTableHead-root .MuiTableCell-root {
+  color: white !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  border-bottom: none !important;
+}
+
+.MuiTableBody-root {
+  background-color: #ffffff !important;
+}
+
+.MuiTableBody-root .MuiTableRow-root {
+  transition: all 0.3s ease !important;
+  background-color: #ffffff !important;
+}
+
+.MuiTableBody-root .MuiTableRow-root:nth-of-type(even) {
+  background-color: rgba(245, 243, 255, 0.3) !important;
+}
+
+.MuiTableBody-root .MuiTableRow-root:hover {
+  background-color: rgba(91, 33, 182, 0.06) !important;
+  box-shadow: 0 2px 8px rgba(91, 33, 182, 0.12) !important;
+}
+
+.MuiTableBody-root .MuiTableCell-root {
+  border-bottom: 1px solid rgba(91, 33, 182, 0.08) !important;
+  padding: 16px !important;
+  font-size: 0.9rem !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+/* Pagination */
+.MuiTablePagination-root {
+  border-top: 2px solid rgba(91, 33, 182, 0.1) !important;
+  background: rgba(91, 33, 182, 0.02) !important;
+}
+
+.MuiTablePagination-select {
+  border-radius: 8px !important;
+}
+
+/* Chips dans les tables */
+.MuiTableCell-root .MuiChip-root {
+  font-weight: 600 !important;
+  border-radius: 12px !important;
+}
+
+/* Cards de section */
+.dashboard-section-card {
+  background: linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%) !important;
+  border-radius: 20px !important;
+  border: 2px solid rgba(91, 33, 182, 0.1) !important;
+  box-shadow: 0 10px 40px rgba(91, 33, 182, 0.08) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.dashboard-section-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dashboard-section-card:hover {
+  transform: translateY(-8px) scale(1.01) !important;
+  box-shadow: 0 20px 60px rgba(91, 33, 182, 0.15) !important;
+}
+
+.dashboard-section-card:hover::before {
+  opacity: 1;
+}
+
+/* Titres de section */
+.dashboard-section-title {
+  font-weight: 800 !important;
+  background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  letter-spacing: -0.5px !important;
+  margin-bottom: 24px !important;
+}
+
+/* Stats Cards */
+.stats-card {
+  background: linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%) !important;
+  border-radius: 20px !important;
+  border: 2px solid rgba(91, 33, 182, 0.1) !important;
+  box-shadow: 0 10px 40px rgba(91, 33, 182, 0.08) !important;
+  padding: 24px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.stats-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.stats-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 0 20px 60px rgba(91, 33, 182, 0.15) !important;
+}
+
+/* Icon Wrapper pour stats */
+.stats-icon-wrapper {
+  width: 70px !important;
+  height: 70px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 8px 24px rgba(91, 33, 182, 0.25) !important;
+  transition: all 0.3s ease !important;
+  margin-bottom: 16px !important;
+}
+
+.stats-icon-wrapper:hover {
+  transform: scale(1.1) rotate(5deg) !important;
+  box-shadow: 0 12px 32px rgba(91, 33, 182, 0.35) !important;
+}
+
+/* Progress bars */
+.MuiLinearProgress-root {
+  border-radius: 8px !important;
+  height: 10px !important;
+  background: rgba(91, 33, 182, 0.1) !important;
+}
+
+.MuiLinearProgress-bar {
+  background: linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 10px rgba(91, 33, 182, 0.5) !important;
+}
+
+/* Formulaires dans sections */
+.section-form .MuiTextField-root {
+  margin-bottom: 16px !important;
+}
+
+.section-form .MuiOutlinedInput-root {
+  border-radius: 12px !important;
+  background: rgba(245, 243, 255, 0.5) !important;
+  transition: all 0.3s ease !important;
+}
+
+.section-form .MuiOutlinedInput-root:hover {
+  background: rgba(245, 243, 255, 0.8) !important;
+  box-shadow: 0 4px 12px rgba(91, 33, 182, 0.08) !important;
+}
+
+.section-form .MuiOutlinedInput-root.Mui-focused {
+  background: white !important;
+  box-shadow: 0 4px 12px rgba(91, 33, 182, 0.12) !important;
+  border-width: 2px !important;
+}
+
+/* Accordions */
+.MuiAccordion-root {
+  border-radius: 16px !important;
+  margin-bottom: 16px !important;
+  border: 2px solid rgba(91, 33, 182, 0.1) !important;
+  box-shadow: 0 4px 12px rgba(91, 33, 182, 0.06) !important;
+}
+
+.MuiAccordion-root::before {
+  display: none !important;
+}
+
+.MuiAccordionSummary-root {
+  border-radius: 16px !important;
+  background: linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%) !important;
+  font-weight: 600 !important;
+}
+
+.MuiAccordionSummary-root:hover {
+  background: linear-gradient(145deg, #F5F3FF 0%, #EDE9FE 100%) !important;
+}
+
+/* Tabs */
+.MuiTabs-root {
+  border-bottom: 2px solid rgba(91, 33, 182, 0.1) !important;
+  margin-bottom: 24px !important;
+}
+
+.MuiTab-root {
+  font-weight: 600 !important;
+  text-transform: none !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.MuiTab-root:hover {
+  background: rgba(91, 33, 182, 0.04) !important;
+  border-radius: 12px 12px 0 0 !important;
+}
+
+.MuiTab-root.Mui-selected {
+  color: #5B21B6 !important;
+  font-weight: 700 !important;
+}
+
+.MuiTabs-indicator {
+  height: 3px !important;
+  background: linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6) !important;
+  border-radius: 3px 3px 0 0 !important;
+}
+
+/* Dividers */
+.MuiDivider-root {
+  border-color: rgba(91, 33, 182, 0.12) !important;
+}
+
+/* Badges */
+.MuiBadge-badge {
+  font-weight: 700 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Avatars */
+.MuiAvatar-root {
+  border: 2px solid rgba(91, 33, 182, 0.1) !important;
+  box-shadow: 0 4px 12px rgba(91, 33, 182, 0.15) !important;
+}
+
+/* List Items */
+.MuiListItem-root {
+  border-radius: 12px !important;
+  margin: 4px 0 !important;
+  transition: all 0.2s ease !important;
+}
+
+.MuiListItem-root:hover {
+  background: rgba(91, 33, 182, 0.04) !important;
+}
+
+/* Stepper */
+.MuiStepLabel-root .Mui-active {
+  color: #5B21B6 !important;
+}
+
+.MuiStepLabel-root .Mui-completed {
+  color: #10B981 !important;
+}
+
+.MuiStepConnector-line {
+  border-color: rgba(91, 33, 182, 0.2) !important;
+}
+
+/* Tooltips personnalisés */
+.MuiTooltip-tooltip {
+  background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  padding: 8px 12px !important;
+  box-shadow: 0 4px 12px rgba(91, 33, 182, 0.25) !important;
+  font-size: 0.875rem !important;
+}
+
+/* Skeleton loaders */
+.MuiSkeleton-root {
+  background: linear-gradient(
+    90deg,
+    rgba(91, 33, 182, 0.08) 0%,
+    rgba(91, 33, 182, 0.15) 50%,
+    rgba(91, 33, 182, 0.08) 100%
+  ) !important;
+  background-size: 200% 100% !important;
+  animation: skeleton-loading 1.5s ease-in-out infinite !important;
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Breadcrumbs */
+.MuiBreadcrumbs-root {
+  padding: 12px 0 !important;
+  margin-bottom: 24px !important;
+}
+
+.MuiBreadcrumbs-separator {
+  color: rgba(91, 33, 182, 0.4) !important;
+}
+
+/* Timeline */
+.MuiTimelineItem-root::before {
+  flex: 0 !important;
+  padding: 0 !important;
+}
+
+.MuiTimelineDot-root {
+  background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
+  box-shadow: 0 4px 12px rgba(91, 33, 182, 0.25) !important;
+}
+
+.MuiTimelineConnector-root {
+  background: linear-gradient(180deg, #5B21B6, rgba(91, 33, 182, 0.2)) !important;
+}
+
+/* Cards avec actions */
+.card-actions {
+  display: flex !important;
+  gap: 8px !important;
+  justify-content: flex-end !important;
+  padding-top: 16px !important;
+}
+
+.card-actions .MuiIconButton-root {
+  transition: all 0.2s ease !important;
+}
+
+.card-actions .MuiIconButton-root:hover {
+  transform: scale(1.15) !important;
+  background: rgba(91, 33, 182, 0.08) !important;
+}
+
+/* Empty states */
+.empty-state {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 48px 24px !important;
+  text-align: center !important;
+}
+
+.empty-state-icon {
+  width: 80px !important;
+  height: 80px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 24px !important;
+  box-shadow: 0 8px 24px rgba(91, 33, 182, 0.25) !important;
+}
+
+.empty-state-title {
+  font-weight: 700 !important;
+  font-size: 1.5rem !important;
+  margin-bottom: 12px !important;
+  background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.empty-state-description {
+  color: rgba(0, 0, 0, 0.6) !important;
+  margin-bottom: 24px !important;
+  max-width: 400px !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-section-card {
+    border-radius: 16px !important;
+  }
+  
+  .stats-card {
+    border-radius: 16px !important;
+  }
+  
+  .stats-icon-wrapper {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+

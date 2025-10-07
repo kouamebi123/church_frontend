@@ -7,6 +7,8 @@ import previsionnelService from './previsionnelService';
 import assistanceService from './assistanceService';
 import chaineImpactService from './chaineImpactService';
 import activityService from './activityService';
+import logger from '@utils/logger';
+
 
 // Import des services de thème
 import themeService from '../theme/themeService';
@@ -25,14 +27,14 @@ export { default as activityService } from './activityService';
 export { default as themeService } from '../theme/themeService';
 
 // Export des constantes
-export * from '../constants/enums';
-export * from '../constants/countries';
+export * from '@constants/enums';
+export * from '@constants/countries';
 
 // Export des hooks
-export { useInitialData } from '../hooks/useInitialData';
+export { useInitialData } from '@hooks/useInitialData';
 
 // Export des composants
-export { default as UserPreferences } from '../components/UserPreferences';
+export { default as UserPreferences } from '@components/UserPreferences';
 
 // Export des configurations
 export * from '../config/preferences';
@@ -78,7 +80,7 @@ export const storage = {
       const item = localStorage.getItem(key);
       return item ? JSON.parse(item) : null;
     } catch (error) {
-      // console.warn('Erreur lors de la récupération depuis localStorage:', error);
+      // logger.warn('Erreur lors de la récupération depuis localStorage:', error);
       return null;
     }
   },
@@ -88,7 +90,7 @@ export const storage = {
       localStorage.setItem(key, JSON.stringify(value));
       return true;
     } catch (error) {
-      // console.warn('Erreur lors de la sauvegarde dans localStorage:', error);
+      // logger.warn('Erreur lors de la sauvegarde dans localStorage:', error);
       return false;
     }
   },
@@ -98,7 +100,7 @@ export const storage = {
       localStorage.removeItem(key);
       return true;
     } catch (error) {
-      // console.warn('Erreur lors de la suppression depuis localStorage:', error);
+      // logger.warn('Erreur lors de la suppression depuis localStorage:', error);
       return false;
     }
   },
@@ -108,7 +110,7 @@ export const storage = {
       localStorage.clear();
       return true;
     } catch (error) {
-      // console.warn('Erreur lors du nettoyage de localStorage:', error);
+      // logger.warn('Erreur lors du nettoyage de localStorage:', error);
       return false;
     }
   }
@@ -121,11 +123,11 @@ export const debug = {
   },
   
   warn: (message, data) => {
-    // console.warn(`⚠️ [DEBUG] ${message}`, data);
+    // logger.warn(`⚠️ [DEBUG] ${message}`, data);
   },
   
   error: (message, error) => {
-    // console.error(`❌ [DEBUG] ${message}`, error);
+    // logger.error(`❌ [DEBUG] ${message}`, error);
   }
 };
 

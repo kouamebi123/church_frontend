@@ -1,8 +1,31 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { handleApiError } from '../utils/errorHandler';
+import { handleApiError } from '@utils/errorHandler';
 // Import supprimé car non utilisé
-import { login, register, getMe, logout, updateUserProfile, updatePassword } from '../features/auth/authSlice';
+import { login, register, getMe, logout, updateUserProfile, updatePassword } from '@features/auth/authSlice';
+import logger from '@utils/logger';
 
+
+/**
+ * Hook personnalisé pour la gestion de l'authentification
+ * @returns {Object} Objet contenant l'état d'authentification et les fonctions de gestion
+ * @returns {Object|null} returns.user - Utilisateur connecté ou null
+ * @returns {string|null} returns.token - Token d'authentification ou null
+ * @returns {boolean} returns.isAuthenticated - État de connexion
+ * @returns {boolean} returns.isLoading - État de chargement
+ * @returns {string|null} returns.error - Message d'erreur ou null
+ * @returns {Function} returns.loginUser - Fonction de connexion
+ * @returns {Function} returns.registerUser - Fonction d'inscription
+ * @returns {Function} returns.logoutUser - Fonction de déconnexion
+ * @returns {Function} returns.getUserProfile - Fonction de récupération du profil
+ * @returns {Function} returns.updateUserProfile - Fonction de mise à jour du profil
+ * @returns {Function} returns.updatePassword - Fonction de mise à jour du mot de passe
+ * @example
+ * const { user, isAuthenticated, loginUser } = useAuth();
+ * 
+ * if (isAuthenticated) {
+ *   logger.debug('Utilisateur connecté:', user);
+ * }
+ */
 export const useAuth = () => {
   const dispatch = useDispatch();
   const { user, token, isAuthenticated, isLoading, error } = useSelector((state) => state.auth);

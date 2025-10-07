@@ -1,4 +1,6 @@
 import authAxios from './authService';
+import logger from '@utils/logger';
+
 
 /**
  * Service pour la gestion des préférences utilisateur via l'API
@@ -12,7 +14,7 @@ class PreferencesApiService {
       const response = await authAxios.get('/preferences');
       return response.data;
     } catch (error) {
-      console.error('Erreur lors de la récupération des préférences:', error);
+      logger.error('Erreur lors de la récupération des préférences:', error);
       throw error;
     }
   }
@@ -25,7 +27,7 @@ class PreferencesApiService {
       const response = await authAxios.put('/preferences', preferences);
       return response.data;
     } catch (error) {
-      console.error('Erreur lors de la mise à jour des préférences:', error);
+      logger.error('Erreur lors de la mise à jour des préférences:', error);
       throw error;
     }
   }
@@ -38,7 +40,7 @@ class PreferencesApiService {
       const response = await authAxios.put('/preferences/email', { email_notifications });
       return response.data;
     } catch (error) {
-      console.error('Erreur lors de la mise à jour des préférences email:', error);
+      logger.error('Erreur lors de la mise à jour des préférences email:', error);
       throw error;
     }
   }

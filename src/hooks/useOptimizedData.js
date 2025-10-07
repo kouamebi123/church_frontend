@@ -1,5 +1,5 @@
 import { useMemo, useCallback } from 'react';
-import { formatQualification } from '../utils/qualificationFormatter';
+import { formatQualification } from '@utils/qualificationFormatter';
 
 // Hook pour optimiser les calculs de données
 export const useOptimizedData = (data, dependencies = []) => {

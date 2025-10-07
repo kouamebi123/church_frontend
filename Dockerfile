@@ -1,44 +1,65 @@
-# Dockerfile pour le frontend React
-FROM node:18-alpine AS build
+# Dockerfile optimisé pour le frontend React avec Vite
+FROM node:20-alpine AS dependencies
 
-# Installer les dépendances système
-RUN apk add --no-cache \
-    git \
-    && rm -rf /var/cache/apk/*
+# Installer les dépendances système nécessaires uniquement
+RUN apk add --no-cache git && rm -rf /var/cache/apk/*
 
 # Définir le répertoire de travail
 WORKDIR /app
 
-# Copier les fichiers de dépendances
+# Copier SEULEMENT les fichiers de dépendances (pour optimiser le cache)
 COPY package*.json ./
 
-# Installer les dépendances
-RUN npm ci --only=production && npm cache clean --force
+# Installer TOUTES les dépendances (dev + prod pour Vite)
+RUN --mount=type=cache,target=/root/.npm \
+    npm ci --silent && \
+    npm cache clean --force
 
-# Copier le code source
-COPY . .
+# Stage de build séparé
+FROM node:20-alpine AS build
 
-# Construire l'application
-RUN npm run build
+WORKDIR /app
 
-# Stage de production avec Nginx
-FROM nginx:alpine
+# Copier les node_modules depuis le stage précédent
+COPY --from=dependencies /app/node_modules ./node_modules
+COPY --from=dependencies /app/package*.json ./
 
-# Copier la configuration Nginx personnalisée
+# Copier le code source (seulement ce qui est nécessaire)
+COPY src/ ./src/
+COPY public/ ./public/
+COPY index.html ./
+COPY vite.config.js ./
+COPY vitest.config.js ./
+COPY scripts/ ./scripts/
+
+# Construire l'application avec Vite (cache des modules)
+RUN --mount=type=cache,target=/app/node_modules/.vite \
+    npm run build
+
+# Stage de production optimisé
+FROM nginx:alpine AS production
+
+# Installer seulement ce qui est nécessaire
+RUN apk add --no-cache tzdata && \
+    rm -rf /var/cache/apk/*
+
+# Copier la configuration Nginx
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copier les fichiers buildés
 COPY --from=build /app/build /usr/share/nginx/html
 
-# Corriger les permissions des fichiers statiques
+# Optimiser les permissions en une seule commande
 RUN chmod -R 644 /usr/share/nginx/html/* && \
-    find /usr/share/nginx/html -type d -exec chmod 755 {} \;
+    find /usr/share/nginx/html -type d -exec chmod 755 {} \; && \
+    mkdir -p /var/log/nginx /var/cache/nginx /var/run /tmp/nginx && \
+    chown -R root:root /var/log/nginx /var/cache/nginx /var/run /tmp/nginx
 
-# Créer les répertoires pour les logs
-RUN mkdir -p /var/log/nginx
+# Variables d'environnement pour Nginx
+ENV NGINX_ENTRYPOINT_QUIET_LOGS=1
 
 # Exposer le port
 EXPOSE 3000
 
-# Démarrer Nginx
+# Démarrer Nginx en tant que root pour éviter les problèmes de permissions
 CMD ["nginx", "-g", "daemon off;"]

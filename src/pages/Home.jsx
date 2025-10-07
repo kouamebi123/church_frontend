@@ -1,0 +1,316 @@
+import React, { useEffect, useState } from 'react';
+import { handleApiError } from '@utils/errorHandler';
+import Navbar from '@components/Navbar';
+import {
+  Grid,
+  Typography,
+  Paper,
+  Box,
+  MenuItem,
+  Select,
+  InputLabel,
+  FormControl,
+} from '@mui/material';
+import { styled } from '@mui/material/styles';
+import Carousel from '@components/Carousel';
+import { AccountTree, SupervisorAccount, GroupWork, EmojiPeople, SentimentDissatisfied, AdminPanelSettings, People, ChildCare, Star, Diversity3, PersonAddAlt1, CoPresent } from '@mui/icons-material';
+import Loading from '@components/Loading';
+import { apiService } from '@services/apiService';
+import { useSelectedChurch } from '@hooks/useSelectedChurch';
+import i18nService from '@services/i18nService';
+import { useUserSync } from '@hooks/useUserSync';
+import { usePermissions } from '@hooks/usePermissions';
+
+const StatCard = styled(Paper, {
+  shouldForwardProp: (prop) => prop !== 'isTotal'
+})(({ theme, isTotal }) => ({
+  padding: theme.spacing(3),
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  gap: theme.spacing(2),
+  background: isTotal 
+    ? 'linear-gradient(135deg, #5B21B6 0%, #7C3AED 50%, #8B5CF6 100%)'
+    : 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
+  color: isTotal ? 'white' : theme.palette.text.primary,
+  borderRadius: '20px',
+  boxShadow: isTotal 
+    ? '0 10px 40px rgba(91, 33, 182, 0.25)' 
+    : '0 4px 20px rgba(91, 33, 182, 0.08)',
+  transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+  position: 'relative',
+  overflow: 'hidden',
+  border: isTotal ? 'none' : '1px solid rgba(91, 33, 182, 0.1)',
+  '&::before': {
+    content: '""',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    height: '4px',
+    background: isTotal 
+      ? 'linear-gradient(90deg, rgba(255,255,255,0.3), rgba(255,255,255,0.6), rgba(255,255,255,0.3))'
+      : 'linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6)',
+    opacity: 0,
+    transition: 'opacity 0.4s ease'
+  },
+  '&:hover': {
+    transform: 'translateY(-12px) scale(1.02)',
+    boxShadow: isTotal
+      ? '0 20px 60px rgba(91, 33, 182, 0.35)'
+      : '0 15px 50px rgba(91, 33, 182, 0.18)',
+    '&::before': {
+      opacity: 1
+    }
+  }
+}));
+
+// StyledContainer supprimé car non utilisé
+
+const IconWrapper = styled(Box, {
+  shouldForwardProp: (prop) => prop !== 'isTotal'
+})(({ theme, isTotal }) => ({
+  width: 70,
+  height: 70,
+  borderRadius: '50%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  background: isTotal 
+    ? 'linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.1))'
+    : 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+  color: 'white',
+  marginBottom: theme.spacing(2),
+  boxShadow: isTotal
+    ? '0 8px 20px rgba(255, 255, 255, 0.2)'
+    : '0 8px 20px rgba(91, 33, 182, 0.25)',
+  transition: 'all 0.4s ease',
+  backdropFilter: isTotal ? 'blur(10px)' : 'none',
+  border: isTotal ? '2px solid rgba(255,255,255,0.3)' : 'none',
+  '&:hover': {
+    transform: 'scale(1.15) rotate(5deg)',
+    boxShadow: isTotal
+      ? '0 12px 30px rgba(255, 255, 255, 0.3)'
+      : '0 12px 30px rgba(91, 33, 182, 0.35)'
+  }
+}));
+
+const StyledTypography = styled(Typography)(({ theme }) => ({
+  textAlign: 'center',
+  fontWeight: 'bold',
+  color: theme.palette.text.primary
+}));
+
+const Home = () => {
+  // Utiliser le hook personnalisé pour la synchronisation de l'utilisateur
+  const { user, isUserFullyLoaded, syncUser } = useUserSync();
+  const { selectedChurch, changeSelectedChurch, churches } = useSelectedChurch();
+  const { isAdmin, isSuperAdmin } = usePermissions();
+  const [stats, setStats] = useState(null);
+
+  // Effet pour forcer la synchronisation de l'utilisateur si nécessaire
+  useEffect(() => {
+    if (user && !isUserFullyLoaded) {
+      syncUser();
+    }
+  }, [user, isUserFullyLoaded, syncUser]);
+
+  useEffect(() => {
+    const fetchStats = async () => {
+      try {
+        let res;
+        if (isAdmin || isSuperAdmin) {
+          // Pour les admins, utiliser l'église sélectionnée ou l'église par défaut
+          let churchId = null;
+          
+          if (selectedChurch?.id || selectedChurch?._id) {
+            // Si une église est sélectionnée, utiliser son ID
+            churchId = selectedChurch.id || selectedChurch._id;
+          } else if (user?.eglise_locale) {
+            // Sinon, utiliser l'église de l'utilisateur (peut être un ID ou un objet)
+            churchId = typeof user.eglise_locale === 'object' ? user.eglise_locale.id || user.eglise_locale._id : user.eglise_locale;
+          }
+          
+          if (churchId) {
+            res = await apiService.stats.getOverview({ churchId });
+          } else {
+            res = await apiService.stats.getOverview();
+          }
+        } else {
+          // Pour les autres utilisateurs, filtrer par leur église
+          let churchId = null;
+          if (user?.eglise_locale) {
+            churchId = typeof user.eglise_locale === 'object' ? user.eglise_locale.id : user.eglise_locale;
+          }
+          
+          if (churchId) {
+            res = await apiService.stats.getOverview({ churchId });
+          } else {
+            res = await apiService.stats.getOverview();
+          }
+        }
+        
+        setStats(res.data?.data || res.data || {});
+      } catch (err) {
+        const processedError = handleApiError(err, i18nService.t('errors.api.loadStats'));
+        setStats({}); // Définir des stats vides en cas d'erreur
+      }
+    };
+    fetchStats();
+  }, [user, selectedChurch]);
+
+  // Gestion du changement d'église - utilise l'état global
+  const handleChurchChange = (churchId) => {
+    // Utiliser la fonction du hook pour changer l'église
+    changeSelectedChurch(churchId);
+  };
+
+  if (!stats) return <Loading titre={i18nService.t('home.statsLoading')} />;
+
+  const statsConfig = [
+    { label: i18nService.t('home.gouvernance'), value: stats.total_gouvernance, icon: AdminPanelSettings },
+    { label: i18nService.t('home.totalReseaux'), value: stats.total_reseaux, icon: AccountTree },
+    { label: i18nService.t('home.responsablesReseaux'), value: stats.total_resp_reseaux, icon: SupervisorAccount },
+    { label: i18nService.t('home.totalGr'), value: stats.total_gr, icon: GroupWork },
+    { label: i18nService.t('home.responsablesGr'), value: stats.total_resp_gr, icon: EmojiPeople },
+    { label: i18nService.t('home.leaders'), value: stats.total_leaders, icon: Star },
+    { label: i18nService.t('home.leadersTous'), value: stats.total_leaders_all, icon: Star },
+    { label: i18nService.t('home.membresReguliers'), value: stats.total_reguliers, icon: Diversity3 },
+    { label: i18nService.t('home.membresEnIntegration'), value: stats.total_integration, icon: PersonAddAlt1 },
+    { label: i18nService.t('home.membresIrréguliers'), value: stats.total_irreguliers, icon: SentimentDissatisfied },
+    { label: i18nService.t('home.ecodim'), value: stats.total_ecodim, icon: ChildCare },
+    { label: i18nService.t('home.responsablesEcodim'), value: stats.total_resp_ecodim, icon: CoPresent },
+  ];
+
+  return (
+    <Box sx={{ minHeight: '100vh' }}>
+      <Navbar />
+
+      <Carousel />
+
+      <Box width="100%" textAlign="center" sx={{ py: 6 }}>
+        <Typography 
+          variant="h3" 
+          sx={{ 
+            mb: 2, 
+            textAlign: 'center', 
+            fontWeight: 800, 
+            background: 'linear-gradient(135deg, #5B21B6, #7C3AED, #8B5CF6)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            textShadow: '0 4px 12px rgba(91, 33, 182, 0.15)',
+            letterSpacing: '-0.5px',
+            animation: 'fadeIn 0.8s ease-out'
+          }}
+        >
+          {i18nService.t('home.title')}
+        </Typography>
+        <Box 
+          sx={{ 
+            width: '80px', 
+            height: '4px', 
+            background: 'linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6)',
+            margin: '0 auto 4rem',
+            borderRadius: '2px',
+            animation: 'scaleIn 0.6s ease-out'
+          }} 
+        />
+
+        {(isAdmin || isSuperAdmin) && (
+          <Box sx={{ mb: 3, display: 'flex', justifyContent: 'center' }}>
+            <FormControl sx={{ minWidth: 250 }}>
+              <InputLabel id="home-church-select-label">{i18nService.t('home.filterByChurch')}</InputLabel>
+              <Select
+                id="home-church-select"
+                name="church"
+                value={selectedChurch?.id || selectedChurch?._id || ''}
+                onChange={(e) => handleChurchChange(e.target.value)}
+                displayEmpty
+                label={i18nService.t('home.filterByChurch')}
+                labelId="home-church-select-label"
+                autoComplete="off"
+                renderValue={(selected) => {
+                  if (selectedChurch) {
+                    return selectedChurch.nom;
+                  }
+                  return i18nService.t('home.selectChurch');
+                }}
+              >
+                {churches.map((church) => (
+                  <MenuItem key={church.id || church._id} value={church.id || church._id}>{church.nom}</MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </Box>
+        )}
+
+        <Grid container width="92%" mx="auto">
+          {statsConfig.map((stat, index) => (
+            <Grid
+              data-aos="fade-up"
+              key={index}
+              sx={{
+                width: '100%',
+                padding: '10px 10px 10px 10px',
+                '@media (min-width:460px) and (max-width:699px)': { width: '50%', height: '270px' },
+                '@media (min-width:700px) and (max-width:1099px)': { width: '33.33%', height: '270px' },
+                '@media (min-width:1100px) and (max-width:1199px)': { width: '25%', height: '270px' },
+                '@media (min-width:1200px) and (max-width:1599px)': { width: '20%', height: '270px' },
+                '@media (min-width:1600px)': { width: '20%' },
+                flexBasis: 'unset',
+                maxWidth: 'unset',
+                flexGrow: 0,
+                flexShrink: 0,
+                height: '100%'
+              }}
+            >
+              <StatCard sx={{ height: '100%', width: '100%', display: 'flex', flexDirection: 'column' }}>
+                <IconWrapper>
+                  <stat.icon sx={{ fontSize: 30 }} />
+                </IconWrapper>
+                <StyledTypography variant="h6">
+                  {stat.label}
+                </StyledTypography>
+                <StyledTypography variant="h4" color="primary">
+                  {stat.value}
+                </StyledTypography>
+              </StatCard>
+            </Grid>
+          ))}
+          <Grid
+            data-aos="fade-up"
+            sx={{
+              width: '100%',
+              padding: '10px 10px 10px 10px',
+              '@media (min-width:460px) and (max-width:699px)': { width: '50%', height: '270px' },
+              '@media (min-width:700px) and (max-width:1099px)': { width: '33.33%', height: '270px' },
+              '@media (min-width:1100px) and (max-width:1199px)': { width: '25%', height: '270px' },
+              '@media (min-width:1200px) and (max-width:1599px)': { width: '20%', height: '270px' },
+              '@media (min-width:1600px)': { width: '20%' },
+              flexBasis: 'unset',
+              maxWidth: 'unset',
+              flexGrow: 0,
+              flexShrink: 0,
+              height: '100%'
+            }}
+          >
+            <StatCard isTotal sx={{ height: '100%', width: '100%', display: 'flex', flexDirection: 'column' }}>
+              <IconWrapper isTotal>
+                <People sx={{ fontSize: 30, color: 'primary.main' }} />
+              </IconWrapper>
+              <StyledTypography variant="h6" sx={{ color: 'white' }}>
+                {i18nService.t('home.totalEffectif')}
+              </StyledTypography>
+              <StyledTypography variant="h3" sx={{ color: 'white' }}>
+                {stats.total_all}
+              </StyledTypography>
+            </StatCard>
+          </Grid>
+        </Grid>
+      </Box>
+    </Box>
+  );
+};
+
+export default Home;

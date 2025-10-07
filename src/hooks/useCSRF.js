@@ -2,6 +2,8 @@ import { useEffect, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import { logout } from '../redux/slices/authSlice';
 import { API_URL } from '../config/apiConfig';
+import logger from '@utils/logger';
+
 
 // Hook pour gérer automatiquement les tokens CSRF
 export const useCSRF = () => {
@@ -60,7 +62,7 @@ export const useCSRF = () => {
 
       return true;
     } catch (error) {
-      // console.error('Erreur lors de la vérification du token CSRF:', error);
+      // logger.error('Erreur lors de la vérification du token CSRF:', error);
       dispatch(logout());
       return false;
     }

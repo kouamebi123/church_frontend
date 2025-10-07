@@ -1,6 +1,11 @@
 import axios from 'axios';
-import { handleApiError, handleTimeoutError, handleConnectionError } from '../utils/errorHandler';
+import { handleApiError, handleTimeoutError, handleConnectionError } from '@utils/errorHandler';
 import { API_URL } from '../config/apiConfig';
+
+/**
+ * Service d'authentification pour la gestion des utilisateurs
+ * @namespace authService
+ */
 
 // Configuration axios avec intercepteurs
 const authAxios = axios.create({

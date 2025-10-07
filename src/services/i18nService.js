@@ -1,5 +1,7 @@
 import fr from '../assets/i18n/fr.json';
 import en from '../assets/i18n/en.json';
+import logger from '@utils/logger';
+
 
 class I18nService {
   constructor() {
@@ -21,7 +23,7 @@ class I18nService {
   init() {
     // Vérifier que nous sommes dans un environnement DOM
     if (typeof document === 'undefined') {
-      // // console.warn('i18nService: Pas d\'environnement DOM disponible');
+      // // logger.warn('i18nService: Pas d\'environnement DOM disponible');
       return;
     }
     
@@ -41,7 +43,7 @@ class I18nService {
       try {
         return localStorage.getItem('user_language') || 'fr';
       } catch (error) {
-        // console.warn('i18nService: Impossible de récupérer la langue depuis localStorage:', error);
+        // logger.warn('i18nService: Impossible de récupérer la langue depuis localStorage:', error);
         return 'fr';
       }
     }
@@ -57,7 +59,7 @@ class I18nService {
       try {
         localStorage.setItem('user_language', language);
       } catch (error) {
-        // console.warn('i18nService: Impossible de stocker la langue dans localStorage:', error);
+        // logger.warn('i18nService: Impossible de stocker la langue dans localStorage:', error);
       }
     }
   }
@@ -67,7 +69,7 @@ class I18nService {
    */
   setLanguage(language) {
     if (!this.translations[language]) {
-      console.warn(`Langue non supportée: ${language}, utilisation de la langue de fallback`);
+      logger.warn(`Langue non supportée: ${language}, utilisation de la langue de fallback`);
       language = this.fallbackLanguage;
     }
 
@@ -83,7 +85,7 @@ class I18nService {
       this.dispatchLanguageChangeEvent();
     }
     
-    console.log(`🌐 Langue changée vers: ${language}`);
+    logger.debug(`🌐 Langue changée vers: ${language}`);
   }
 
   /**
@@ -99,13 +101,13 @@ class I18nService {
   t(key, params = {}) {
     try {
       if (!key || typeof key !== 'string') {
-        // console.warn('i18nService: Clé de traduction invalide:', key);
+        // logger.warn('i18nService: Clé de traduction invalide:', key);
         return key || 'Invalid key';
       }
       
       
       if (!this.translations || !this.translations[this.currentLanguage]) {
-        // console.warn('i18nService: Traductions non disponibles pour la langue:', this.currentLanguage);
+        // logger.warn('i18nService: Traductions non disponibles pour la langue:', this.currentLanguage);
         return key;
       }
       
@@ -139,7 +141,7 @@ class I18nService {
 
       return translation || key;
     } catch (error) {
-      // console.warn('i18nService: Erreur lors de la récupération de la traduction:', error);
+      // logger.warn('i18nService: Erreur lors de la récupération de la traduction:', error);
       return key;
     }
   }
@@ -164,13 +166,13 @@ class I18nService {
           const regex = new RegExp(`{${key}}`, 'g');
           result = result.replace(regex, params[key]);
         } catch (error) {
-          // console.warn('i18nService: Erreur lors du remplacement du paramètre:', key, error);
+          // logger.warn('i18nService: Erreur lors du remplacement du paramètre:', key, error);
         }
       });
       
       return result;
     } catch (error) {
-      // console.warn('i18nService: Erreur lors du remplacement des paramètres:', error);
+      // logger.warn('i18nService: Erreur lors du remplacement des paramètres:', error);
       return text;
     }
   }
@@ -181,7 +183,7 @@ class I18nService {
   getAvailableLanguages() {
     try {
       if (!this.translations || typeof this.translations !== 'object') {
-        // console.warn('i18nService: Traductions non disponibles');
+        // logger.warn('i18nService: Traductions non disponibles');
         return [];
       }
       
@@ -192,7 +194,7 @@ class I18nService {
         flag: this.getLanguageFlag(code)
       }));
     } catch (error) {
-      // console.warn('i18nService: Erreur lors de la récupération des langues disponibles:', error);
+      // logger.warn('i18nService: Erreur lors de la récupération des langues disponibles:', error);
       return [];
     }
   }
@@ -212,7 +214,7 @@ class I18nService {
       };
       return flags[code] || '🌍';
     } catch (error) {
-      // console.warn('i18nService: Erreur lors de la récupération du drapeau de la langue:', error);
+      // logger.warn('i18nService: Erreur lors de la récupération du drapeau de la langue:', error);
       return '🌍';
     }
   }
@@ -232,7 +234,7 @@ class I18nService {
       const languages = this.getAvailableLanguages();
       return languages.find(lang => lang.code === this.currentLanguage) || null;
     } catch (error) {
-      // console.warn('i18nService: Erreur lors de la récupération des informations de la langue actuelle:', error);
+      // logger.warn('i18nService: Erreur lors de la récupération des informations de la langue actuelle:', error);
       return null;
     }
   }
@@ -252,7 +254,7 @@ class I18nService {
         });
         window.dispatchEvent(event);
       } catch (error) {
-        // console.warn('i18nService: Erreur lors de la création de l\'événement:', error);
+        // logger.warn('i18nService: Erreur lors de la création de l\'événement:', error);
       }
     }
   }
@@ -268,7 +270,7 @@ class I18nService {
           // Événement de changement de langue détecté
         });
       } catch (error) {
-        //// console.warn('i18nService: Erreur lors de l\'écoute des changements de langue:', error);
+        //// logger.warn('i18nService: Erreur lors de l\'écoute des changements de langue:', error);
       }
     }
   }
@@ -291,7 +293,7 @@ class I18nService {
         const direction = this.getLanguageDirection();
         document.documentElement.setAttribute('dir', direction);
       } catch (error) {
-        // console.warn('i18nService: Erreur lors de l\'application de la direction de la langue:', error);
+        // logger.warn('i18nService: Erreur lors de l\'application de la direction de la langue:', error);
       }
     }
   }
@@ -409,7 +411,7 @@ class I18nService {
   formatCurrency(amount, currency = 'EUR', options = {}) {
     // Vérifier que Intl est disponible
     if (typeof Intl === 'undefined' || typeof Intl.NumberFormat === 'undefined') {
-      // console.warn('i18nService: Intl.NumberFormat non disponible');
+      // logger.warn('i18nService: Intl.NumberFormat non disponible');
       return amount.toString();
     }
     
@@ -435,7 +437,7 @@ class I18nService {
         ...options
       }).format(amount);
     } catch (error) {
-      // console.warn('i18nService: Erreur lors du formatage de la devise:', error);
+      // logger.warn('i18nService: Erreur lors du formatage de la devise:', error);
       return amount.toString();
     }
   }
@@ -446,13 +448,13 @@ class I18nService {
   getSection(section) {
     try {
       if (!section || typeof section !== 'string') {
-        // console.warn('i18nService: Section invalide spécifiée');
+        // logger.warn('i18nService: Section invalide spécifiée');
         return {};
       }
       
       return this.translations[this.currentLanguage]?.[section] || {};
     } catch (error) {
-      // console.warn('i18nService: Erreur lors de la récupération de la section:', error);
+      // logger.warn('i18nService: Erreur lors de la récupération de la section:', error);
       return {};
     }
   }
@@ -464,7 +466,7 @@ class I18nService {
     try {
       return this.translations[this.currentLanguage] || {};
     } catch (error) {
-      // console.warn('i18nService: Erreur lors de la récupération de toutes les traductions:', error);
+      // logger.warn('i18nService: Erreur lors de la récupération de toutes les traductions:', error);
       return {};
     }
   }
@@ -491,7 +493,7 @@ class I18nService {
       
       return true;
     } catch (error) {
-      // console.warn('i18nService: Erreur lors de la vérification de la traduction:', error);
+      // logger.warn('i18nService: Erreur lors de la vérification de la traduction:', error);
       return false;
     }
   }
@@ -501,7 +503,7 @@ class I18nService {
    */
   addCustomTranslations(language, translations) {
     if (!language || !translations || typeof translations !== 'object') {
-      // console.warn('i18nService: Paramètres invalides pour addCustomTranslations');
+      // logger.warn('i18nService: Paramètres invalides pour addCustomTranslations');
       return;
     }
     
@@ -516,7 +518,7 @@ class I18nService {
       };
       
     } catch (error) {
-      // console.warn('i18nService: Erreur lors de l\'ajout des traductions personnalisées:', error);
+      // logger.warn('i18nService: Erreur lors de l\'ajout des traductions personnalisées:', error);
     }
   }
 
@@ -525,7 +527,7 @@ class I18nService {
    */
   removeCustomTranslations(language) {
     if (!language) {
-      // console.warn('i18nService: Langue non spécifiée pour removeCustomTranslations');
+      // logger.warn('i18nService: Langue non spécifiée pour removeCustomTranslations');
       return;
     }
     
@@ -534,7 +536,7 @@ class I18nService {
         delete this.translations[language];
       }
     } catch (error) {
-      // console.warn('i18nService: Erreur lors de la suppression des traductions personnalisées:', error);
+      // logger.warn('i18nService: Erreur lors de la suppression des traductions personnalisées:', error);
     }
   }
 
@@ -549,7 +551,7 @@ class I18nService {
         allLanguages: this.translations || {}
       };
     } catch (error) {
-      // console.warn('i18nService: Erreur lors de l\'export des traductions:', error);
+      // logger.warn('i18nService: Erreur lors de l\'export des traductions:', error);
       return {
         currentLanguage: this.fallbackLanguage,
         translations: {},
@@ -567,11 +569,11 @@ class I18nService {
         this.translations = { ...this.translations, ...translations };
         return true;
       } else {
-        // console.warn('i18nService: Traductions invalides fournies');
+        // logger.warn('i18nService: Traductions invalides fournies');
         return false;
       }
     } catch (error) {
-      // console.error('❌ Erreur lors de l\'import des traductions:', error);
+      // logger.error('❌ Erreur lors de l\'import des traductions:', error);
       return false;
     }
   }

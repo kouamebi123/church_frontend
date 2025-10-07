@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { handleApiError } from '../utils/errorHandler';
-import { apiService } from '../services/apiService';
+import { handleApiError } from '@utils/errorHandler';
+import { apiService } from '@services/apiService';
 
 export const useInitialData = () => {
   const [churches, setChurches] = useState([]);

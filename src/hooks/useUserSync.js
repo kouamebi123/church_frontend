@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getMe } from '../features/auth/authSlice';
+import { getMe } from '@features/auth/authSlice';
+import logger from '@utils/logger';
+import { API_BASE_URL } from '../config/apiConfig';
+
 
 /**
  * Hook personnalisé pour synchroniser l'utilisateur et son image de profil
@@ -41,7 +44,7 @@ export const useUserSync = () => {
         setIsUserFullyLoaded(true);
         return result;
       } catch (error) {
-        // console.error('Erreur lors de la synchronisation de l\'utilisateur:', error);
+        // logger.error('Erreur lors de la synchronisation de l\'utilisateur:', error);
         throw error;
       }
     }
@@ -60,7 +63,6 @@ export const useUserSync = () => {
     }
     
     // Construire l'URL complète
-    const { API_BASE_URL } = require('../config/apiConfig');
     return `${API_BASE_URL}/${imageToUse}`;
   };
 

@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react';
-import { useOptimizedData, useOptimizedFilters, useOptimizedPagination, useOptimizedStats } from '../../hooks/useOptimizedData';
+import { useOptimizedData, useOptimizedFilters, useOptimizedPagination, useOptimizedStats } from '@hooks/useOptimizedData';
 
 describe('useOptimizedData', () => {
   it('returns empty array for null data', () => {

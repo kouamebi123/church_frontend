@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { handleApiError } from '../utils/errorHandler';
+import { handleApiError } from '@utils/errorHandler';
 import { usePerformanceMonitor } from './usePerformanceMonitor';
 
 // Cache global pour éviter les rechargements

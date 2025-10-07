@@ -15,6 +15,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "@tsparticles/react": "^3.0.0",
     "@vercel/speed-insights": "^1.2.0",
     "aos": "^2.3.4",
     "axios": "^1.8.4",
@@ -27,14 +28,12 @@
     "react-leaflet": "^5.0.0",
     "react-organizational-chart": "^2.2.1",
     "react-redux": "^9.2.0",
-    "react-router-dom": "^7.5.0",
-    "react-scripts": "^5.0.1",
+    "react-router-dom": "^7.9.3",
+    "react-scripts": "^0.0.0",
     "react-toastify": "^11.0.5",
-    "react-tsparticles": "^2.12.2",
     "recharts": "^2.15.3",
     "resolve-url-loader": "^5.0.0",
     "socket.io-client": "^4.8.1",
-    "svgo": "^4.0.0",
     "swiper": "^11.2.6",
     "tsparticles": "^3.8.1",
     "web-vitals": "^2.1.4",
@@ -42,41 +41,36 @@
     "yup": "^1.6.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && node scripts/generate-sw.js",
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build && node scripts/generate-sw.js",
     "build:sw": "node scripts/generate-sw.js",
-    "test": "react-scripts test",
-    "test:coverage": "react-scripts test --coverage --watchAll=false",
-    "test:ci": "react-scripts test --coverage --watchAll=false --ci",
-    "test:debug": "react-scripts test --debug",
-    "eject": "react-scripts eject",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage --run",
+    "test:ci": "vitest --coverage --run --reporter=verbose",
+    "test:debug": "vitest --debug",
+    "test:watch": "vitest --watch",
+    "test:components": "vitest --run src/__tests__/components",
+    "test:hooks": "vitest --run src/__tests__/hooks",
+    "test:services": "vitest --run src/__tests__/services",
+    "test:utils": "vitest --run src/__tests__/utils",
+    "test:e2e": "vitest --run src/__tests__/e2e",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
+    "lint:check": "eslint src --ext .js,.jsx,.ts,.tsx --max-warnings 0",
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx,json,css,md}",
-    "format:check": "prettier --check src/**/*.{js,jsx,ts,tsx,json,css,md}"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "format:check": "prettier --check src/**/*.{js,jsx,ts,tsx,json,css,md}",
+    "type-check": "tsc --noEmit",
+    "analyze": "npm run build && npx vite-bundle-analyzer build/assets/*.js",
+    "precommit": "npm run lint:check && npm run format:check && npm run test:ci"
   },
   "devDependencies": {
     "@types/leaflet": "^1.9.19",
-    "@vitejs/plugin-react": "^5.0.1",
+    "@types/node": "^24.7.0",
+    "@vitejs/plugin-react": "^5.0.4",
     "eslint": "^8.57.1",
-    "eslint-config-react-app": "^7.0.1",
-    "vite": "^7.1.3"
+    "prettier": "^3.3.3",
+    "vite": "^7.1.9"
   }
 }

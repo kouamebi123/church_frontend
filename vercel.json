@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "frontend/package.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "build"
@@ -12,11 +12,15 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "frontend/$1"
+      "dest": "/$1"
     }
   ],
   "env": {
-    "REACT_APP_API_URL": "https://church-production-9a34.up.railway.app",
-    "REACT_APP_SOCKET_URL": "https://church-production-9a34.up.railway.app/socket.io"
-  }
+    "VITE_API_URL": "@vite_api_url",
+    "VITE_BACKEND_URL": "@vite_backend_url",
+    "VITE_HIDE_CONSOLE": "true",
+    "VITE_PERFORMANCE_TRACKING": "false"
+  },
+  "buildCommand": "npm run build",
+  "outputDirectory": "build"
 }

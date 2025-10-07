@@ -1,9 +1,9 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useAuth } from './useAuth';
-import socketService from '../services/socketService';
-import messageService from '../services/messageService';
-import logger from '../utils/logger';
-import i18nService from '../services/i18nService';
+import socketService from '@services/socketService';
+import messageService from '@services/messageService';
+import logger from '@utils/logger';
+import i18nService from '@services/i18nService';
 
 export const useRealtimeMessaging = () => {
   const { user, token } = useAuth();

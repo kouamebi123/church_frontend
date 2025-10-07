@@ -1,4 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
+import logger from '@utils/logger';
+
 
 /**
  * Hook pour persister les données des formulaires dans le sessionStorage
@@ -11,7 +13,7 @@ export const useFormPersistence = (formKey, initialData = {}) => {
       const persisted = sessionStorage.getItem(`form_${formKey}`);
       return persisted ? { ...initialData, ...JSON.parse(persisted) } : initialData;
     } catch (error) {
-      // console.warn('Erreur lors de la récupération des données persistées:', error);
+      // logger.warn('Erreur lors de la récupération des données persistées:', error);
       return initialData;
     }
   });
@@ -21,7 +23,7 @@ export const useFormPersistence = (formKey, initialData = {}) => {
     try {
       sessionStorage.setItem(`form_${formKey}`, JSON.stringify(formData));
     } catch (error) {
-      // console.warn('Erreur lors de la persistance des données:', error);
+      // logger.warn('Erreur lors de la persistance des données:', error);
     }
   }, [formData, formKey]);
 
@@ -36,7 +38,7 @@ export const useFormPersistence = (formKey, initialData = {}) => {
     try {
       sessionStorage.removeItem(`form_${formKey}`);
     } catch (error) {
-      // console.warn('Erreur lors de la suppression des données persistées:', error);
+      // logger.warn('Erreur lors de la suppression des données persistées:', error);
     }
   }, [formKey, initialData]);
 
@@ -80,7 +82,7 @@ export const useSelectionPersistence = (selectionKey, initialSelection = null) =
       const persisted = sessionStorage.getItem(`selection_${selectionKey}`);
       return persisted ? JSON.parse(persisted) : initialSelection;
     } catch (error) {
-      // console.warn('Erreur lors de la récupération de la sélection persistée:', error);
+      // logger.warn('Erreur lors de la récupération de la sélection persistée:', error);
       return initialSelection;
     }
   });
@@ -94,7 +96,7 @@ export const useSelectionPersistence = (selectionKey, initialSelection = null) =
         sessionStorage.removeItem(`selection_${selectionKey}`);
       }
     } catch (error) {
-      // console.warn('Erreur lors de la persistance de la sélection:', error);
+      // logger.warn('Erreur lors de la persistance de la sélection:', error);
     }
   }, [selection, selectionKey]);
 
@@ -107,7 +109,7 @@ export const useSelectionPersistence = (selectionKey, initialSelection = null) =
     try {
       sessionStorage.removeItem(`selection_${selectionKey}`);
     } catch (error) {
-      // console.warn('Erreur lors de la suppression de la sélection persistée:', error);
+      // logger.warn('Erreur lors de la suppression de la sélection persistée:', error);
     }
   }, [selectionKey]);
 
