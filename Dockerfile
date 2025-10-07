@@ -26,8 +26,13 @@ RUN npm install -g serve
 # Copier les fichiers buildés
 COPY --from=build /app/build ./build
 
-# Exposer le port
+# Créer un utilisateur non-root
+RUN addgroup -g 1001 -S nodejs && adduser -S nodejs -u 1001
+RUN chown -R nodejs:nodejs /app
+USER nodejs
+
+# Exposer le port (Railway utilise $PORT)
 EXPOSE 3000
 
-# Démarrer l'application
-CMD ["serve", "-s", "build", "-l", "3000"]
+# Démarrer l'application avec variable d'environnement PORT
+CMD ["sh", "-c", "serve -s build -l ${PORT:-3000}"]
