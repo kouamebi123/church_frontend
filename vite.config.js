@@ -51,8 +51,8 @@ export default defineConfig({
     global: 'globalThis',
     'process.env': JSON.stringify({
       NODE_ENV: process.env.NODE_ENV || 'development',
-      VITE_API_URL: process.env.VITE_API_URL || 'http://localhost:5001',
-      VITE_BACKEND_URL: process.env.VITE_BACKEND_URL || 'http://localhost:5001',
+      VITE_API_URL: process.env.VITE_API_URL ||"https://church-production-9a34.up.railway.app" || 'http://localhost:5001',
+      VITE_BACKEND_URL: process.env.VITE_BACKEND_URL ||"https://church-production-9a34.up.railway.app" || 'http://localhost:5001',
       VITE_HIDE_CONSOLE: process.env.VITE_HIDE_CONSOLE || 'false',
       VITE_PERFORMANCE_TRACKING: process.env.VITE_PERFORMANCE_TRACKING || 'false'
     })
