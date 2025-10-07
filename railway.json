@@ -5,8 +5,8 @@
     "dockerfilePath": "Dockerfile"
   },
   "deploy": {
-    "startCommand": "nginx -g 'daemon off;'",
-    "healthcheckPath": "/health",
+    "startCommand": "serve -s build -l 3000",
+    "healthcheckPath": "/",
     "healthcheckTimeout": 300,
     "restartPolicyType": "on_failure",
     "restartPolicyMaxRetries": 10
