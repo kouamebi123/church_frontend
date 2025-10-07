@@ -28,8 +28,12 @@ RUN npm ci --only=production && npm install vite
 COPY --from=build /app/build ./build
 COPY --from=build /app/vite.config.js ./
 
+# Copier le script de démarrage
+COPY start.sh ./
+RUN chmod +x start.sh
+
 # Exposer le port (Railway injecte $PORT)
 EXPOSE 3000
 
-# Utiliser vite preview avec le port dynamique de Railway
-CMD sh -c "npx vite preview --host 0.0.0.0 --port ${PORT:-3000}"
+# Utiliser le script de démarrage avec logs de debug
+CMD ["./start.sh"]
