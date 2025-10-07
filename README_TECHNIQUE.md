@@ -1,4 +1,4 @@
-# 📚 Documentation Technique - Frontend Church Management
+# 📚 Documentation Technique - Frontend Multitudes
 
 ## 🏗️ Architecture
 
