@@ -193,7 +193,7 @@ const Navbar = () => {
           left: 0,
           right: 0,
           height: '2px',
-          background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent)',
+          background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.49), transparent)',
           opacity: isScrolled ? 0 : 1,
           transition: 'opacity 0.4s ease'
         }
