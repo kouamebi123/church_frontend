@@ -209,7 +209,7 @@ const Carousel = () => {
               fontSize: { xs: '2rem', sm: '3rem', md: '4rem' }
             }}
           >
-            {i18nService.t('home.welcome.title')}
+            {i18nService.t('home.welcome.welcomeMessage')}
           </Typography>
           <Divider
             sx={{

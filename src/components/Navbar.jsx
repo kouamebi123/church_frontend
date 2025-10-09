@@ -261,7 +261,7 @@ const Navbar = () => {
           }} 
           variant="h6"
         >
-          {i18nService.t('home.welcome.subtitle')}
+          {i18nService.t('home.welcome.title')}
         </Typography>
       </Box>
 

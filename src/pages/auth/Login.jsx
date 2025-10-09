@@ -201,7 +201,7 @@ const Login = () => {
               animation: 'fadeIn 1s ease-out'
             }}
           >
-              Bienvenue sur ACER HUB !<br/>Accédez à votre espace membre
+              Bienvenue sur MULTITUDES ZNO !<br/>Accédez à votre espace membre
             </Typography>
           <Box
             component="form"

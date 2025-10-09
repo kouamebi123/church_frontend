@@ -13,6 +13,7 @@ import {
   InputLabel,
   FormControl
 } from '@mui/material';
+import { Inbox as InboxIcon } from '@mui/icons-material';
 import { styled } from '@mui/material/styles';
 import Navbar from '@components/Navbar';
 import { useNavigate } from 'react-router-dom';
@@ -47,7 +48,7 @@ const NetworkCard = styled(Paper)(({ theme }) => ({
     left: 0,
     right: 0,
     height: '4px',
-    background: 'linear-gradient(90deg, rgb(59, 20, 100), #662d91, #9e005d)',
+    background: 'linear-gradient(90deg, #662d91, #9e005d, #9e005d)',
     opacity: 0,
     transition: 'opacity 0.4s ease'
   },
@@ -64,22 +65,10 @@ const InfoRow = styled(Box)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  padding: theme.spacing(1.5),
-  borderRadius: '8px',
-  background: 'rgba(102, 45, 145, 0.02)',
-  marginBottom: theme.spacing(1),
-  transition: 'all 0.2s ease',
-  '&:hover': {
-    background: 'rgba(102, 45, 145, 0.05)',
-    transform: 'translateX(4px)'
-  },
-  '& .MuiTypography-subtitle2': {
-    fontWeight: 600,
-    color: theme.palette.text.secondary
-  },
-  '& .MuiTypography-root:not(.MuiTypography-subtitle2)': {
-    fontWeight: 700,
-    color: theme.palette.primary.main
+  padding: theme.spacing(1),
+  borderBottom: `1px solid ${theme.palette.divider}`,
+  '&:last-child': {
+    borderBottom: 'none'
   }
 }));
 
@@ -290,22 +279,11 @@ const Networks = () => {
           )}
         </Box>
         {networks.length === 0 ? (
-          <Box 
-            sx={{ 
-              textAlign: 'center', 
-              py: 8, 
-              px: 2,
-              backgroundColor: 'background.paper',
-              borderRadius: 2,
-              border: '2px dashed',
-              borderColor: 'divider',
-              mx: 2
-            }}
-          >
-            <Typography variant="h5" color="text.secondary" gutterBottom>
+          <Box className="empty-state">
+            <Typography className="empty-state-title">
               Aucun réseau trouvé
             </Typography>
-            <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
+            <Typography className="empty-state-description">
               {selectedChurch 
                 ? i18nService.t('networks.noNetworksForChurch', { churchName: selectedChurch.nom })
                 : i18nService.t('networks.noNetworksAvailable')
