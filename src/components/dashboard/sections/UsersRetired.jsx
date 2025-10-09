@@ -100,13 +100,13 @@ const UsersRetired = ({ selectedChurch }) => {
         >
           <Table stickyHeader>
             <TableHead>
-              <TableRow>
-                <TableCell sx={{ fontWeight: 700, color: 'white' }}>Nom</TableCell>
-                <TableCell sx={{ fontWeight: 700, color: 'white' }}>Pseudo</TableCell>
-                <TableCell sx={{ fontWeight: 700, color: 'white' }}>Qualification</TableCell>
-                <TableCell sx={{ fontWeight: 700, color: 'white' }}>Groupe quitté</TableCell>
-                <TableCell sx={{ fontWeight: 700, color: 'white' }}>Réseau</TableCell>
-                <TableCell sx={{ fontWeight: 700, color: 'white' }}>Date de sortie</TableCell>
+              <TableRow sx={{ background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%) !important' }}>
+                <TableCell sx={{ fontWeight: 700, color: 'white !important', background: 'transparent !important' }}>Nom</TableCell>
+                <TableCell sx={{ fontWeight: 700, color: 'white !important', background: 'transparent !important' }}>Pseudo</TableCell>
+                <TableCell sx={{ fontWeight: 700, color: 'white !important', background: 'transparent !important' }}>Qualification</TableCell>
+                <TableCell sx={{ fontWeight: 700, color: 'white !important', background: 'transparent !important' }}>Groupe quitté</TableCell>
+                <TableCell sx={{ fontWeight: 700, color: 'white !important', background: 'transparent !important' }}>Réseau</TableCell>
+                <TableCell sx={{ fontWeight: 700, color: 'white !important', background: 'transparent !important' }}>Date de sortie</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
