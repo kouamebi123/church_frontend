@@ -15,6 +15,7 @@ import {
 } from '@mui/material';
 import { apiService } from '@services/apiService';
 import { formatQualificationWithFallback } from '@utils/qualificationFormatter';
+import '../../../styles/dashboardSections.css';
 
 const UsersRetired = ({ selectedChurch }) => {
   // Debug: afficher la valeur de selectedChurch
