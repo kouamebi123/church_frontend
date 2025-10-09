@@ -189,8 +189,8 @@ const Dashboard = () => {
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
-          background: 'linear-gradient(135deg, #5B21B6 0%, #7C3AED 50%, #8B5CF6 100%)',
-          boxShadow: '0 4px 20px rgba(91, 33, 182, 0.20)'
+          background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
+          boxShadow: '0 4px 20px rgba(102, 45, 145, 0.20)'
         }}
       >
         <Toolbar>

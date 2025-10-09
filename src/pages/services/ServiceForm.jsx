@@ -165,8 +165,8 @@ const ServiceForm = () => {
           borderRadius: '24px',
           background: 'rgba(255, 255, 255, 0.95)',
           backdropFilter: 'blur(10px)',
-          border: '2px solid rgba(91, 33, 182, 0.1)',
-          boxShadow: '0 10px 40px rgba(91, 33, 182, 0.08)'
+          border: '2px solid rgba(102, 45, 145, 0.1)',
+          boxShadow: '0 10px 40px rgba(102, 45, 145, 0.08)'
         }}
       >
         <Box sx={{ textAlign: 'center', py: 4 }}>
@@ -191,8 +191,8 @@ const ServiceForm = () => {
           background: 'rgba(255, 255, 255, 0.95)',
           backdropFilter: 'blur(10px)',
           borderRadius: '24px',
-          border: '1px solid rgba(91, 33, 182, 0.1)',
-          boxShadow: '0 10px 40px rgba(91, 33, 182, 0.12)'
+          border: '1px solid rgba(102, 45, 145, 0.1)',
+          boxShadow: '0 10px 40px rgba(102, 45, 145, 0.12)'
         }}
       >
         <form onSubmit={formik.handleSubmit}>

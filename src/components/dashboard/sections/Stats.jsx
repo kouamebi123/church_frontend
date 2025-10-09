@@ -216,7 +216,7 @@ const Stats = ({ selectedChurch, refreshKey }) => {
                     variant="h3" 
                     sx={{ 
                       fontWeight: 800,
-                      background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+                      background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       mb: 1
@@ -227,7 +227,7 @@ const Stats = ({ selectedChurch, refreshKey }) => {
                   <Box sx={{ 
                     width: 80, 
                     height: 4, 
-                    background: 'linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6)',
+                    background: 'linear-gradient(90deg, #662d91, #9e005d, #9e005d)',
                     borderRadius: 2
                   }} />
                 </Box>
@@ -267,12 +267,12 @@ const Stats = ({ selectedChurch, refreshKey }) => {
                                     minHeight: 100,
                                     borderRadius: '16px',
                                     background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
-                                    border: '2px solid rgba(91, 33, 182, 0.1)',
-                                    boxShadow: '0 4px 12px rgba(91, 33, 182, 0.08)',
+                                    border: '2px solid rgba(102, 45, 145, 0.1)',
+                                    boxShadow: '0 4px 12px rgba(102, 45, 145, 0.08)',
                                     transition: 'all 0.3s ease',
                                     '&:hover': {
                                       transform: 'translateY(-6px)',
-                                      boxShadow: '0 12px 32px rgba(91, 33, 182, 0.15)',
+                                      boxShadow: '0 12px 32px rgba(102, 45, 145, 0.15)',
                                       borderColor: 'primary.main'
                                     }
                                   }}
@@ -282,7 +282,7 @@ const Stats = ({ selectedChurch, refreshKey }) => {
                                       variant="h4" 
                                       sx={{ 
                                         fontWeight: 800,
-                                        background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+                                        background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
                                         WebkitBackgroundClip: 'text',
                                         WebkitTextFillColor: 'transparent'
                                       }}
@@ -304,8 +304,8 @@ const Stats = ({ selectedChurch, refreshKey }) => {
                             width: '100%',
                             borderRadius: '20px',
                             background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
-                            border: '2px solid rgba(91, 33, 182, 0.1)',
-                            boxShadow: '0 10px 40px rgba(91, 33, 182, 0.08)',
+                            border: '2px solid rgba(102, 45, 145, 0.1)',
+                            boxShadow: '0 10px 40px rgba(102, 45, 145, 0.08)',
                             overflowX: 'auto', 
                             display: 'flex', 
                             flexDirection: 'column', 
@@ -383,9 +383,9 @@ const Stats = ({ selectedChurch, refreshKey }) => {
                                     <Box sx={{ 
                                       background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)', 
                                       borderRadius: '16px', 
-                                      border: '2px solid rgba(91, 33, 182, 0.1)', 
+                                      border: '2px solid rgba(102, 45, 145, 0.1)', 
                                       p: 4,
-                                      boxShadow: '0 4px 12px rgba(91, 33, 182, 0.08)'
+                                      boxShadow: '0 4px 12px rgba(102, 45, 145, 0.08)'
                                     }}>
                                         {(() => {
                                             const date = new Date();
@@ -460,8 +460,8 @@ const Stats = ({ selectedChurch, refreshKey }) => {
                             justifyContent: 'center',
                             borderRadius: '20px',
                             background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
-                            border: '2px solid rgba(91, 33, 182, 0.1)',
-                            boxShadow: '0 10px 40px rgba(91, 33, 182, 0.08)'
+                            border: '2px solid rgba(102, 45, 145, 0.1)',
+                            boxShadow: '0 10px 40px rgba(102, 45, 145, 0.08)'
                           }}
                         >
                             <Typography 
@@ -506,8 +506,8 @@ const Stats = ({ selectedChurch, refreshKey }) => {
                             minHeight: 320,
                             borderRadius: '20px',
                             background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
-                            border: '2px solid rgba(91, 33, 182, 0.1)',
-                            boxShadow: '0 10px 40px rgba(91, 33, 182, 0.08)'
+                            border: '2px solid rgba(102, 45, 145, 0.1)',
+                            boxShadow: '0 10px 40px rgba(102, 45, 145, 0.08)'
                           }}
                         >
                             <Typography 
@@ -582,8 +582,8 @@ const Stats = ({ selectedChurch, refreshKey }) => {
                             justifyContent: 'center',
                             borderRadius: '20px',
                             background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
-                            border: '2px solid rgba(91, 33, 182, 0.1)',
-                            boxShadow: '0 10px 40px rgba(91, 33, 182, 0.08)'
+                            border: '2px solid rgba(102, 45, 145, 0.1)',
+                            boxShadow: '0 10px 40px rgba(102, 45, 145, 0.08)'
                           }}
                         >
                             <Typography 

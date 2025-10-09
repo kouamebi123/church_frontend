@@ -267,7 +267,7 @@ const StatsAssistance = ({ selectedChurch, user }) => {
           variant="h3" 
           sx={{ 
             fontWeight: 800,
-            background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+            background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             mb: 1
@@ -278,7 +278,7 @@ const StatsAssistance = ({ selectedChurch, user }) => {
         <Box sx={{ 
           width: 80, 
           height: 4, 
-          background: 'linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6)',
+          background: 'linear-gradient(90deg, #662d91, #9e005d, #9e005d)',
           borderRadius: 2,
           mb: 2
         }} />
@@ -294,8 +294,8 @@ const StatsAssistance = ({ selectedChurch, user }) => {
           mb: 3,
           borderRadius: '20px',
           background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
-          border: '2px solid rgba(91, 33, 182, 0.1)',
-          boxShadow: '0 10px 40px rgba(91, 33, 182, 0.08)'
+          border: '2px solid rgba(102, 45, 145, 0.1)',
+          boxShadow: '0 10px 40px rgba(102, 45, 145, 0.08)'
         }}
       >
         <Typography 
@@ -392,12 +392,12 @@ const StatsAssistance = ({ selectedChurch, user }) => {
               sx={{
                 borderRadius: '20px',
                 background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
-                border: '2px solid rgba(91, 33, 182, 0.1)',
-                boxShadow: '0 8px 24px rgba(91, 33, 182, 0.08)',
+                border: '2px solid rgba(102, 45, 145, 0.1)',
+                boxShadow: '0 8px 24px rgba(102, 45, 145, 0.08)',
                 transition: 'all 0.3s ease',
                 '&:hover': {
                   transform: 'translateY(-6px)',
-                  boxShadow: '0 12px 36px rgba(91, 33, 182, 0.15)'
+                  boxShadow: '0 12px 36px rgba(102, 45, 145, 0.15)'
                 }
               }}
             >
@@ -409,7 +409,7 @@ const StatsAssistance = ({ selectedChurch, user }) => {
                   variant="h4"
                   sx={{
                     fontWeight: 800,
-                    background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+                    background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent'
                   }}
@@ -426,12 +426,12 @@ const StatsAssistance = ({ selectedChurch, user }) => {
               sx={{
                 borderRadius: '20px',
                 background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
-                border: '2px solid rgba(91, 33, 182, 0.1)',
-                boxShadow: '0 8px 24px rgba(91, 33, 182, 0.08)',
+                border: '2px solid rgba(102, 45, 145, 0.1)',
+                boxShadow: '0 8px 24px rgba(102, 45, 145, 0.08)',
                 transition: 'all 0.3s ease',
                 '&:hover': {
                   transform: 'translateY(-6px)',
-                  boxShadow: '0 12px 36px rgba(91, 33, 182, 0.15)'
+                  boxShadow: '0 12px 36px rgba(102, 45, 145, 0.15)'
                 }
               }}
             >
@@ -443,7 +443,7 @@ const StatsAssistance = ({ selectedChurch, user }) => {
                   variant="h4"
                   sx={{
                     fontWeight: 800,
-                    background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+                    background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent'
                   }}
@@ -460,12 +460,12 @@ const StatsAssistance = ({ selectedChurch, user }) => {
               sx={{
                 borderRadius: '20px',
                 background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
-                border: '2px solid rgba(91, 33, 182, 0.1)',
-                boxShadow: '0 8px 24px rgba(91, 33, 182, 0.08)',
+                border: '2px solid rgba(102, 45, 145, 0.1)',
+                boxShadow: '0 8px 24px rgba(102, 45, 145, 0.08)',
                 transition: 'all 0.3s ease',
                 '&:hover': {
                   transform: 'translateY(-6px)',
-                  boxShadow: '0 12px 36px rgba(91, 33, 182, 0.15)'
+                  boxShadow: '0 12px 36px rgba(102, 45, 145, 0.15)'
                 }
               }}
             >
@@ -491,8 +491,8 @@ const StatsAssistance = ({ selectedChurch, user }) => {
             mb: 3,
             borderRadius: '20px',
             background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
-            border: '2px solid rgba(91, 33, 182, 0.1)',
-            boxShadow: '0 10px 40px rgba(91, 33, 182, 0.08)'
+            border: '2px solid rgba(102, 45, 145, 0.1)',
+            boxShadow: '0 10px 40px rgba(102, 45, 145, 0.08)'
           }}
         >
           <Typography 
@@ -534,8 +534,8 @@ const StatsAssistance = ({ selectedChurch, user }) => {
               textAlign: 'center',
               borderRadius: '20px',
               background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
-              border: '2px solid rgba(91, 33, 182, 0.1)',
-              boxShadow: '0 10px 40px rgba(91, 33, 182, 0.08)'
+              border: '2px solid rgba(102, 45, 145, 0.1)',
+              boxShadow: '0 10px 40px rgba(102, 45, 145, 0.08)'
             }}
           >
             <Typography variant="h6" color="text.secondary">
@@ -553,8 +553,8 @@ const StatsAssistance = ({ selectedChurch, user }) => {
             p: 3,
             borderRadius: '20px',
             background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
-            border: '2px solid rgba(91, 33, 182, 0.1)',
-            boxShadow: '0 10px 40px rgba(91, 33, 182, 0.08)'
+            border: '2px solid rgba(102, 45, 145, 0.1)',
+            boxShadow: '0 10px 40px rgba(102, 45, 145, 0.08)'
           }}
         >
           <Typography 
@@ -568,7 +568,7 @@ const StatsAssistance = ({ selectedChurch, user }) => {
           <Box sx={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
               <thead>
-                  <tr style={{ background: 'linear-gradient(135deg, #5B21B6, #7C3AED)' }}>
+                  <tr style={{ background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)' }}>
                   <th style={{ padding: '12px', textAlign: 'left', borderBottom: 'none', color: 'white', fontWeight: 700 }}>
                     {i18nService.t('assistance.dashboard.table.network')}
                   </th>

@@ -45,10 +45,10 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
   '& .MuiDrawer-paper': {
     width: drawerWidth,
     boxSizing: 'border-box',
-    background: 'linear-gradient(180deg, #4C1D95 0%, #5B21B6 50%, #6D28D9 100%)',
+    background: 'linear-gradient(180deg, #1b1464 0%, #662d91 50%, #662d91 100%)',
     color: theme.palette.primary.contrastText,
     overflowX: 'hidden',
-    boxShadow: '4px 0 20px rgba(91, 33, 182, 0.15)',
+    boxShadow: '4px 0 20px rgba(102, 45, 145, 0.15)',
   },
 }));
 

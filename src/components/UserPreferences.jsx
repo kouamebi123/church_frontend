@@ -201,8 +201,8 @@ const UserPreferences = () => {
         mb: 3,
         borderRadius: '24px',
         background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
-        border: '2px solid rgba(91, 33, 182, 0.1)',
-        boxShadow: '0 10px 40px rgba(91, 33, 182, 0.08)'
+        border: '2px solid rgba(102, 45, 145, 0.1)',
+        boxShadow: '0 10px 40px rgba(102, 45, 145, 0.08)'
       }}
     >
       <Box display="flex" alignItems="center" mb={3}>
@@ -210,12 +210,12 @@ const UserPreferences = () => {
           width: 48,
           height: 48,
           borderRadius: '50%',
-          background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+          background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           mr: 2,
-          boxShadow: '0 4px 12px rgba(91, 33, 182, 0.25)'
+          boxShadow: '0 4px 12px rgba(102, 45, 145, 0.25)'
         }}>
           <Settings sx={{ color: 'white' }} />
         </Box>
@@ -224,7 +224,7 @@ const UserPreferences = () => {
           component="h3"
           sx={{
             fontWeight: 700,
-            background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+            background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent'
           }}

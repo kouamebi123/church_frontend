@@ -21,7 +21,7 @@ const CarouselContainer = styled(Box)(({ theme }) => ({
   overflow: 'hidden',
   marginBottom: theme.spacing(4),
   borderRadius: '0 0 40px 40px',
-  boxShadow: '0 20px 60px rgba(91, 33, 182, 0.20)',
+  boxShadow: '0 20px 60px rgba(102, 45, 145, 0.13)',
   '&::after': {
     content: '""',
     position: 'absolute',
@@ -29,7 +29,7 @@ const CarouselContainer = styled(Box)(({ theme }) => ({
     left: 0,
     right: 0,
     bottom: 0,
-    background: 'linear-gradient(180deg, rgba(90, 33, 182, 0.06) 0%, rgba(90, 33, 182, 0.11) 50%, rgba(90, 33, 182, 0.21) 100%)',
+    background: 'linear-gradient(180deg, rgba(90, 33, 182, 0.04) 0%, rgba(90, 33, 182, 0.06) 50%, rgba(90, 33, 182, 0.12) 100%)',
     pointerEvents: 'none',
     zIndex: 1
   }
@@ -78,7 +78,7 @@ const CarouselCaption = styled(Box)(({ theme }) => ({
   width: '90%',
   maxWidth: '900px',
   padding: theme.spacing(4),
-  background: 'rgba(91, 33, 182, 0.15)',
+  background: 'rgba(102, 45, 145, 0.15)',
   backdropFilter: 'blur(15px)',
   borderRadius: '30px',
   border: '2px solid rgba(255, 255, 255, 0.2)',
@@ -257,19 +257,17 @@ const Carousel = () => {
         <IconButton
           onClick={prevSlide}
           sx={{
-            color: 'var(--carousel-button-hover)',
-            backgroundColor: 'var(--carousel-button-bg)',
-            boxShadow: '0 4px 16px var(--carousel-button-shadow)',
+            color: 'white',
+            background: 'linear-gradient(135deg,rgba(102, 45, 145, 0.35),rgba(158, 0, 92, 0.3))',
+            boxShadow: '0 4px 16px rgba(102, 45, 145, 0.3)',
             width: { xs: 30, sm: 40, md: 48 },
             height: { xs: 30, sm: 40, md: 48 },
             '& svg': { fontSize: { xs: 24, sm: 28, md: 32 } },
             '&:hover': {
-              backgroundColor: 'var(--carousel-button-hover-bg)',
+              background: 'linear-gradient(135deg,rgba(102, 45, 145, 0.35),rgba(158, 0, 92, 0.3))',
               transform: 'scale(1.15)',
-              color: 'var(--carousel-button-active)',
-              border: '2px solid var(--carousel-button-active)',
+              boxShadow: '0 6px 20px rgba(102, 45, 145, 0.4)',
             },
-            border: '2px solid var(--carousel-dot-inactive)',
             transition: 'all 0.3s',
           }}
         >
@@ -278,19 +276,17 @@ const Carousel = () => {
         <IconButton
           onClick={nextSlide}
           sx={{
-            color: 'var(--carousel-button-hover)',
-            backgroundColor: 'var(--carousel-button-bg)',
-            boxShadow: '0 4px 16px var(--carousel-button-shadow)',
+            color: 'white',
+            background: 'linear-gradient(135deg,rgba(102, 45, 145, 0.35),rgba(158, 0, 92, 0.3))',
+            boxShadow: '0 4px 16px rgba(102, 45, 145, 0.3)',
             width: { xs: 30, sm: 40, md: 48 },
             height: { xs: 30, sm: 40, md: 48 },
             '& svg': { fontSize: { xs: 24, sm: 28, md: 32 } },
             '&:hover': {
-              backgroundColor: 'var(--carousel-button-active-bg)',
+              background: 'linear-gradient(135deg,rgba(102, 45, 145, 0.35),rgba(158, 0, 92, 0.3))',
               transform: 'scale(1.15)',
-              color: 'var(--carousel-button-active)',
-              border: '2px solid var(--carousel-button-active)',
+              boxShadow: '0 6px 20px rgba(102, 45, 145, 0.4)',
             },
-            border: '2px solid var(--carousel-dot-inactive)',
             transition: 'all 0.3s',
           }}
         >

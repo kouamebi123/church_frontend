@@ -21,6 +21,7 @@ const UserMenu = ({
   anchorEl, 
   onMenuOpen, 
   onMenuClose,
+  isScrolled = false,
   sx = {} 
 }) => {
   const navigate = useNavigate();
@@ -165,14 +166,19 @@ const UserMenu = ({
             sx={{ 
               width: 44, 
               height: 44, 
-              bgcolor: 'primary.main',
+              background: isScrolled 
+                ? 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)'
+                : 'primary.main',
               cursor: 'pointer',
               border: '2px solid white',
-              boxShadow: '0 4px 12px rgba(91, 33, 182, 0.25)',
+              boxShadow: '0 4px 12px rgba(102, 45, 145, 0.25)',
+              transition: 'all 0.3s ease',
               '&:hover': {
                 transform: 'scale(1.1)',
-                boxShadow: '0 6px 16px rgba(91, 33, 182, 0.35)',
-                transition: 'all 0.3s ease'
+                background: isScrolled 
+                  ? 'linear-gradient(135deg, #1b1464, #662d91)'
+                  : 'primary.dark',
+                boxShadow: '0 6px 16px rgba(102, 45, 145, 0.35)'
               }
             }}
             onError={(e) => {

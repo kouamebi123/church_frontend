@@ -23,7 +23,7 @@ const NoFound = () => {
         transform: 'translate(-50%, -50%)',
         width: '600px',
         height: '600px',
-        background: 'radial-gradient(circle, rgba(91, 33, 182, 0.1) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(102, 45, 145, 0.1) 0%, transparent 70%)',
         animation: 'pulse 3s ease-in-out infinite'
       },
       '@keyframes pulse': {
@@ -39,7 +39,7 @@ const NoFound = () => {
         background: 'rgba(255, 255, 255, 0.95)',
         backdropFilter: 'blur(20px)',
         borderRadius: '40px',
-        boxShadow: '0 20px 60px rgba(91, 33, 182, 0.15)',
+        boxShadow: '0 20px 60px rgba(102, 45, 145, 0.15)',
         border: '2px solid rgba(255, 255, 255, 0.8)',
         position: 'relative',
         zIndex: 1,
@@ -65,7 +65,7 @@ const NoFound = () => {
           variant="h1" 
           sx={{ 
             fontWeight: 900, 
-            background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+            background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             mb: 2, 
@@ -112,13 +112,13 @@ const NoFound = () => {
             py: 1.5,
             fontSize: '1.1rem',
             borderRadius: '12px',
-            background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
-            boxShadow: '0 8px 24px rgba(91, 33, 182, 0.25)',
+            background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
+            boxShadow: '0 8px 24px rgba(102, 45, 145, 0.25)',
             transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
             animation: 'scaleIn 1s ease-out',
             '&:hover': {
-              background: 'linear-gradient(135deg, #4C1D95, #6D28D9)',
-              boxShadow: '0 12px 32px rgba(91, 33, 182, 0.35)',
+              background: 'linear-gradient(135deg, #1b1464, #662d91)',
+              boxShadow: '0 12px 32px rgba(102, 45, 145, 0.35)',
               transform: 'translateY(-3px) scale(1.05)'
             }
           }}

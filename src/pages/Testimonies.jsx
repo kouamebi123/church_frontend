@@ -48,7 +48,7 @@ const StyledContainer = styled(Box)(({ theme }) => ({
     radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.4) 0%, transparent 50%),
-    linear-gradient(135deg, rgba(75, 0, 130, 0.1) 0%, rgba(138, 43, 226, 0.2) 50%, rgba(75, 0, 130, 0.1) 100%),
+    linear-gradient(135deg, rgba(102, 45, 145, 0.1) 0%, rgba(158, 0, 93, 0.2) 50%, rgba(102, 45, 145, 0.1) 100%),
     url('/IMG_7993.jpg')
   `,
   backgroundSize: 'cover, cover, cover, cover, cover',
@@ -66,9 +66,9 @@ const StyledContainer = styled(Box)(({ theme }) => ({
     right: 0,
     bottom: 0,
     background: `
-      linear-gradient(135deg, rgba(75, 0, 130, 0.7) 0%, rgba(138, 43, 226, 0.5) 25%, rgba(255, 20, 147, 0.3) 50%, rgba(75, 0, 130, 0.6) 75%, rgba(75, 0, 130, 0.8) 100%),
+      linear-gradient(135deg, rgba(102, 45, 145, 0.7) 0%, rgba(158, 0, 93, 0.5) 25%, rgba(255, 20, 147, 0.3) 50%, rgba(102, 45, 145, 0.6) 75%, rgba(102, 45, 145, 0.8) 100%),
       radial-gradient(ellipse at top, rgba(255, 255, 255, 0.1) 0%, transparent 70%),
-      radial-gradient(ellipse at bottom, rgba(138, 43, 226, 0.2) 0%, transparent 70%)
+      radial-gradient(ellipse at bottom, rgba(158, 0, 93, 0.2) 0%, transparent 70%)
     `,
     zIndex: 1,
     animation: 'gradientShift 8s ease-in-out infinite',
@@ -82,7 +82,7 @@ const StyledContainer = styled(Box)(({ theme }) => ({
     bottom: 0,
     background: `
       radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
-      radial-gradient(circle at 90% 80%, rgba(138, 43, 226, 0.1) 0%, transparent 20%),
+      radial-gradient(circle at 90% 80%, rgba(158, 0, 93, 0.1) 0%, transparent 20%),
       radial-gradient(circle at 50% 50%, rgba(255, 20, 147, 0.05) 0%, transparent 30%)
     `,
     zIndex: 1,
@@ -133,18 +133,18 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
   maxWidth: '900px',
   background: `
     linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 50%, rgba(255, 255, 255, 0.95) 100%),
-    radial-gradient(circle at 50% 0%, rgba(138, 43, 226, 0.1) 0%, transparent 70%)
+    radial-gradient(circle at 50% 0%, rgba(158, 0, 93, 0.1) 0%, transparent 70%)
   `,
   backdropFilter: 'blur(25px) saturate(180%)',
   borderRadius: theme.spacing(5),
   border: '2px solid transparent',
   backgroundClip: 'padding-box',
   boxShadow: `
-    0 24px 48px rgba(75, 0, 130, 0.15),
-    0 12px 24px rgba(138, 43, 226, 0.1),
+    0 24px 48px rgba(102, 45, 145, 0.15),
+    0 12px 24px rgba(158, 0, 93, 0.1),
     0 6px 12px rgba(255, 20, 147, 0.05),
     inset 0 1px 0 rgba(255, 255, 255, 0.8),
-    inset 0 -1px 0 rgba(138, 43, 226, 0.1)
+    inset 0 -1px 0 rgba(158, 0, 93, 0.1)
   `,
   position: 'relative',
   zIndex: 4,
@@ -154,11 +154,11 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
   '&:hover': {
     transform: 'perspective(1000px) rotateX(0deg) translateY(-8px)',
     boxShadow: `
-      0 36px 72px rgba(75, 0, 130, 0.2),
-      0 18px 36px rgba(138, 43, 226, 0.15),
+      0 36px 72px rgba(102, 45, 145, 0.2),
+      0 18px 36px rgba(158, 0, 93, 0.15),
       0 9px 18px rgba(255, 20, 147, 0.1),
       inset 0 1px 0 rgba(255, 255, 255, 0.9),
-      inset 0 -1px 0 rgba(138, 43, 226, 0.15)
+      inset 0 -1px 0 rgba(158, 0, 93, 0.15)
     `,
   },
   '&::before': {
@@ -170,11 +170,11 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
     height: '6px',
     background: `
       linear-gradient(90deg, 
-        #4B0082 0%, 
-        #8A2BE2 25%, 
+        #1b1464 0%, 
+        #2a3184 25%, 
         #FF1493 50%, 
-        #8A2BE2 75%, 
-        #4B0082 100%
+        #2a3184 75%, 
+        #1b1464 100%
       )
     `,
     borderRadius: `${theme.spacing(5)}px ${theme.spacing(5)}px 0 0`,
@@ -188,9 +188,9 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
     right: 0,
     bottom: 0,
     background: `
-      radial-gradient(circle at 20% 80%, rgba(138, 43, 226, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, rgba(158, 0, 93, 0.05) 0%, transparent 50%),
       radial-gradient(circle at 80% 20%, rgba(255, 20, 147, 0.02) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, rgba(75, 0, 130, 0.02) 0%, transparent 50%)
+      radial-gradient(circle at 40% 40%, rgba(102, 45, 145, 0.02) 0%, transparent 50%)
     `,
     pointerEvents: 'none',
     animation: 'subtleGlow 4s ease-in-out infinite',
@@ -222,11 +222,11 @@ const HeaderSection = styled(Box)(({ theme }) => ({
   padding: theme.spacing(5),
   background: `
     linear-gradient(135deg, 
-      #4B0082 0%, 
-      #8A2BE2 25%, 
+      #1b1464 0%, 
+      #2a3184 25%, 
       #FF1493 50%, 
-      #8A2BE2 75%, 
-      #4B0082 100%
+      #2a3184 75%, 
+      #1b1464 100%
     )
   `,
   backgroundSize: '200% 200%',
@@ -239,15 +239,15 @@ const HeaderSection = styled(Box)(({ theme }) => ({
   transform: 'perspective(1000px) rotateX(5deg)',
   transition: 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
   boxShadow: `
-    0 15px 30px rgba(75, 0, 130, 0.3),
-    0 7.5px 15px rgba(138, 43, 226, 0.2),
+    0 15px 30px rgba(102, 45, 145, 0.3),
+    0 7.5px 15px rgba(158, 0, 93, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.3)
   `,
   '&:hover': {
     transform: 'perspective(1000px) rotateX(0deg) scale(1.02)',
     boxShadow: `
-      0 20px 40px rgba(75, 0, 130, 0.4),
-      0 10px 20px rgba(138, 43, 226, 0.3),
+      0 20px 40px rgba(102, 45, 145, 0.4),
+      0 10px 20px rgba(158, 0, 93, 0.3),
       inset 0 1px 0 rgba(255, 255, 255, 0.4)
     `,
     animation: 'rainbowFlow 2s ease-in-out infinite, headerGlow 1s ease-in-out infinite',
@@ -262,7 +262,7 @@ const HeaderSection = styled(Box)(({ theme }) => ({
     background: `
       radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
       radial-gradient(circle at 80% 80%, rgba(255, 20, 147, 0.2) 0%, transparent 50%),
-      radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.1) 0%, transparent 70%)
+      radial-gradient(circle at 50% 50%, rgba(158, 0, 93, 0.1) 0%, transparent 70%)
     `,
     opacity: 0.8,
     animation: 'sparkle 3s ease-in-out infinite',
@@ -278,8 +278,8 @@ const HeaderSection = styled(Box)(({ theme }) => ({
       conic-gradient(from 0deg at 50% 50%, 
         rgba(255, 255, 255, 0.1) 0deg,
         rgba(255, 20, 147, 0.1) 90deg,
-        rgba(138, 43, 226, 0.1) 180deg,
-        rgba(75, 0, 130, 0.1) 270deg,
+        rgba(158, 0, 93, 0.1) 180deg,
+        rgba(102, 45, 145, 0.1) 270deg,
         rgba(255, 255, 255, 0.1) 360deg
       )
     `,
@@ -355,32 +355,32 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
     backdropFilter: 'blur(10px)',
     transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
     '& fieldset': {
-      border: `2px solid rgba(138, 43, 226, 0.3)`,
+      border: `2px solid rgba(158, 0, 93, 0.3)`,
       transition: 'border-color 0.3s ease',
     },
     '&:hover fieldset': {
-      border: `2px solid rgba(138, 43, 226, 0.5)`,
+      border: `2px solid rgba(158, 0, 93, 0.5)`,
       boxShadow: `
-        0 0 15px rgba(138, 43, 226, 0.2),
+        0 0 15px rgba(158, 0, 93, 0.2),
         inset 0 1px 0 rgba(255, 255, 255, 0.3)
       `,
     },
     '&.Mui-focused fieldset': {
-      border: `2px solid #8A2BE2`,
+      border: `2px solid #2a3184`,
       boxShadow: `
-        0 0 20px rgba(138, 43, 226, 0.3),
-        0 0 0 3px rgba(138, 43, 226, 0.1),
+        0 0 20px rgba(158, 0, 93, 0.3),
+        0 0 0 3px rgba(158, 0, 93, 0.1),
         inset 0 1px 0 rgba(255, 255, 255, 0.4)
       `,
     },
   },
   '& .MuiInputLabel-root': {
-    color: 'rgba(75, 0, 130, 0.7)',
+    color: 'rgba(102, 45, 145, 0.7)',
     fontWeight: 600,
     transition: 'all 0.3s ease',
     '&.Mui-focused': {
-      color: '#8A2BE2',
-      textShadow: '0 0 10px rgba(138, 43, 226, 0.3)',
+      color: '#2a3184',
+      textShadow: '0 0 10px rgba(158, 0, 93, 0.3)',
     },
   },
 }));
@@ -396,21 +396,21 @@ const StyledSelect = styled(Select)(({ theme }) => ({
   backdropFilter: 'blur(10px)',
   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
   '& .MuiOutlinedInput-notchedOutline': {
-    border: `2px solid rgba(138, 43, 226, 0.3)`,
+    border: `2px solid rgba(158, 0, 93, 0.3)`,
     transition: 'border-color 0.3s ease',
   },
   '&:hover .MuiOutlinedInput-notchedOutline': {
-    border: `2px solid rgba(138, 43, 226, 0.5)`,
+    border: `2px solid rgba(158, 0, 93, 0.5)`,
     boxShadow: `
-      0 0 15px rgba(138, 43, 226, 0.2),
+      0 0 15px rgba(158, 0, 93, 0.2),
       inset 0 1px 0 rgba(255, 255, 255, 0.3)
     `,
   },
   '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-    border: `2px solid #8A2BE2`,
+    border: `2px solid #2a3184`,
     boxShadow: `
-      0 0 20px rgba(138, 43, 226, 0.3),
-      0 0 0 3px rgba(138, 43, 226, 0.1),
+      0 0 20px rgba(158, 0, 93, 0.3),
+      0 0 0 3px rgba(158, 0, 93, 0.1),
       inset 0 1px 0 rgba(255, 255, 255, 0.4)
     `,
   },
@@ -418,19 +418,19 @@ const StyledSelect = styled(Select)(({ theme }) => ({
 
 const StyledFormControl = styled(FormControl)(({ theme }) => ({
   '& .MuiInputLabel-root': {
-    color: 'rgba(75, 0, 130, 0.7)',
+    color: 'rgba(102, 45, 145, 0.7)',
     fontWeight: 600,
     transition: 'all 0.3s ease',
     '&.Mui-focused': {
-      color: '#8A2BE2',
-      textShadow: '0 0 10px rgba(138, 43, 226, 0.3)',
+      color: '#2a3184',
+      textShadow: '0 0 10px rgba(158, 0, 93, 0.3)',
     },
   },
 }));
 
 const FileUploadArea = styled(Box)(({ theme }) => ({
   width: '100%',
-  border: `3px dashed #8A2BE2`,
+  border: `3px dashed #2a3184`,
   borderRadius: theme.spacing(4),
   padding: theme.spacing(5),
   textAlign: 'center',
@@ -439,9 +439,9 @@ const FileUploadArea = styled(Box)(({ theme }) => ({
   overflow: 'hidden',
   background: `
     linear-gradient(135deg, 
-      rgba(138, 43, 226, 0.05) 0%, 
+      rgba(158, 0, 93, 0.05) 0%, 
       rgba(255, 20, 147, 0.05) 50%, 
-      rgba(138, 43, 226, 0.05) 100%
+      rgba(158, 0, 93, 0.05) 100%
     )
   `,
   backdropFilter: 'blur(10px)',
@@ -456,7 +456,7 @@ const FileUploadArea = styled(Box)(({ theme }) => ({
     bottom: 0,
     background: `
       linear-gradient(45deg, 
-        rgba(138, 43, 226, 0.1) 0%, 
+        rgba(158, 0, 93, 0.1) 0%, 
         transparent 50%, 
         rgba(255, 20, 147, 0.1) 100%
       )
@@ -469,14 +469,14 @@ const FileUploadArea = styled(Box)(({ theme }) => ({
     borderStyle: 'solid',
     background: `
       linear-gradient(135deg, 
-        rgba(138, 43, 226, 0.1) 0%, 
+        rgba(158, 0, 93, 0.1) 0%, 
         rgba(255, 20, 147, 0.1) 50%, 
-        rgba(138, 43, 226, 0.1) 100%
+        rgba(158, 0, 93, 0.1) 100%
       )
     `,
     transform: 'perspective(1000px) rotateX(0deg) translateY(-4px) scale(1.02)',
     boxShadow: `
-      0 15px 30px rgba(138, 43, 226, 0.2),
+      0 15px 30px rgba(158, 0, 93, 0.2),
       0 10px 20px rgba(255, 20, 147, 0.1),
       inset 0 1px 0 rgba(255, 255, 255, 0.2)
     `,
@@ -487,7 +487,7 @@ const FileUploadArea = styled(Box)(({ theme }) => ({
   '&:active': {
     transform: 'perspective(1000px) rotateX(0deg) translateY(-2px) scale(1.01)',
     boxShadow: `
-      0 10px 20px rgba(138, 43, 226, 0.3),
+      0 10px 20px rgba(158, 0, 93, 0.3),
       0 8px 16px rgba(255, 20, 147, 0.2),
       inset 0 2px 4px rgba(0, 0, 0, 0.1)
     `,
@@ -497,11 +497,11 @@ const FileUploadArea = styled(Box)(({ theme }) => ({
 const SubmitButton = styled(Button)(({ theme }) => ({
   background: `
     linear-gradient(135deg, 
-      #4B0082 0%, 
-      #8A2BE2 25%, 
+      #1b1464 0%, 
+      #2a3184 25%, 
       #FF1493 50%, 
-      #8A2BE2 75%, 
-      #4B0082 100%
+      #2a3184 75%, 
+      #1b1464 100%
     )
   `,
   backgroundSize: '200% 200%',
@@ -517,8 +517,8 @@ const SubmitButton = styled(Button)(({ theme }) => ({
   border: '3px solid transparent',
   backgroundClip: 'padding-box',
   boxShadow: `
-    0 15px 30px rgba(75, 0, 130, 0.3),
-    0 8px 16px rgba(138, 43, 226, 0.2),
+    0 15px 30px rgba(102, 45, 145, 0.3),
+    0 8px 16px rgba(158, 0, 93, 0.2),
     0 0 15px rgba(255, 20, 147, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.3)
   `,
@@ -545,17 +545,17 @@ const SubmitButton = styled(Button)(({ theme }) => ({
     background: `
       linear-gradient(135deg, 
         #2D004D 0%, 
-        #4B0082 25%, 
+        #1b1464 25%, 
         #FF1493 50%, 
-        #4B0082 75%, 
+        #1b1464 75%, 
         #2D004D 100%
       )
     `,
     backgroundSize: '200% 200%',
     animation: 'rainbowButton 1.5s ease-in-out infinite, buttonPulse 0.8s ease-in-out infinite',
     boxShadow: `
-      0 20px 40px rgba(75, 0, 130, 0.4),
-      0 12px 25px rgba(138, 43, 226, 0.3),
+      0 20px 40px rgba(102, 45, 145, 0.4),
+      0 12px 25px rgba(158, 0, 93, 0.3),
       0 0 40px rgba(255, 20, 147, 0.2),
       inset 0 1px 0 rgba(255, 255, 255, 0.4)
     `,
@@ -567,8 +567,8 @@ const SubmitButton = styled(Button)(({ theme }) => ({
   '&:active': {
     transform: 'perspective(1000px) rotateX(0deg) translateY(-3px) scale(1.05)',
     boxShadow: `
-      0 10px 20px rgba(75, 0, 130, 0.5),
-      0 8px 16px rgba(138, 43, 226, 0.4),
+      0 10px 20px rgba(102, 45, 145, 0.5),
+      0 8px 16px rgba(158, 0, 93, 0.4),
       inset 0 3px 6px rgba(0, 0, 0, 0.2)
     `,
   },
@@ -594,16 +594,16 @@ const SubmitButton = styled(Button)(({ theme }) => ({
   '@keyframes buttonPulse': {
     '0%, 100%': {
       boxShadow: `
-        0 20px 40px rgba(75, 0, 130, 0.4),
-        0 12px 25px rgba(138, 43, 226, 0.3),
+        0 20px 40px rgba(102, 45, 145, 0.4),
+        0 12px 25px rgba(158, 0, 93, 0.3),
         0 0 40px rgba(255, 20, 147, 0.2),
         inset 0 1px 0 rgba(255, 255, 255, 0.4)
       `,
     },
     '50%': {
       boxShadow: `
-        0 20px 40px rgba(75, 0, 130, 0.5),
-        0 10px 20px rgba(138, 43, 226, 0.4),
+        0 20px 40px rgba(102, 45, 145, 0.5),
+        0 10px 20px rgba(158, 0, 93, 0.4),
         0 0 50px rgba(255, 20, 147, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.5)
       `,
@@ -962,8 +962,8 @@ const TestimoniesPage = () => {
                          )
                        `,
                        backdropFilter: 'blur(10px)',
-                       border: '1px solid rgba(138, 43, 226, 0.2)',
-                       boxShadow: '0 5px 10px rgba(75, 0, 130, 0.1)',
+                       border: '1px solid rgba(158, 0, 93, 0.2)',
+                       boxShadow: '0 5px 10px rgba(102, 45, 145, 0.1)',
                        '&::before': {
                          content: '""',
                          position: 'absolute',
@@ -971,7 +971,7 @@ const TestimoniesPage = () => {
                          left: 0,
                          right: 0,
                          height: '3px',
-                         background: 'linear-gradient(90deg, #4B0082, #8A2BE2, #FF1493, #8A2BE2, #4B0082)',
+                         background: 'linear-gradient(90deg, #1b1464, #2a3184, #FF1493, #2a3184, #1b1464)',
                          borderRadius: '3px 3px 0 0',
                        },
                      }}
@@ -982,7 +982,7 @@ const TestimoniesPage = () => {
                        sx={{
                          mb: 4,
                          fontWeight: 700,
-                         background: 'linear-gradient(135deg, #4B0082, #8A2BE2, #FF1493)',
+                         background: 'linear-gradient(135deg, #1b1464, #2a3184, #FF1493)',
                          WebkitBackgroundClip: 'text',
                          WebkitTextFillColor: 'transparent',
                          backgroundClip: 'text',
@@ -1000,7 +1000,7 @@ const TestimoniesPage = () => {
                        sx={{
                          mb: 4,
                          lineHeight: 1.8,
-                         color: 'rgba(75, 0, 130, 0.85)',
+                         color: 'rgba(102, 45, 145, 0.85)',
                          fontFamily: '"Crimson Text", serif',
                          textAlign: 'center',
                          maxWidth: '800px',
@@ -1123,7 +1123,7 @@ const TestimoniesPage = () => {
               sx={{
                 mb: 2,
                 fontWeight: 'bold',
-                color: '#4B0082',
+                color: '#1b1464',
                 textAlign: 'center',
                 fontFamily: '"Playfair Display", serif',
                 textShadow: '0 2px 4px var(--text-shadow)'
@@ -1154,7 +1154,7 @@ const TestimoniesPage = () => {
                   variant="h6"
                   sx={{
                     mb: 3,
-                    color: '#4B0082',
+                    color: '#1b1464',
                     borderBottom: '2px solid',
                     borderColor: 'var(--primary-color)',
                     pb: 1,
@@ -1208,7 +1208,7 @@ const TestimoniesPage = () => {
                       </Typography>
                     }
                   />
-                  <FormHelperText sx={{ ml: 4, color: '#4B0082', fontSize: '0.9rem' }}>
+                  <FormHelperText sx={{ ml: 4, color: '#1b1464', fontSize: '0.9rem' }}>
                     {formik.values.isAnonymous
                       ? "Si vous ne souhaitez pas vous identifier, votre témoignage sera publié de manière anonyme"
                       : "Votre nom et prénom seront affichés avec votre témoignage"
@@ -1292,7 +1292,7 @@ const TestimoniesPage = () => {
                   variant="h6"
                   sx={{
                     mb: 3,
-                    color: '#4B0082',
+                    color: '#1b1464',
                     borderBottom: '2px solid',
                     borderColor: 'var(--primary-color)',
                     pb: 1,
@@ -1448,7 +1448,7 @@ const TestimoniesPage = () => {
                   variant="h6"
                   sx={{
                     mb: 3,
-                    color: '#4B0082',
+                    color: '#1b1464',
                     borderBottom: '2px solid',
                     borderColor: 'var(--primary-color)',
                     pb: 1,
@@ -1516,7 +1516,7 @@ const TestimoniesPage = () => {
                       />
                       <label htmlFor="file-upload" style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'flex-start', height: '100%', cursor: 'pointer' }}>
                         <Box display="flex" alignItems="center" gap={1.5}>
-                          <ImageIcon sx={{ fontSize: 28, color: '#4B0082' }} />
+                          <ImageIcon sx={{ fontSize: 28, color: '#1b1464' }} />
                           <Box textAlign="left">
                             <Typography
                               variant="body2"
@@ -1613,7 +1613,7 @@ const TestimoniesPage = () => {
                   variant="h6"
                   sx={{
                     mb: 3,
-                    color: '#4B0082',
+                    color: '#1b1464',
                     borderBottom: '2px solid',
                     borderColor: 'var(--primary-color)',
                     pb: 1,
@@ -1666,7 +1666,7 @@ const TestimoniesPage = () => {
                       </Typography>
                     }
                   />
-                  <FormHelperText sx={{ ml: 4, color: '#4B0082', fontSize: '0.9rem' }}>
+                  <FormHelperText sx={{ ml: 4, color: '#1b1464', fontSize: '0.9rem' }}>
                     {formik.values.wantsToTestify
                       ? "Vous devrez vous identifier et fournir un moyen de contact. L'équipe vous contactera pour confirmer votre participation."
                       : "Votre témoignage sera uniquement publié en ligne."
@@ -1786,7 +1786,7 @@ const TestimoniesPage = () => {
       sx={{
         fontFamily: '"Crimson Text", serif',
         lineHeight: 1.6,
-        color: '#4B0082',
+        color: '#1b1464',
         fontSize: { xs: '1rem', sm: '1.1rem' },
         mb: 1.5, mt: { xs: 1.5, sm: 2 }
       }}

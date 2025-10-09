@@ -668,7 +668,7 @@ const Membres = ({ selectedChurch }) => {
                     variant="h3" 
                     sx={{ 
                       fontWeight: 800,
-                      background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+                      background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       mb: 1
@@ -679,7 +679,7 @@ const Membres = ({ selectedChurch }) => {
                   <Box sx={{ 
                     width: 80, 
                     height: 4, 
-                    background: 'linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6)',
+                    background: 'linear-gradient(90deg, #662d91, #9e005d, #9e005d)',
                     borderRadius: 2
                   }} />
                 </Box>
@@ -737,8 +737,8 @@ const Membres = ({ selectedChurch }) => {
                       elevation={0}
                       sx={{
                         borderRadius: '20px',
-                        border: '2px solid rgba(91, 33, 182, 0.1)',
-                        boxShadow: '0 10px 40px rgba(91, 33, 182, 0.08)',
+                        border: '2px solid rgba(102, 45, 145, 0.1)',
+                        boxShadow: '0 10px 40px rgba(102, 45, 145, 0.08)',
                         overflow: 'hidden'
                       }}
                     >
@@ -847,16 +847,16 @@ const Membres = ({ selectedChurch }) => {
               PaperProps={{
                 sx: {
                   borderRadius: '24px',
-                  boxShadow: '0 20px 60px rgba(91, 33, 182, 0.15)',
+                  boxShadow: '0 20px 60px rgba(102, 45, 145, 0.15)',
                   background: 'rgba(255, 255, 255, 0.98)',
                   backdropFilter: 'blur(20px)',
-                  border: '2px solid rgba(91, 33, 182, 0.1)'
+                  border: '2px solid rgba(102, 45, 145, 0.1)'
                 }
               }}
             >
                 <DialogTitle sx={{
                   fontWeight: 700,
-                  background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+                  background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent'
                 }}>
@@ -921,10 +921,10 @@ const Membres = ({ selectedChurch }) => {
               PaperProps={{
                 sx: {
                   borderRadius: '24px',
-                  boxShadow: '0 20px 60px rgba(91, 33, 182, 0.15)',
+                  boxShadow: '0 20px 60px rgba(102, 45, 145, 0.15)',
                   background: 'rgba(255, 255, 255, 0.98)',
                   backdropFilter: 'blur(20px)',
-                  border: '2px solid rgba(91, 33, 182, 0.1)'
+                  border: '2px solid rgba(102, 45, 145, 0.1)'
                 }
               }}
             >
@@ -933,11 +933,11 @@ const Membres = ({ selectedChurch }) => {
                   alignItems: 'center', 
                   gap: 1,
                   fontWeight: 700,
-                  background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+                  background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent'
                 }}>
-                    <LockResetIcon sx={{ mr: 1, color: '#5B21B6' }} />
+                    <LockResetIcon sx={{ mr: 1, color: '#662d91' }} />
                     {i18nService.t('dashboard.members.resetPasswordDialog.title')}
                 </DialogTitle>
                 <DialogContent sx={{ minWidth: 340 }}>
@@ -1051,16 +1051,16 @@ const Membres = ({ selectedChurch }) => {
                         maxWidth: '800px',
                         margin: '20px',
                         borderRadius: '24px',
-                        boxShadow: '0 20px 60px rgba(91, 33, 182, 0.15)',
+                        boxShadow: '0 20px 60px rgba(102, 45, 145, 0.15)',
                         background: 'rgba(255, 255, 255, 0.98)',
                         backdropFilter: 'blur(20px)',
-                        border: '2px solid rgba(91, 33, 182, 0.1)'
+                        border: '2px solid rgba(102, 45, 145, 0.1)'
                     }
                 }}
             >
                 <DialogTitle sx={{
                   fontWeight: 700,
-                  background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+                  background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent'
                 }}>

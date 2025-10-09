@@ -54,11 +54,11 @@
 }
 
 .MuiButton-contained {
-  box-shadow: 0 4px 12px rgba(91, 33, 182, 0.15) !important;
+  box-shadow: 0 4px 12px rgba(102, 45, 145, 0.15) !important;
 }
 
 .MuiButton-contained:hover {
-  box-shadow: 0 8px 24px rgba(91, 33, 182, 0.25) !important;
+  box-shadow: 0 8px 24px rgba(102, 45, 145, 0.25) !important;
   transform: translateY(-2px);
 }
 
@@ -74,20 +74,20 @@
 }
 
 .MuiTextField-root .MuiOutlinedInput-root:hover {
-  box-shadow: 0 4px 12px rgba(91, 33, 182, 0.08) !important;
+  box-shadow: 0 4px 12px rgba(102, 45, 145, 0.08) !important;
 }
 
 .MuiTextField-root .MuiOutlinedInput-root.Mui-focused {
-  box-shadow: 0 4px 16px rgba(91, 33, 182, 0.15) !important;
+  box-shadow: 0 4px 16px rgba(102, 45, 145, 0.15) !important;
 }
 
 /* Animation pour les tooltips */
 .MuiTooltip-tooltip {
   border-radius: 8px !important;
-  background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
+  background: linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%) !important;
   font-weight: 500 !important;
   padding: 8px 12px !important;
-  box-shadow: 0 8px 24px rgba(91, 33, 182, 0.25) !important;
+  box-shadow: 0 8px 24px rgba(102, 45, 145, 0.25) !important;
 }
 
 /* Amélioration des chips */
@@ -99,7 +99,7 @@
 
 .MuiChip-root:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(91, 33, 182, 0.15) !important;
+  box-shadow: 0 4px 12px rgba(102, 45, 145, 0.15) !important;
 }
 
 /* Amélioration des Select/Dropdowns */
@@ -119,8 +119,8 @@
 /* Menu déroulant des Select */
 .MuiMenu-paper {
   border-radius: 12px !important;
-  boxShadow: 0 10px 40px rgba(91, 33, 182, 0.15) !important;
-  border: 1px solid rgba(91, 33, 182, 0.1) !important;
+  boxShadow: 0 10px 40px rgba(102, 45, 145, 0.15) !important;
+  border: 1px solid rgba(102, 45, 145, 0.1) !important;
   margin-top: 8px !important;
 }
 
@@ -131,23 +131,23 @@
 }
 
 .MuiMenuItem-root:hover {
-  background-color: rgba(91, 33, 182, 0.08) !important;
+  background-color: rgba(102, 45, 145, 0.08) !important;
   transform: translateX(4px);
 }
 
 .MuiMenuItem-root.Mui-selected {
-  background-color: rgba(91, 33, 182, 0.12) !important;
+  background-color: rgba(102, 45, 145, 0.12) !important;
   font-weight: 600 !important;
 }
 
 .MuiMenuItem-root.Mui-selected:hover {
-  background-color: rgba(91, 33, 182, 0.16) !important;
+  background-color: rgba(102, 45, 145, 0.16) !important;
 }
 
 /* Dialog amélioré */
 .MuiDialog-paper {
   border-radius: 20px !important;
-  box-shadow: 0 20px 60px rgba(91, 33, 182, 0.15) !important;
+  box-shadow: 0 20px 60px rgba(102, 45, 145, 0.15) !important;
 }
 
 /* Snackbar/Alert */
@@ -163,7 +163,7 @@
 
 .MuiAutocomplete-paper {
   border-radius: 12px !important;
-  boxShadow: 0 10px 40px rgba(91, 33, 182, 0.15) !important;
+  boxShadow: 0 10px 40px rgba(102, 45, 145, 0.15) !important;
 }
 
 .MuiAutocomplete-option {
@@ -172,6 +172,6 @@
 }
 
 .MuiAutocomplete-option:hover {
-  background-color: rgba(91, 33, 182, 0.08) !important;
+  background-color: rgba(102, 45, 145, 0.08) !important;
 }
 

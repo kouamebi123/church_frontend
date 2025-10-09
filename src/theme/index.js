@@ -15,10 +15,12 @@ export const THEME_CONSTANTS = {
 export const getThemeClass = (theme) => `theme-${theme}`;
 export const getThemeAttribute = (theme) => `data-theme="${theme}"`;
 
-// Export des couleurs par défaut
+// Export des couleurs par défaut - Palette ACER ZNO
 export const DEFAULT_COLORS = {
-  PRIMARY: '#4B0082',
-  SECONDARY: '#8A2BE2',
+  PRIMARY: '#662d91', // Violet principal ACER
+  SECONDARY: '#9e005d', // Magenta ACER
+  TERTIARY: '#2a3184', // Bleu foncé ACER
+  QUATERNARY: '#1b1464', // Bleu marine ACER
   SUCCESS: '#28A745',
   WARNING: '#FFC107',
   ERROR: '#DC3545',

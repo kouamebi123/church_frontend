@@ -167,7 +167,7 @@ const Navbar = () => {
       sx={{
         background: isScrolled 
           ? 'rgba(255, 255, 255, 0.95)' 
-          : 'linear-gradient(135deg, #5B21B6 0%, #7C3AED 50%, #8B5CF6 100%)',
+          : 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
         backdropFilter: isScrolled ? 'blur(20px)' : 'none',
         color: isScrolled ? 'primary.main' : 'white',
         py: 2,
@@ -182,10 +182,10 @@ const Navbar = () => {
         zIndex: 1000,
         height: '70px',
         boxShadow: isScrolled 
-          ? '0 8px 32px rgba(91, 33, 182, 0.12)' 
+          ? '0 8px 32px rgba(102, 45, 145, 0.12)' 
           : '0 4px 20px rgba(0, 0, 0, 0.15)',
         transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-        borderBottom: isScrolled ? '1px solid rgba(91, 33, 182, 0.1)' : 'none',
+        borderBottom: isScrolled ? '1px solid rgba(102, 45, 145, 0.1)' : 'none',
         '&::before': {
           content: '""',
           position: 'absolute',
@@ -238,12 +238,26 @@ const Navbar = () => {
         <Typography 
           sx={{ 
             cursor: 'pointer', 
-            color: isScrolled ? 'primary.main' : 'white',
+            background: isScrolled 
+              ? 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)'
+              : 'transparent',
+            WebkitBackgroundClip: isScrolled ? 'text' : 'unset',
+            WebkitTextFillColor: isScrolled ? 'transparent' : 'white',
+            backgroundClip: isScrolled ? 'text' : 'unset',
+            color: isScrolled ? 'transparent' : 'white',
             fontWeight: 700,
             fontSize: '1.3rem',
             letterSpacing: '0.5px',
-            textShadow: isScrolled ? '0 2px 4px rgba(91, 33, 182, 0.15)' : '0 2px 8px rgba(0,0,0,0.4)',
-            transition: 'all 0.3s ease'
+            textShadow: isScrolled ? 'none' : '0 2px 8px rgba(0,0,0,0.4)',
+            transition: 'all 0.3s ease',
+            '&:hover': {
+              background: isScrolled 
+                ? 'linear-gradient(135deg, #1b1464, #662d91)'
+                : 'transparent',
+              WebkitBackgroundClip: isScrolled ? 'text' : 'unset',
+              WebkitTextFillColor: isScrolled ? 'transparent' : 'white',
+              backgroundClip: isScrolled ? 'text' : 'unset',
+            }
           }} 
           variant="h6"
         >
@@ -278,23 +292,23 @@ const Navbar = () => {
                 py: 1,
                 fontWeight: 600,
                 background: isScrolled 
-                  ? 'transparent'
+                  ? 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)'
                   : 'rgba(255, 255, 255, 0.1)',
                 backdropFilter: isScrolled ? 'none' : 'blur(10px)',
                 border: isScrolled 
-                  ? '2px solid transparent'
+                  ? 'none'
                   : '1px solid rgba(255, 255, 255, 0.2)',
-                color: isScrolled ? 'primary.main' : 'white',
+                color: isScrolled ? 'white' : 'white',
                 transition: 'all 0.3s ease',
                 '&:hover': {
                   background: isScrolled
-                    ? 'rgba(91, 33, 182, 0.08)'
+                    ? 'linear-gradient(135deg, #1b1464, #662d91)'
                     : 'rgba(255, 255, 255, 0.2)',
                   transform: 'translateY(-2px)',
                   boxShadow: isScrolled
-                    ? '0 4px 12px rgba(91, 33, 182, 0.15)'
+                    ? '0 6px 16px rgba(102, 45, 145, 0.35)'
                     : '0 4px 12px rgba(0, 0, 0, 0.2)',
-                  borderColor: isScrolled ? 'primary.main' : 'rgba(255, 255, 255, 0.4)'
+                  borderColor: isScrolled ? 'transparent' : 'rgba(255, 255, 255, 0.4)'
                 }
               }}
             >
@@ -319,23 +333,23 @@ const Navbar = () => {
                 py: 1,
                 fontWeight: 600,
                 background: isScrolled 
-                  ? 'transparent'
+                  ? 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)'
                   : 'rgba(255, 255, 255, 0.1)',
                 backdropFilter: isScrolled ? 'none' : 'blur(10px)',
                 border: isScrolled 
-                  ? '2px solid transparent'
+                  ? 'none'
                   : '1px solid rgba(255, 255, 255, 0.2)',
-                color: isScrolled ? 'primary.main' : 'white',
+                color: isScrolled ? 'white' : 'white',
                 transition: 'all 0.3s ease',
                 '&:hover': {
                   background: isScrolled
-                    ? 'rgba(91, 33, 182, 0.08)'
+                    ? 'linear-gradient(135deg, #1b1464, #662d91)'
                     : 'rgba(255, 255, 255, 0.2)',
                   transform: 'translateY(-2px)',
                   boxShadow: isScrolled
-                    ? '0 4px 12px rgba(91, 33, 182, 0.15)'
+                    ? '0 6px 16px rgba(102, 45, 145, 0.35)'
                     : '0 4px 12px rgba(0, 0, 0, 0.2)',
-                  borderColor: isScrolled ? 'primary.main' : 'rgba(255, 255, 255, 0.4)'
+                  borderColor: isScrolled ? 'transparent' : 'rgba(255, 255, 255, 0.4)'
                 }
               }}
             >
@@ -350,11 +364,11 @@ const Navbar = () => {
                 mt: 1,
                 minWidth: '220px',
                 borderRadius: '16px',
-                boxShadow: '0 10px 40px rgba(91, 33, 182, 0.15)',
+                boxShadow: '0 10px 40px rgba(102, 45, 145, 0.15)',
                 zIndex: 1000,
                 bgcolor: 'background.paper',
                 py: 1.5,
-                border: '1px solid rgba(91, 33, 182, 0.1)',
+                border: '1px solid rgba(102, 45, 145, 0.1)',
                 backdropFilter: 'blur(10px)',
                 background: 'rgba(255, 255, 255, 0.98)',
                 opacity: servicesMenuOpen ? 1 : 0,
@@ -374,7 +388,7 @@ const Navbar = () => {
                     fontWeight: 500,
                     transition: 'all 0.2s ease',
                     '&:hover': {
-                      bgcolor: 'rgba(91, 33, 182, 0.08)',
+                      bgcolor: 'rgba(102, 45, 145, 0.08)',
                       transform: 'translateX(4px)',
                       color: 'primary.main'
                     }
@@ -394,7 +408,7 @@ const Navbar = () => {
                     fontWeight: 500,
                     transition: 'all 0.2s ease',
                     '&:hover': {
-                      bgcolor: 'rgba(91, 33, 182, 0.08)',
+                      bgcolor: 'rgba(102, 45, 145, 0.08)',
                       transform: 'translateX(4px)',
                       color: 'primary.main'
                     }
@@ -412,7 +426,19 @@ const Navbar = () => {
           <IconButton
             color="inherit"
             onClick={handleMessageModalOpen}
-            sx={{ ml: 1 }}
+            sx={{ 
+              ml: 1,
+              background: isScrolled 
+                ? 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)'
+                : 'transparent',
+              color: 'white',
+              transition: 'all 0.3s ease',
+              '&:hover': {
+                background: isScrolled 
+                  ? 'linear-gradient(135deg, #1b1464, #662d91)'
+                  : 'rgba(255, 255, 255, 0.2)'
+              }
+            }}
             title={i18nService.t('navigation.messaging')}
           >
             <Badge 
@@ -429,6 +455,7 @@ const Navbar = () => {
           anchorEl={anchorEl}
           onMenuOpen={handleMenuOpen}
           onMenuClose={handleMenuClose}
+          isScrolled={isScrolled}
         />
       </Box>
       {/* Drawer pour mobile */}

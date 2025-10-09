@@ -186,15 +186,15 @@ const AssistanceModal = ({
         sx: { 
           height: '90vh',
           borderRadius: '24px',
-          boxShadow: '0 20px 60px rgba(91, 33, 182, 0.15)',
+          boxShadow: '0 20px 60px rgba(102, 45, 145, 0.15)',
           background: 'rgba(255, 255, 255, 0.98)',
           backdropFilter: 'blur(20px)',
-          border: '2px solid rgba(91, 33, 182, 0.1)'
+          border: '2px solid rgba(102, 45, 145, 0.1)'
         }
       }}
     >
       <DialogTitle sx={{ 
-        borderBottom: '2px solid rgba(91, 33, 182, 0.1)',
+        borderBottom: '2px solid rgba(102, 45, 145, 0.1)',
         background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)'
       }}>
         <Typography 
@@ -202,7 +202,7 @@ const AssistanceModal = ({
           component="div"
           sx={{
             fontWeight: 700,
-            background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+            background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             mb: 0.5
@@ -285,13 +285,13 @@ const AssistanceModal = ({
                     sx={{ 
                       height: '100%',
                       borderRadius: '16px',
-                      border: '2px solid rgba(91, 33, 182, 0.1)',
+                      border: '2px solid rgba(102, 45, 145, 0.1)',
                       background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
-                      boxShadow: '0 4px 12px rgba(91, 33, 182, 0.08)',
+                      boxShadow: '0 4px 12px rgba(102, 45, 145, 0.08)',
                       transition: 'all 0.3s ease',
                       '&:hover': {
                         transform: 'translateY(-4px)',
-                        boxShadow: '0 8px 24px rgba(91, 33, 182, 0.15)',
+                        boxShadow: '0 8px 24px rgba(102, 45, 145, 0.15)',
                         borderColor: 'primary.main'
                       }
                     }}
@@ -375,9 +375,9 @@ const AssistanceModal = ({
                     p: 2.5, 
                     textAlign: 'center',
                     borderRadius: '16px',
-                    border: '2px solid rgba(91, 33, 182, 0.2)',
+                    border: '2px solid rgba(102, 45, 145, 0.2)',
                     background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
-                    boxShadow: '0 4px 12px rgba(91, 33, 182, 0.08)'
+                    boxShadow: '0 4px 12px rgba(102, 45, 145, 0.08)'
                   }}
                 >
                   <Typography variant="body2" color="text.secondary" sx={{ fontWeight: 600 }}>

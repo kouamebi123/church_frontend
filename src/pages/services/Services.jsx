@@ -36,7 +36,7 @@ const Services = () => {
               variant="h3" 
               sx={{ 
                 fontWeight: 800,
-                background: 'linear-gradient(135deg, #5B21B6, #7C3AED, #8B5CF6)',
+                background: 'linear-gradient(135deg, #662d91, #9e005d, #9e005d)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 letterSpacing: '-0.5px',
@@ -49,7 +49,7 @@ const Services = () => {
               sx={{ 
                 width: '80px', 
                 height: '4px', 
-                background: 'linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6)',
+                background: 'linear-gradient(90deg, #662d91, #9e005d, #9e005d)',
                 borderRadius: '2px',
                 mb: 2
               }} 

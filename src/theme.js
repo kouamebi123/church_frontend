@@ -3,14 +3,14 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#4B0082', // Couleur primaire (Indigo)
-      light: '#8A2BE2', // Couleur secondaire (BlueViolet)
-      dark: '#2D004D',
-      special: 'rgba(138, 160, 248, 0.16)',
-      specialHover: 'rgba(138, 160, 248, 0.32)',
+      main: '#662d91', // Violet principal ACER ZNO
+      light: '#9e005d', // Magenta ACER ZNO
+      dark: '#1b1464', // Bleu marine ACER ZNO
+      special: 'rgba(102, 45, 145, 0.16)',
+      specialHover: 'rgba(102, 45, 145, 0.32)',
     },
     secondary: {
-      main: '#8A2BE2',
+      main: '#2a3184', // Bleu foncé ACER ZNO
     },
     success: {
       main: '#4CAF50', // Vert pour les indicateurs de lecture
@@ -28,7 +28,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"FUTURA", "Open Sans", "Helvetica", "Arial", sans-serif', // Police de soutien ACER ZNO
     h1: {
       fontSize: '2.5rem',
       fontWeight: 600,
@@ -74,7 +74,7 @@ const theme = createTheme({
           msUserSelect: 'text !important',
         },
         '::selection': {
-          backgroundColor: 'rgba(138, 43, 226, 0.2) !important',
+          backgroundColor: 'rgba(102, 45, 145, 0.2) !important',
           color: '#000000 !important',
         },
       },

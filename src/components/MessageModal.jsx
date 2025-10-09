@@ -451,10 +451,10 @@ const MessageModal = ({ open, onClose, messageStats: propMessageStats }) => {
                 backgroundColor: 'rgba(255, 255, 255, 0.95)',
                 borderRadius: '12px',
                 '&:hover': {
-                  boxShadow: '0 2px 8px rgba(91, 33, 182, 0.08)'
+                  boxShadow: '0 2px 8px rgba(102, 45, 145, 0.08)'
                 },
                 '&.Mui-focused': {
-                  boxShadow: '0 4px 12px rgba(91, 33, 182, 0.15)'
+                  boxShadow: '0 4px 12px rgba(102, 45, 145, 0.15)'
                 }
               }
             }}
@@ -537,10 +537,10 @@ const MessageModal = ({ open, onClose, messageStats: propMessageStats }) => {
             backgroundColor: 'rgba(255, 255, 255, 0.95)',
             borderRadius: '12px',
             '&:hover': {
-              boxShadow: '0 2px 8px rgba(91, 33, 182, 0.08)'
+              boxShadow: '0 2px 8px rgba(102, 45, 145, 0.08)'
             },
             '&.Mui-focused': {
-              boxShadow: '0 4px 12px rgba(91, 33, 182, 0.15)'
+              boxShadow: '0 4px 12px rgba(102, 45, 145, 0.15)'
             }
           }
         }}
@@ -565,19 +565,19 @@ const MessageModal = ({ open, onClose, messageStats: propMessageStats }) => {
           onClick={handleSendMessage}
           disabled={loading}
           sx={{
-            background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+            background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
             borderRadius: '12px',
             fontWeight: 700,
             px: 4,
             py: 1.2,
-            boxShadow: '0 4px 12px rgba(91, 33, 182, 0.25)',
+            boxShadow: '0 4px 12px rgba(102, 45, 145, 0.25)',
             '&:hover': {
-              background: 'linear-gradient(135deg, #4C1D95, #6D28D9)',
-              boxShadow: '0 6px 16px rgba(91, 33, 182, 0.35)',
+              background: 'linear-gradient(135deg, #1b1464, #662d91)',
+              boxShadow: '0 6px 16px rgba(102, 45, 145, 0.35)',
               transform: 'translateY(-2px)'
             },
             '&:disabled': {
-              background: 'rgba(91, 33, 182, 0.5)',
+              background: 'rgba(102, 45, 145, 0.5)',
               color: 'white'
             },
             transition: 'all 0.3s ease'
@@ -656,16 +656,16 @@ const MessageModal = ({ open, onClose, messageStats: propMessageStats }) => {
                     : 'linear-gradient(145deg, #F5F3FF 0%, #EDE9FE 100%)',
                   border: '2px solid',
                   borderColor: (conversation.lastMessage.is_read || conversation.lastMessage.message_type === 'sent') 
-                    ? 'rgba(91, 33, 182, 0.1)' 
-                    : 'rgba(91, 33, 182, 0.25)',
+                    ? 'rgba(102, 45, 145, 0.1)' 
+                    : 'rgba(102, 45, 145, 0.25)',
                   boxShadow: (conversation.lastMessage.is_read || conversation.lastMessage.message_type === 'sent')
-                    ? '0 2px 8px rgba(91, 33, 182, 0.05)'
-                    : '0 4px 12px rgba(91, 33, 182, 0.15)',
+                    ? '0 2px 8px rgba(102, 45, 145, 0.05)'
+                    : '0 4px 12px rgba(102, 45, 145, 0.15)',
                   cursor: 'pointer',
                   '&:hover': {
                     background: 'linear-gradient(145deg, #EDE9FE 0%, #DDD6FE 100%)',
-                    boxShadow: '0 4px 12px rgba(91, 33, 182, 0.2)',
-                    borderColor: 'rgba(91, 33, 182, 0.35)'
+                    boxShadow: '0 4px 12px rgba(102, 45, 145, 0.2)',
+                    borderColor: 'rgba(102, 45, 145, 0.35)'
                   },
                   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
                 }}
@@ -799,11 +799,11 @@ const MessageModal = ({ open, onClose, messageStats: propMessageStats }) => {
       {/* Header de la conversation */}
       <Box sx={{ 
         p: 1.5,
-        borderBottom: '2px solid rgba(91, 33, 182, 0.1)', 
+        borderBottom: '2px solid rgba(102, 45, 145, 0.1)', 
         display: 'flex', 
         alignItems: 'center', 
         gap: 1,
-        background: 'linear-gradient(135deg, rgba(91, 33, 182, 0.05), rgba(124, 58, 237, 0.05))',
+        background: 'linear-gradient(135deg, rgba(102, 45, 145, 0.05), rgba(124, 58, 237, 0.05))',
         flexShrink: 0
       }}>
         <IconButton 
@@ -814,7 +814,7 @@ const MessageModal = ({ open, onClose, messageStats: propMessageStats }) => {
             mr: 1,
             color: 'primary.main',
             '&:hover': {
-              backgroundColor: 'rgba(91, 33, 182, 0.1)',
+              backgroundColor: 'rgba(102, 45, 145, 0.1)',
               transform: 'scale(1.1)'
             },
             transition: 'all 0.2s'
@@ -867,7 +867,7 @@ const MessageModal = ({ open, onClose, messageStats: propMessageStats }) => {
             color: 'text.secondary',
             background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
             borderRadius: '16px',
-            border: '2px dashed rgba(91, 33, 182, 0.2)',
+            border: '2px dashed rgba(102, 45, 145, 0.2)',
             m: 2
           }}>
             <Typography 
@@ -895,11 +895,11 @@ const MessageModal = ({ open, onClose, messageStats: propMessageStats }) => {
                     maxWidth: '70%',
                     p: 1.5,
                     borderRadius: '16px',
-                    background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+                    background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
                     color: 'white',
                     position: 'relative',
                     opacity: 0.7,
-                    boxShadow: '0 4px 12px rgba(91, 33, 182, 0.25)'
+                    boxShadow: '0 4px 12px rgba(102, 45, 145, 0.25)'
                   }}
                 >
                   <Typography variant="body2">{tempMessage.content}</Typography>
@@ -934,16 +934,16 @@ const MessageModal = ({ open, onClose, messageStats: propMessageStats }) => {
                     p: 1.5,
                     borderRadius: '16px',
                     background: msg.is_from_current_user 
-                      ? 'linear-gradient(135deg, #5B21B6, #7C3AED)' 
+                      ? 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)' 
                       : 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
                     border: msg.is_from_current_user 
                       ? 'none' 
-                      : '2px solid rgba(91, 33, 182, 0.1)',
+                      : '2px solid rgba(102, 45, 145, 0.1)',
                     color: msg.is_from_current_user ? 'white' : 'text.primary',
                     position: 'relative',
                     boxShadow: msg.is_from_current_user 
-                      ? '0 4px 12px rgba(91, 33, 182, 0.25)' 
-                      : '0 2px 8px rgba(91, 33, 182, 0.08)'
+                      ? '0 4px 12px rgba(102, 45, 145, 0.25)' 
+                      : '0 2px 8px rgba(102, 45, 145, 0.08)'
                   }}
                 >
                   {!msg.is_from_current_user && (
@@ -995,7 +995,7 @@ const MessageModal = ({ open, onClose, messageStats: propMessageStats }) => {
       {/* Zone de réponse */}
       <Box sx={{ 
         p: 1.5, 
-        borderTop: '2px solid rgba(91, 33, 182, 0.1)',
+        borderTop: '2px solid rgba(102, 45, 145, 0.1)',
         background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
         flexShrink: 0
       }}>
@@ -1051,10 +1051,10 @@ const MessageModal = ({ open, onClose, messageStats: propMessageStats }) => {
                 opacity: isSendingMessage ? 0.7 : 1,
                 '&:hover': {
                   backgroundColor: 'rgba(255, 255, 255, 1)',
-                  boxShadow: '0 2px 8px rgba(91, 33, 182, 0.08)'
+                  boxShadow: '0 2px 8px rgba(102, 45, 145, 0.08)'
                 },
                 '&.Mui-focused': {
-                  boxShadow: '0 4px 12px rgba(91, 33, 182, 0.15)'
+                  boxShadow: '0 4px 12px rgba(102, 45, 145, 0.15)'
                 }
               },
               '& .MuiInputBase-input': {
@@ -1067,20 +1067,20 @@ const MessageModal = ({ open, onClose, messageStats: propMessageStats }) => {
             onClick={handleSendReply}
             disabled={!replyMessage.trim() || loading}
             sx={{
-              background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+              background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
               color: 'white',
               width: 44,
               height: 44,
-              boxShadow: '0 4px 12px rgba(91, 33, 182, 0.25)',
+              boxShadow: '0 4px 12px rgba(102, 45, 145, 0.25)',
               transition: 'all 0.3s ease',
               transform: isSendingMessage ? 'scale(0.95)' : 'scale(1)',
               '&:hover': {
-                background: 'linear-gradient(135deg, #4C1D95, #6D28D9)',
-                boxShadow: '0 6px 16px rgba(91, 33, 182, 0.35)',
+                background: 'linear-gradient(135deg, #1b1464, #662d91)',
+                boxShadow: '0 6px 16px rgba(102, 45, 145, 0.35)',
                 transform: isSendingMessage ? 'scale(0.95)' : 'scale(1.1)'
               },
               '&:disabled': {
-                background: 'rgba(91, 33, 182, 0.3)',
+                background: 'rgba(102, 45, 145, 0.3)',
                 color: 'rgba(255, 255, 255, 0.5)',
                 transform: 'scale(1)'
               }
@@ -1125,8 +1125,8 @@ const MessageModal = ({ open, onClose, messageStats: propMessageStats }) => {
           top: '71px',
           right: '0px',
           borderRadius: '20px 0 0 20px',
-          boxShadow: '0 20px 60px rgba(91, 33, 182, 0.15)',
-          border: '2px solid rgba(91, 33, 182, 0.1)',
+          boxShadow: '0 20px 60px rgba(102, 45, 145, 0.15)',
+          border: '2px solid rgba(102, 45, 145, 0.1)',
           background: 'rgba(255, 255, 255, 0.98)',
           backdropFilter: 'blur(20px)',
           display: 'flex',
@@ -1149,14 +1149,14 @@ const MessageModal = ({ open, onClose, messageStats: propMessageStats }) => {
       {/* Header */}
       <Box sx={{ 
         p: 2, 
-        borderBottom: '2px solid rgba(91, 33, 182, 0.1)',
+        borderBottom: '2px solid rgba(102, 45, 145, 0.1)',
         display: 'flex', 
         alignItems: 'center', 
         justifyContent: 'space-between',
         minHeight: 64,
-        background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+                    background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
         borderRadius: '20px 0 0 0',
-        boxShadow: '0 4px 12px rgba(91, 33, 182, 0.15)'
+        boxShadow: '0 4px 12px rgba(102, 45, 145, 0.15)'
       }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           <Typography variant="h6" sx={{ fontSize: '1.2rem', fontWeight: 700, color: 'white' }}>

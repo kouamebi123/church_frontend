@@ -3,20 +3,20 @@
 
 /* ===== THÈME CLAIR (DÉFAUT) ===== */
 [data-theme="light"] {
-  /* Couleurs principales - Palette spirituelle et moderne */
-  --primary-color: #5B21B6;
-  --primary-light: #8B5CF6;
-  --primary-dark: #4C1D95;
-  --secondary-color: #7C3AED;
+  /* Couleurs principales - Palette ACER ZNO */
+  --primary-color: #662d91; /* Violet principal ACER */
+  --primary-light: #9e005d;
+  --primary-dark: #1b1464; /* Bleu marine ACER */
+  --secondary-color: #9e005d; /* Magenta ACER */
   --secondary-light: #A78BFA;
-  --secondary-dark: #6D28D9;
+  --secondary-dark: #2a3184; /* Bleu foncé ACER */
   
   /* Couleurs de fond - Ambiance lumineuse et accueillante */
   --background-primary: #FDFCFE;
   --background-secondary: #F5F3FF;
   --background-tertiary: #EDE9FE;
   --background-elevated: #FFFFFF;
-  --background-overlay: rgba(91, 33, 182, 0.15);
+  --background-overlay: rgba(102, 45, 145, 0.15);
   
   /* Couleurs de texte */
   --text-primary: #212529;
@@ -28,8 +28,8 @@
   /* Couleurs de bordure */
   --border-primary: #DEE2E6;
   --border-secondary: #E9ECEF;
-  --border-accent: #4B0082;
-  --border-focus: #4B0082;
+  --border-accent: #662d91; /* Violet principal ACER */
+  --border-focus: #662d91;
   
   /* Couleurs d'état */
   --success-color: #28A745;
@@ -45,20 +45,20 @@
   --info-light: #D1ECF1;
   --info-dark: #117A8B;
   
-  /* Couleurs d'ombre - Ombres douces et colorées */
-  --shadow-light: rgba(91, 33, 182, 0.08);
-  --shadow-medium: rgba(91, 33, 182, 0.12);
-  --shadow-heavy: rgba(91, 33, 182, 0.20);
-  --shadow-glow: rgba(139, 92, 246, 0.35);
-  --shadow-elevation: 0 10px 40px rgba(91, 33, 182, 0.12);
+  /* Couleurs d'ombre - Ombres douces et colorées ACER */
+  --shadow-light: rgba(102, 45, 145, 0.08);
+  --shadow-medium: rgba(102, 45, 145, 0.12);
+  --shadow-heavy: rgba(102, 45, 145, 0.20);
+  --shadow-glow: rgba(158, 0, 93, 0.35); /* Magenta ACER */
+  --shadow-elevation: 0 10px 40px rgba(102, 45, 145, 0.12);
   
   /* Couleurs de composants */
   --card-background: #FFFFFF;
   --card-border: #E9ECEF;
   --input-background: #FFFFFF;
   --input-border: #DEE2E6;
-  --input-focus: #4B0082;
-  --button-primary: #4B0082;
+  --input-focus: #662d91;
+  --button-primary: #662d91;
   --button-secondary: #6C757D;
   --button-text: #FFFFFF;
   
@@ -87,8 +87,8 @@
   --toast-shadow: rgba(0, 0, 0, 0.15);
   
   /* Couleurs d'accessibilité */
-  --focus-ring: rgba(75, 0, 130, 0.25);
-  --selection-background: rgba(75, 0, 130, 0.2);
+  --focus-ring: rgba(102, 45, 145, 0.25);
+  --selection-background: rgba(102, 45, 145, 0.2);
   --scrollbar-track: #F1F3F4;
   --scrollbar-thumb: #C1C1C1;
   --scrollbar-thumb-hover: #A8A8A8;
@@ -97,17 +97,17 @@
   --overlay-light: rgba(255, 255, 255, 0.1);
   --overlay-medium: rgba(255, 255, 255, 0.3);
   --overlay-heavy: rgba(255, 255, 255, 0.5);
-  --overlay-bottom: rgba(75, 0, 130, 0.8);
-  --overlay-middle: rgba(75, 0, 130, 0.6);
+  --overlay-bottom: rgba(102, 45, 145, 0.8);
+  --overlay-middle: rgba(102, 45, 145, 0.6);
   
   /* Couleurs de modal et de composants spéciaux */
   --modal-bg: rgba(255, 255, 255, 0.95);
   --modal-shadow: rgba(0, 0, 0, 0.1);
   --modal-border-light: rgba(255, 255, 255, 0.2);
   
-  /* Gradients - Dégradés élégants et spirituels */
-  --gradient-primary: linear-gradient(135deg, #5B21B6 0%, #7C3AED 50%, #8B5CF6 100%);
-  --gradient-header: linear-gradient(135deg, #4C1D95 0%, #5B21B6 50%, #6D28D9 100%);
+  /* Gradients - Dégradés ACER ZNO */
+  --gradient-primary: linear-gradient(135deg, #662d91 0%, #662d91 60%, #9e005d 80%, #2a3184 100%);
+  --gradient-header: linear-gradient(135deg, #1b1464 0%, #662d91 50%, #9e005d 100%);
   --gradient-hero: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 50%, #DDD6FE 100%);
   --gradient-card: linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%);
   
@@ -117,14 +117,14 @@
   
   /* Variables pour les composants */
   --upload-bg: rgba(248, 249, 250, 0.8);
-  --upload-hover-bg: rgba(75, 0, 130, 0.05);
-  --upload-shadow: rgba(75, 0, 130, 0.1);
+  --upload-hover-bg: rgba(102, 45, 145, 0.05);
+  --upload-shadow: rgba(102, 45, 145, 0.1);
   
   /* Boutons */
-  --gradient-button: linear-gradient(135deg, #4B0082, #8A2BE2);
-  --gradient-button-hover: linear-gradient(135deg, #2D004D, #4B0082);
-  --button-shadow: rgba(75, 0, 130, 0.3);
-  --button-hover-shadow: rgba(75, 0, 130, 0.4);
+  --gradient-button: linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%);
+  --gradient-button-hover: linear-gradient(135deg, #1b1464, #2a3184);
+  --button-shadow: rgba(102, 45, 145, 0.3);
+  --button-hover-shadow: rgba(102, 45, 145, 0.4);
   --button-disabled: #E9ECEF;
   --button-disabled-text: #6C757D;
   
@@ -133,13 +133,13 @@
   --card-hover-shadow: rgba(0, 0, 0, 0.15);
   
   /* Info boxes */
-  --info-bg: rgba(75, 0, 130, 0.05);
-  --info-border: rgba(75, 0, 130, 0.2);
-  --info-shadow: rgba(75, 0, 130, 0.1);
+  --info-bg: rgba(102, 45, 145, 0.05);
+  --info-border: rgba(102, 45, 145, 0.2);
+  --info-shadow: rgba(102, 45, 145, 0.1);
   
   /* Chips */
-  --chip-bg: rgba(75, 0, 130, 0.1);
-  --chip-border: rgba(75, 0, 130, 0.3);
+  --chip-bg: rgba(102, 45, 145, 0.1);
+  --chip-border: rgba(102, 45, 145, 0.3);
   
   /* Scrollbar */
   --scrollbar-white: rgba(255, 255, 255, 0.3);
@@ -158,13 +158,13 @@
 
 /* ===== THÈME SOMBRE ===== */
 [data-theme="dark"] {
-  /* Couleurs principales */
-  --primary-color: #8A2BE2;
+  /* Couleurs principales - Palette ACER ZNO */
+  --primary-color: #9e005d; /* Magenta ACER pour le thème sombre */
   --primary-light: #B19CD9;
-  --primary-dark: #4B0082;
-  --secondary-color: #B19CD9;
+  --primary-dark: #662d91; /* Violet principal ACER */
+  --secondary-color: #2a3184; /* Bleu foncé ACER */
   --secondary-light: #D4C4E8;
-  --secondary-dark: #8A2BE2;
+  --secondary-dark: #1b1464; /* Bleu marine ACER */
   
   /* Couleurs de fond */
   --background-primary: #121212;
@@ -183,8 +183,8 @@
   /* Couleurs de bordure */
   --border-primary: #404040;
   --border-secondary: #2D2D2D;
-  --border-accent: #8A2BE2;
-  --border-focus: #8A2BE2;
+  --border-accent: #9e005d; /* Magenta ACER */
+  --border-focus: #9e005d;
   
   /* Couleurs d'état */
   --success-color: #4CAF50;
@@ -210,8 +210,8 @@
   --card-border: #404040;
   --input-background: #1E1E1E;
   --input-border: #404040;
-  --input-focus: #8A2BE2;
-  --button-primary: #8A2BE2;
+  --input-focus: #9e005d;
+  --button-primary: #9e005d;
   --button-secondary: #404040;
   --button-text: #FFFFFF;
   
@@ -240,8 +240,8 @@
   --toast-shadow: rgba(0, 0, 0, 0.4);
   
   /* Couleurs d'accessibilité */
-  --focus-ring: rgba(138, 43, 226, 0.25);
-  --selection-background: rgba(138, 43, 226, 0.2);
+  --focus-ring: rgba(158, 0, 93, 0.25);
+  --selection-background: rgba(158, 0, 93, 0.2);
   --scrollbar-track: #2D2D2D;
   --scrollbar-thumb: #404040;
   --scrollbar-thumb-hover: #505050;
@@ -259,8 +259,8 @@
   --modal-border-light: rgba(255, 255, 255, 0.1);
   
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #8A2BE2, #B19CD9);
-  --gradient-header: linear-gradient(135deg, #8A2BE2, #B19CD9);
+  --gradient-primary: linear-gradient(135deg, #9e005d, #2a3184);
+  --gradient-header: linear-gradient(135deg, #1b1464, #662d91);
   
   /* Ombres de texte */
   --text-shadow: rgba(0, 0, 0, 0.5);
@@ -268,14 +268,14 @@
   
   /* Variables pour les composants */
   --upload-bg: rgba(45, 45, 45, 0.8);
-  --upload-hover-bg: rgba(138, 43, 226, 0.1);
-  --upload-shadow: rgba(138, 43, 226, 0.2);
+  --upload-hover-bg: rgba(158, 0, 93, 0.1);
+  --upload-shadow: rgba(158, 0, 93, 0.2);
   
   /* Boutons */
-  --gradient-button: linear-gradient(135deg, #8A2BE2, #B19CD9);
-  --gradient-button-hover: linear-gradient(135deg, #4B0082, #8A2BE2);
-  --button-shadow: rgba(138, 43, 226, 0.3);
-  --button-hover-shadow: rgba(138, 43, 226, 0.4);
+  --gradient-button: linear-gradient(135deg, #9e005d, #2a3184);
+  --gradient-button-hover: linear-gradient(135deg, #662d91, #1b1464);
+  --button-shadow: rgba(158, 0, 93, 0.3);
+  --button-hover-shadow: rgba(158, 0, 93, 0.4);
   --button-disabled: #404040;
   --button-disabled-text: #808080;
   
@@ -284,13 +284,13 @@
   --card-hover-shadow: rgba(0, 0, 0, 0.4);
   
   /* Info boxes */
-  --info-bg: rgba(138, 43, 226, 0.1);
-  --info-border: rgba(138, 43, 226, 0.3);
-  --info-shadow: rgba(138, 43, 226, 0.2);
+  --info-bg: rgba(158, 0, 93, 0.1);
+  --info-border: rgba(158, 0, 93, 0.3);
+  --info-shadow: rgba(158, 0, 93, 0.2);
   
   /* Chips */
-  --chip-bg: rgba(138, 43, 226, 0.2);
-  --chip-border: rgba(138, 43, 226, 0.4);
+  --chip-bg: rgba(158, 0, 93, 0.2);
+  --chip-border: rgba(158, 0, 93, 0.4);
   
   /* Scrollbar */
   --scrollbar-white: rgba(255, 255, 255, 0.2);
@@ -400,7 +400,7 @@ body {
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 60px rgba(91, 33, 182, 0.20);
+  box-shadow: 0 20px 60px rgba(102, 45, 145, 0.20);
 }
 
 .card:hover::before {

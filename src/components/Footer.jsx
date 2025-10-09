@@ -4,7 +4,7 @@ import { Instagram, YouTube } from '@mui/icons-material';
 import i18nService from '@services/i18nService';
 
 const FooterWrapper = styled(Box)(({ theme }) => ({
-  background: 'linear-gradient(135deg, #4C1D95 0%, #5B21B6 50%, #6D28D9 100%)',
+  background: 'linear-gradient(135deg, #1b1464 0%, #662d91 50%, #662d91 100%)',
   color: 'white',
   padding: theme.spacing(4, 0),
   marginTop: 'auto',

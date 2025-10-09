@@ -363,7 +363,7 @@ const Churches = () => {
                     variant="h3" 
                     sx={{ 
                       fontWeight: 800,
-                      background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+                      background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       mb: 1
@@ -374,7 +374,7 @@ const Churches = () => {
                   <Box sx={{ 
                     width: 80, 
                     height: 4, 
-                    background: 'linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6)',
+                    background: 'linear-gradient(90deg, #662d91, #9e005d, #9e005d)',
                     borderRadius: 2
                   }} />
                 </Box>
@@ -391,8 +391,8 @@ const Churches = () => {
                   elevation={0}
                   sx={{
                     borderRadius: '20px',
-                    border: '2px solid rgba(91, 33, 182, 0.1)',
-                    boxShadow: '0 10px 40px rgba(91, 33, 182, 0.08)',
+                    border: '2px solid rgba(102, 45, 145, 0.1)',
+                    boxShadow: '0 10px 40px rgba(102, 45, 145, 0.08)',
                     overflow: 'hidden'
                   }}
                 >

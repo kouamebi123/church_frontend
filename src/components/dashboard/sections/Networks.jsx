@@ -303,7 +303,7 @@ const Networks = ({ selectedChurch, user }) => {
                     variant="h3" 
                     sx={{ 
                       fontWeight: 800,
-                      background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+                      background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       mb: 1
@@ -314,7 +314,7 @@ const Networks = ({ selectedChurch, user }) => {
                   <Box sx={{ 
                     width: 80, 
                     height: 4, 
-                    background: 'linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6)',
+                    background: 'linear-gradient(90deg, #662d91, #9e005d, #2a3184)',
                     borderRadius: 2
                   }} />
                 </Box>
@@ -350,8 +350,8 @@ const Networks = ({ selectedChurch, user }) => {
                   elevation={0}
                   sx={{
                     borderRadius: '20px',
-                    border: '2px solid rgba(91, 33, 182, 0.1)',
-                    boxShadow: '0 10px 40px rgba(91, 33, 182, 0.08)',
+                    border: '2px solid rgba(102, 45, 145, 0.1)',
+                    boxShadow: '0 10px 40px rgba(102, 45, 145, 0.08)',
                     overflow: 'hidden'
                   }}
                 >
@@ -492,14 +492,14 @@ const Networks = ({ selectedChurch, user }) => {
                                                                                                               marginBottom: '6px',
                                                                                                               display: 'flex',
                                                                                                               alignItems: 'center',
-                                                                                                              boxShadow: '0 1px 3px rgba(91, 33, 182, 0.08)',
+                                                                                                              boxShadow: '0 1px 3px rgba(102, 45, 145, 0.08)',
                                                                                                               transition: 'all 0.3s ease',
                                                                                                               cursor: 'pointer',
-                                                                                                              border: '1px solid rgba(91, 33, 182, 0.1)',
+                                                                                                              border: '1px solid rgba(102, 45, 145, 0.1)',
                                                                                                               '&:hover': {
-                                                                                                                  background: 'rgba(139, 92, 246, 0.1)',
+                                                                                                                  background: 'rgba(158, 0, 93, 0.1)',
                                                                                                                   transform: 'translateX(4px)',
-                                                                                                                  boxShadow: '0 4px 8px rgba(91, 33, 182, 0.15)'
+                                                                                                                  boxShadow: '0 4px 8px rgba(102, 45, 145, 0.15)'
                                                                                                               }
                                                                                                           }}
                                                                                                       >

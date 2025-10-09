@@ -420,8 +420,8 @@ const Profile = () => {
           borderRadius: '30px',
           background: 'rgba(255, 255, 255, 0.95)',
           backdropFilter: 'blur(20px)',
-          border: '2px solid rgba(91, 33, 182, 0.1)',
-          boxShadow: '0 20px 60px rgba(91, 33, 182, 0.12)'
+          border: '2px solid rgba(102, 45, 145, 0.1)',
+          boxShadow: '0 20px 60px rgba(102, 45, 145, 0.12)'
         }}
       >
         <Box display="flex" flexDirection="column" alignItems="center" mb={4}>
@@ -728,22 +728,22 @@ const Profile = () => {
         PaperProps={{
           sx: {
             borderRadius: '24px',
-            boxShadow: '0 20px 60px rgba(91, 33, 182, 0.15)',
+            boxShadow: '0 20px 60px rgba(102, 45, 145, 0.15)',
             background: 'rgba(255, 255, 255, 0.98)',
             backdropFilter: 'blur(20px)',
-            border: '2px solid rgba(91, 33, 182, 0.1)'
+            border: '2px solid rgba(102, 45, 145, 0.1)'
           }
         }}
       >
         <DialogTitle sx={{
-          borderBottom: '2px solid rgba(91, 33, 182, 0.1)',
+          borderBottom: '2px solid rgba(102, 45, 145, 0.1)',
           background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)'
         }}>
           <Typography 
             variant="h5"
             sx={{
               fontWeight: 700,
-              background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+              background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
             }}
@@ -1000,13 +1000,13 @@ const Profile = () => {
         PaperProps={{
           sx: {
             borderRadius: '24px',
-            boxShadow: '0 20px 60px rgba(91, 33, 182, 0.15)'
+            boxShadow: '0 20px 60px rgba(102, 45, 145, 0.15)'
           }
         }}
       >
         <DialogTitle sx={{
           fontWeight: 700,
-          background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+          background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent'
         }}>

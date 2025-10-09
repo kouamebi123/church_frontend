@@ -39,7 +39,7 @@ const Overview = () => {
                 variant="h3" 
                 sx={{ 
                   fontWeight: 800,
-                  background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+                  background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   mb: 1
@@ -50,7 +50,7 @@ const Overview = () => {
               <Box sx={{ 
                 width: 80, 
                 height: 4, 
-                background: 'linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6)',
+                background: 'linear-gradient(90deg, #662d91, #9e005d, #9e005d)',
                 borderRadius: 2
               }} />
             </Box>

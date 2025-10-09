@@ -67,13 +67,13 @@ const StyledCard = styled(Card)(({ theme }) => ({
   flexDirection: 'column',
   background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
   borderRadius: '20px',
-  border: '1px solid rgba(91, 33, 182, 0.1)',
-  boxShadow: '0 4px 20px rgba(91, 33, 182, 0.08)',
+  border: '1px solid rgba(102, 45, 145, 0.1)',
+  boxShadow: '0 4px 20px rgba(102, 45, 145, 0.08)',
   transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
   overflow: 'hidden',
   '&:hover': {
     transform: 'translateY(-8px) scale(1.02)',
-    boxShadow: '0 15px 50px rgba(91, 33, 182, 0.18)'
+    boxShadow: '0 15px 50px rgba(102, 45, 145, 0.18)'
   }
 }));
 
@@ -89,12 +89,12 @@ const StatCard = styled(Paper)(({ theme }) => ({
   gap: theme.spacing(1),
   background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
   borderRadius: '16px',
-  border: '1px solid rgba(91, 33, 182, 0.1)',
-  boxShadow: '0 4px 16px rgba(91, 33, 182, 0.08)',
+  border: '1px solid rgba(102, 45, 145, 0.1)',
+  boxShadow: '0 4px 16px rgba(102, 45, 145, 0.08)',
   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
   '&:hover': {
     transform: 'translateY(-6px)',
-    boxShadow: '0 12px 32px rgba(91, 33, 182, 0.15)'
+    boxShadow: '0 12px 32px rgba(102, 45, 145, 0.15)'
   }
 }));
 
@@ -1282,7 +1282,7 @@ const NetworkDetails = () => {
               variant="h3" 
               sx={{ 
                 fontWeight: 800,
-                background: 'linear-gradient(135deg, #5B21B6, #7C3AED, #8B5CF6)',
+                background: 'linear-gradient(135deg, #662d91, #9e005d, #9e005d)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 letterSpacing: '-0.5px',
@@ -1299,13 +1299,13 @@ const NetworkDetails = () => {
             <IconButton 
               onClick={fetchData} 
               sx={{ 
-                background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+                background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
                 color: 'white',
-                boxShadow: '0 4px 12px rgba(91, 33, 182, 0.25)',
+                boxShadow: '0 4px 12px rgba(102, 45, 145, 0.25)',
                 transition: 'all 0.3s ease',
                 '&:hover': { 
-                  background: 'linear-gradient(135deg, #4C1D95, #6D28D9)',
-                  boxShadow: '0 8px 20px rgba(91, 33, 182, 0.35)',
+                  background: 'linear-gradient(135deg, #1b1464, #662d91)',
+                  boxShadow: '0 8px 20px rgba(102, 45, 145, 0.35)',
                   transform: 'scale(1.1) rotate(180deg)'
                 }
               }}
@@ -1322,8 +1322,8 @@ const NetworkDetails = () => {
             mb: 4,
             background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
             borderRadius: '20px',
-            border: '1px solid rgba(91, 33, 182, 0.1)',
-            boxShadow: '0 4px 20px rgba(91, 33, 182, 0.08)'
+            border: '1px solid rgba(102, 45, 145, 0.1)',
+            boxShadow: '0 4px 20px rgba(102, 45, 145, 0.08)'
           }}
         >
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
@@ -1412,8 +1412,8 @@ const NetworkDetails = () => {
             mb: 4,
             background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
             borderRadius: '20px',
-            border: '1px solid rgba(91, 33, 182, 0.1)',
-            boxShadow: '0 4px 20px rgba(91, 33, 182, 0.08)'
+            border: '1px solid rgba(102, 45, 145, 0.1)',
+            boxShadow: '0 4px 20px rgba(102, 45, 145, 0.08)'
           }}
         >
           <Typography 
@@ -1675,16 +1675,16 @@ const NetworkDetails = () => {
           PaperProps={{
             sx: {
               borderRadius: '24px',
-              boxShadow: '0 20px 60px rgba(91, 33, 182, 0.15)',
+              boxShadow: '0 20px 60px rgba(102, 45, 145, 0.15)',
               background: 'rgba(255, 255, 255, 0.98)',
               backdropFilter: 'blur(20px)',
-              border: '2px solid rgba(91, 33, 182, 0.1)'
+              border: '2px solid rgba(102, 45, 145, 0.1)'
             }
           }}
         >
           <DialogTitle sx={{
             fontWeight: 700,
-            background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+            background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent'
           }}>
@@ -1863,7 +1863,7 @@ const NetworkDetails = () => {
         >
           <DialogTitle sx={{
             fontWeight: 700,
-            background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+            background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent'
           }}>
@@ -2398,10 +2398,10 @@ const NetworkDetails = () => {
           PaperProps={{
             sx: {
               borderRadius: '24px',
-              boxShadow: '0 20px 60px rgba(91, 33, 182, 0.15)',
+              boxShadow: '0 20px 60px rgba(102, 45, 145, 0.15)',
               background: 'rgba(255, 255, 255, 0.98)',
               backdropFilter: 'blur(20px)',
-              border: '2px solid rgba(91, 33, 182, 0.1)'
+              border: '2px solid rgba(102, 45, 145, 0.1)'
             }
           }}
           onEnter={async () => {
@@ -2439,7 +2439,7 @@ const NetworkDetails = () => {
         >
           <DialogTitle sx={{
             fontWeight: 700,
-            background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+            background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent'
           }}>
@@ -2547,16 +2547,16 @@ const NetworkDetails = () => {
           PaperProps={{
             sx: {
               borderRadius: '24px',
-              boxShadow: '0 20px 60px rgba(91, 33, 182, 0.15)',
+              boxShadow: '0 20px 60px rgba(102, 45, 145, 0.15)',
               background: 'rgba(255, 255, 255, 0.98)',
               backdropFilter: 'blur(20px)',
-              border: '2px solid rgba(91, 33, 182, 0.1)'
+              border: '2px solid rgba(102, 45, 145, 0.1)'
             }
           }}
         >
           <DialogTitle sx={{
             fontWeight: 700,
-            background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+            background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent'
           }}>

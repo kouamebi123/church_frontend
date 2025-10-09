@@ -92,10 +92,10 @@ const TreeNode = ({ node, expandedNodes, onToggle, level = 0 }) => {
           minWidth: node.niveau === 0 ? 200 : node.niveau === 1 ? 160 : 130,
           transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
           mb: hasChildren && isExpanded ? 2 : 0,
-          boxShadow: '0 4px 12px rgba(91, 33, 182, 0.08)',
+          boxShadow: '0 4px 12px rgba(102, 45, 145, 0.08)',
           '&:hover': hasChildren ? {
             transform: 'translateY(-4px) scale(1.02)',
-            boxShadow: '0 8px 24px rgba(91, 33, 182, 0.15)',
+            boxShadow: '0 8px 24px rgba(102, 45, 145, 0.15)',
             borderColor: `${getLevelColor(node.niveau)}.dark`
           } : {}
         }}
@@ -467,7 +467,7 @@ const ChaineImpact = ({ selectedChurch }) => {
             variant="h3" 
             sx={{ 
               fontWeight: 800,
-              background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+              background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               mb: 1
@@ -478,7 +478,7 @@ const ChaineImpact = ({ selectedChurch }) => {
           <Box sx={{ 
             width: 80, 
             height: 4, 
-            background: 'linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6)',
+            background: 'linear-gradient(90deg, #662d91, #9e005d, #9e005d)',
             borderRadius: 2
           }} />
         </Box>
@@ -492,8 +492,8 @@ const ChaineImpact = ({ selectedChurch }) => {
             background: 'rgba(255, 255, 255, 0.98)',
             backdropFilter: 'blur(10px)',
             borderRadius: '12px',
-            border: '2px solid rgba(91, 33, 182, 0.1)',
-            boxShadow: '0 4px 12px rgba(91, 33, 182, 0.08)'
+            border: '2px solid rgba(102, 45, 145, 0.1)',
+            boxShadow: '0 4px 12px rgba(102, 45, 145, 0.08)'
           }}>
             <Typography 
               variant="caption" 
@@ -512,7 +512,7 @@ const ChaineImpact = ({ selectedChurch }) => {
               sx={{
                 color: 'primary.main',
                 '&:hover': {
-                  backgroundColor: 'rgba(91, 33, 182, 0.1)',
+                  backgroundColor: 'rgba(102, 45, 145, 0.1)',
                   transform: 'scale(1.1)'
                 },
                 transition: 'all 0.2s'
@@ -539,7 +539,7 @@ const ChaineImpact = ({ selectedChurch }) => {
               sx={{
                 color: 'primary.main',
                 '&:hover': {
-                  backgroundColor: 'rgba(91, 33, 182, 0.1)',
+                  backgroundColor: 'rgba(102, 45, 145, 0.1)',
                   transform: 'scale(1.1)'
                 },
                 transition: 'all 0.2s'
@@ -555,7 +555,7 @@ const ChaineImpact = ({ selectedChurch }) => {
                 ml: 1,
                 color: 'primary.main',
                 '&:hover': {
-                  backgroundColor: 'rgba(91, 33, 182, 0.1)',
+                  backgroundColor: 'rgba(102, 45, 145, 0.1)',
                   transform: 'scale(1.1)'
                 },
                 transition: 'all 0.2s'
@@ -574,10 +574,10 @@ const ChaineImpact = ({ selectedChurch }) => {
               color: 'primary.main',
               background: 'rgba(255, 255, 255, 0.98)',
               backdropFilter: 'blur(10px)',
-              border: '2px solid rgba(91, 33, 182, 0.1)',
-              boxShadow: '0 4px 12px rgba(91, 33, 182, 0.08)',
+              border: '2px solid rgba(102, 45, 145, 0.1)',
+              boxShadow: '0 4px 12px rgba(102, 45, 145, 0.08)',
               '&:hover': {
-                backgroundColor: 'rgba(91, 33, 182, 0.1)',
+                backgroundColor: 'rgba(102, 45, 145, 0.1)',
                 transform: 'rotate(180deg)',
                 borderColor: 'primary.main'
               },
@@ -626,8 +626,8 @@ const ChaineImpact = ({ selectedChurch }) => {
             p: 5,
             borderRadius: '20px',
             background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
-            border: '2px solid rgba(91, 33, 182, 0.1)',
-            boxShadow: '0 10px 40px rgba(91, 33, 182, 0.08)'
+            border: '2px solid rgba(102, 45, 145, 0.1)',
+            boxShadow: '0 10px 40px rgba(102, 45, 145, 0.08)'
           }}
         >
           <Typography 
@@ -657,8 +657,8 @@ const ChaineImpact = ({ selectedChurch }) => {
             touchAction: 'none',
             borderRadius: '20px',
             background: 'linear-gradient(145deg, #FDFCFE 0%, #F5F3FF 100%)',
-            border: '2px solid rgba(91, 33, 182, 0.1)',
-            boxShadow: '0 10px 40px rgba(91, 33, 182, 0.08)'
+            border: '2px solid rgba(102, 45, 145, 0.1)',
+            boxShadow: '0 10px 40px rgba(102, 45, 145, 0.08)'
           }}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
@@ -678,8 +678,8 @@ const ChaineImpact = ({ selectedChurch }) => {
             fontSize: '0.75rem',
             fontWeight: 600,
             color: 'primary.main',
-            border: '2px solid rgba(91, 33, 182, 0.1)',
-            boxShadow: '0 4px 12px rgba(91, 33, 182, 0.1)'
+            border: '2px solid rgba(102, 45, 145, 0.1)',
+            boxShadow: '0 4px 12px rgba(102, 45, 145, 0.1)'
           }}>
             Glisser pour déplacer • Molette pour zoomer
           </Box>

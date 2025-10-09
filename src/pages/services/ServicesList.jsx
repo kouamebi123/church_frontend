@@ -338,8 +338,8 @@ const ServicesList = () => {
           borderRadius: '24px',
           background: 'rgba(255, 255, 255, 0.95)',
           backdropFilter: 'blur(10px)',
-          border: '2px solid rgba(91, 33, 182, 0.1)',
-          boxShadow: '0 10px 40px rgba(91, 33, 182, 0.08)'
+          border: '2px solid rgba(102, 45, 145, 0.1)',
+          boxShadow: '0 10px 40px rgba(102, 45, 145, 0.08)'
         }}
       >
         <Box sx={{ textAlign: 'center', py: 4 }}>
@@ -364,8 +364,8 @@ const ServicesList = () => {
           background: 'rgba(255, 255, 255, 0.95)',
           backdropFilter: 'blur(10px)',
           borderRadius: '24px',
-          border: '1px solid rgba(91, 33, 182, 0.1)',
-          boxShadow: '0 10px 40px rgba(91, 33, 182, 0.12)'
+          border: '1px solid rgba(102, 45, 145, 0.1)',
+          boxShadow: '0 10px 40px rgba(102, 45, 145, 0.12)'
         }}
       >
         
@@ -526,16 +526,16 @@ const ServicesList = () => {
           PaperProps={{
             sx: {
               borderRadius: '24px',
-              boxShadow: '0 20px 60px rgba(91, 33, 182, 0.15)',
+              boxShadow: '0 20px 60px rgba(102, 45, 145, 0.15)',
               background: 'rgba(255, 255, 255, 0.98)',
               backdropFilter: 'blur(20px)',
-              border: '2px solid rgba(91, 33, 182, 0.1)'
+              border: '2px solid rgba(102, 45, 145, 0.1)'
             }
           }}
         >
           <DialogTitle sx={{
             fontWeight: 700,
-            background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+            background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent'
           }}>

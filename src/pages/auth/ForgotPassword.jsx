@@ -119,7 +119,7 @@ const ForgotPassword = () => {
                 backdropFilter: 'blur(20px)',
                 borderRadius: '30px',
                 border: '2px solid rgba(255, 255, 255, 0.8)',
-                boxShadow: '0 20px 60px rgba(91, 33, 182, 0.15)',
+                boxShadow: '0 20px 60px rgba(102, 45, 145, 0.15)',
                 animation: 'fadeIn 0.8s ease-out'
               }}
             >
@@ -140,7 +140,7 @@ const ForgotPassword = () => {
                 mb: 3, 
                 mt: 2,
                 fontWeight: 700,
-                background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+                background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 animation: 'fadeIn 0.8s ease-out'
@@ -251,16 +251,16 @@ const ForgotPassword = () => {
               backdropFilter: 'blur(20px)',
               borderRadius: '30px',
               border: '2px solid rgba(255, 255, 255, 0.8)',
-              boxShadow: '0 20px 60px rgba(91, 33, 182, 0.15)',
+              boxShadow: '0 20px 60px rgba(102, 45, 145, 0.15)',
               animation: 'fadeIn 0.8s ease-out'
             }}
           >
           <Avatar sx={{ 
             m: 1, 
-            background: 'linear-gradient(135deg, #5B21B6, #7C3AED)', 
+            background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)', 
             width: 72, 
             height: 72,
-            boxShadow: '0 8px 24px rgba(91, 33, 182, 0.25)',
+            boxShadow: '0 8px 24px rgba(102, 45, 145, 0.25)',
             animation: 'scaleIn 0.6s ease-out'
           }}>
             <LockResetOutlined sx={{ fontSize: 36 }} />
@@ -272,7 +272,7 @@ const ForgotPassword = () => {
               mb: 3, 
               mt: 2,
               fontWeight: 700,
-              background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+              background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               animation: 'fadeIn 0.8s ease-out'
@@ -287,7 +287,7 @@ const ForgotPassword = () => {
               mb: 3, 
               width: '100%',
               borderRadius: '12px',
-              boxShadow: '0 4px 12px rgba(91, 33, 182, 0.08)'
+              boxShadow: '0 4px 12px rgba(102, 45, 145, 0.08)'
             }}
           >
             Entrez votre email pour recevoir les instructions de réinitialisation

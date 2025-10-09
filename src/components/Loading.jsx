@@ -13,12 +13,12 @@ const Loading = ({ titre }) => (
       width: 120,
       height: 120,
       borderRadius: '50%',
-      background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+      background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       mb: 3,
-      boxShadow: '0 8px 24px rgba(91, 33, 182, 0.25)',
+      boxShadow: '0 8px 24px rgba(102, 45, 145, 0.25)',
       animation: 'pulse 2s ease-in-out infinite'
     }}>
       <CircularProgress 
@@ -33,7 +33,7 @@ const Loading = ({ titre }) => (
     <Typography variant="h5" sx={{ 
       fontWeight: 800, 
       mb: 1,
-      background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+      background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
       WebkitBackgroundClip: 'text',
       WebkitTextFillColor: 'transparent'
     }}>
@@ -45,7 +45,7 @@ const Loading = ({ titre }) => (
     <Box sx={{ 
       width: 200, 
       height: 8, 
-      background: 'rgba(91, 33, 182, 0.1)', 
+      background: 'rgba(102, 45, 145, 0.1)', 
       borderRadius: 4, 
       overflow: 'hidden',
       position: 'relative'
@@ -53,9 +53,9 @@ const Loading = ({ titre }) => (
       <Box sx={{ 
         width: '60%', 
         height: '100%', 
-        background: 'linear-gradient(90deg, #5B21B6, #7C3AED)', 
+        background: 'linear-gradient(90deg, #662d91, #9e005d)', 
         animation: 'progressBar 1.5s infinite alternate',
-        boxShadow: '0 0 10px rgba(91, 33, 182, 0.5)'
+        boxShadow: '0 0 10px rgba(102, 45, 145, 0.5)'
       }} />
     </Box>
     <style>{`

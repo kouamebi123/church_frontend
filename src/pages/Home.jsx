@@ -30,17 +30,17 @@ const StatCard = styled(Paper, {
   alignItems: 'center',
   gap: theme.spacing(2),
   background: isTotal 
-    ? 'linear-gradient(135deg, #5B21B6 0%, #7C3AED 50%, #8B5CF6 100%)'
+    ? 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)'
     : 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
   color: isTotal ? 'white' : theme.palette.text.primary,
   borderRadius: '20px',
   boxShadow: isTotal 
-    ? '0 10px 40px rgba(91, 33, 182, 0.25)' 
-    : '0 4px 20px rgba(91, 33, 182, 0.08)',
+    ? '0 10px 40px rgba(102, 45, 145, 0.25)' 
+    : '0 4px 20px rgba(102, 45, 145, 0.08)',
   transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
   position: 'relative',
   overflow: 'hidden',
-  border: isTotal ? 'none' : '1px solid rgba(91, 33, 182, 0.1)',
+  border: isTotal ? 'none' : '1px solid rgba(102, 45, 145, 0.1)',
   '&::before': {
     content: '""',
     position: 'absolute',
@@ -50,15 +50,15 @@ const StatCard = styled(Paper, {
     height: '4px',
     background: isTotal 
       ? 'linear-gradient(90deg, rgba(255,255,255,0.3), rgba(255,255,255,0.6), rgba(255,255,255,0.3))'
-      : 'linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6)',
+      : 'linear-gradient(90deg, #662d91, #9e005d, #9e005d)',
     opacity: 0,
     transition: 'opacity 0.4s ease'
   },
   '&:hover': {
     transform: 'translateY(-12px) scale(1.02)',
     boxShadow: isTotal
-      ? '0 20px 60px rgba(91, 33, 182, 0.35)'
-      : '0 15px 50px rgba(91, 33, 182, 0.18)',
+      ? '0 20px 60px rgba(102, 45, 145, 0.35)'
+      : '0 15px 50px rgba(102, 45, 145, 0.18)',
     '&::before': {
       opacity: 1
     }
@@ -78,12 +78,12 @@ const IconWrapper = styled(Box, {
   justifyContent: 'center',
   background: isTotal 
     ? 'linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.1))'
-    : 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+    : 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
   color: 'white',
   marginBottom: theme.spacing(2),
   boxShadow: isTotal
     ? '0 8px 20px rgba(255, 255, 255, 0.2)'
-    : '0 8px 20px rgba(91, 33, 182, 0.25)',
+    : '0 8px 20px rgba(102, 45, 145, 0.25)',
   transition: 'all 0.4s ease',
   backdropFilter: isTotal ? 'blur(10px)' : 'none',
   border: isTotal ? '2px solid rgba(255,255,255,0.3)' : 'none',
@@ -91,7 +91,7 @@ const IconWrapper = styled(Box, {
     transform: 'scale(1.15) rotate(5deg)',
     boxShadow: isTotal
       ? '0 12px 30px rgba(255, 255, 255, 0.3)'
-      : '0 12px 30px rgba(91, 33, 182, 0.35)'
+      : '0 12px 30px rgba(102, 45, 145, 0.35)'
   }
 }));
 
@@ -195,11 +195,11 @@ const Home = () => {
             mb: 2, 
             textAlign: 'center', 
             fontWeight: 800, 
-            background: 'linear-gradient(135deg, #5B21B6, #7C3AED, #8B5CF6)',
+            background: 'linear-gradient(135deg, #662d91, #9e005d, #9e005d)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
-            textShadow: '0 4px 12px rgba(91, 33, 182, 0.15)',
+            textShadow: '0 4px 12px rgba(102, 45, 145, 0.15)',
             letterSpacing: '-0.5px',
             animation: 'fadeIn 0.8s ease-out'
           }}
@@ -210,7 +210,7 @@ const Home = () => {
           sx={{ 
             width: '80px', 
             height: '4px', 
-            background: 'linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6)',
+            background: 'linear-gradient(90deg, #662d91, #9e005d, #9e005d)',
             margin: '0 auto 4rem',
             borderRadius: '2px',
             animation: 'scaleIn 0.6s ease-out'

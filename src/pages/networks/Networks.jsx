@@ -35,8 +35,8 @@ const NetworkCard = styled(Paper)(({ theme }) => ({
   gap: theme.spacing(2),
   background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
   borderRadius: '20px',
-  border: '1px solid rgba(91, 33, 182, 0.1)',
-  boxShadow: '0 4px 20px rgba(91, 33, 182, 0.08)',
+  border: '1px solid rgba(102, 45, 145, 0.1)',
+  boxShadow: '0 4px 20px rgba(102, 45, 145, 0.08)',
   transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
   position: 'relative',
   overflow: 'hidden',
@@ -47,13 +47,13 @@ const NetworkCard = styled(Paper)(({ theme }) => ({
     left: 0,
     right: 0,
     height: '4px',
-    background: 'linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6)',
+    background: 'linear-gradient(90deg, #662d91, #9e005d, #9e005d)',
     opacity: 0,
     transition: 'opacity 0.4s ease'
   },
   '&:hover': {
     transform: 'translateY(-10px) scale(1.02)',
-    boxShadow: '0 15px 50px rgba(91, 33, 182, 0.18)',
+    boxShadow: '0 15px 50px rgba(102, 45, 145, 0.18)',
     '&::before': {
       opacity: 1
     }
@@ -231,7 +231,7 @@ const Networks = () => {
               variant="h3" 
               sx={{ 
                 fontWeight: 800,
-                background: 'linear-gradient(135deg, #5B21B6, #7C3AED, #8B5CF6)',
+                background: 'linear-gradient(135deg, #662d91, #9e005d, #9e005d)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 letterSpacing: '-0.5px',
@@ -244,7 +244,7 @@ const Networks = () => {
               sx={{ 
                 width: '80px', 
                 height: '4px', 
-                background: 'linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6)',
+                background: 'linear-gradient(90deg, #662d91, #9e005d, #9e005d)',
                 borderRadius: '2px'
               }} 
             />
@@ -327,7 +327,7 @@ const Networks = () => {
                     color: 'primary.main',
                     mb: 3,
                     pb: 2,
-                    borderBottom: '2px solid rgba(91, 33, 182, 0.1)'
+                    borderBottom: '2px solid rgba(102, 45, 145, 0.1)'
                   }}
                 >
                   {network.nom}
@@ -379,11 +379,11 @@ const Networks = () => {
 
                 <InfoRow sx={{
                   background: 'linear-gradient(145deg, #F5F3FF 0%, #EDE9FE 100%)',
-                  border: '2px solid rgba(91, 33, 182, 0.2)',
+                  border: '2px solid rgba(102, 45, 145, 0.2)',
                   borderRadius: '12px',
                   p: 2,
                   mt: 2,
-                  boxShadow: '0 2px 8px rgba(91, 33, 182, 0.1)'
+                  boxShadow: '0 2px 8px rgba(102, 45, 145, 0.1)'
                 }}>
                   <Typography variant="h6" sx={{ fontWeight: 700, fontSize: '1.1rem', color: 'primary.main' }}>
                     {i18nService.t('networks.list.total')}
@@ -391,7 +391,7 @@ const Networks = () => {
                   <Typography sx={{ 
                     fontWeight: 800, 
                     fontSize: '1.4rem',
-                    background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+                    background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent'
                   }}>
@@ -411,20 +411,20 @@ const Networks = () => {
                       (userNetworkId === null || String(userNetworkId) !== String(network.id))
                     }
                     sx={{
-                      background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+                      background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
                       py: 1.5,
                       fontWeight: 700,
                       fontSize: '1rem',
                       borderRadius: '12px',
-                      boxShadow: '0 4px 12px rgba(91, 33, 182, 0.25)',
+                      boxShadow: '0 4px 12px rgba(102, 45, 145, 0.25)',
                       transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                       '&:hover': {
-                        background: 'linear-gradient(135deg, #4C1D95, #6D28D9)',
-                        boxShadow: '0 8px 20px rgba(91, 33, 182, 0.35)',
+                        background: 'linear-gradient(135deg, #1b1464, #662d91)',
+                        boxShadow: '0 8px 20px rgba(102, 45, 145, 0.35)',
                         transform: 'translateY(-2px)'
                       },
                       '&:disabled': {
-                        background: 'rgba(91, 33, 182, 0.3)',
+                        background: 'rgba(102, 45, 145, 0.3)',
                         color: 'white'
                       }
                     }}

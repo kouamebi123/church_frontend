@@ -320,7 +320,7 @@ const Register = () => {
               backdropFilter: 'blur(20px)',
               borderRadius: '30px',
               border: '2px solid rgba(255, 255, 255, 0.8)',
-              boxShadow: '0 20px 60px rgba(91, 33, 182, 0.15)',
+              boxShadow: '0 20px 60px rgba(102, 45, 145, 0.15)',
               position: 'relative',
               animation: 'fadeIn 0.8s ease-out',
             overflow: 'hidden',

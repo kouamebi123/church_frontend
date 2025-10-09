@@ -5,13 +5,13 @@
 /* Tables et DataTables */
 .MuiTableContainer-root {
   border-radius: 20px !important;
-  border: 2px solid rgba(91, 33, 182, 0.1) !important;
-  box-shadow: 0 10px 40px rgba(91, 33, 182, 0.08) !important;
+  border: 2px solid rgba(102, 45, 145, 0.1) !important;
+  box-shadow: 0 10px 40px rgba(102, 45, 145, 0.08) !important;
   overflow: hidden !important;
 }
 
 .MuiTableHead-root {
-  background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
+  background: linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%) !important;
 }
 
 .MuiTableHead-root .MuiTableCell-root {
@@ -35,12 +35,12 @@
 }
 
 .MuiTableBody-root .MuiTableRow-root:hover {
-  background-color: rgba(91, 33, 182, 0.06) !important;
-  box-shadow: 0 2px 8px rgba(91, 33, 182, 0.12) !important;
+  background-color: rgba(102, 45, 145, 0.06) !important;
+  box-shadow: 0 2px 8px rgba(102, 45, 145, 0.12) !important;
 }
 
 .MuiTableBody-root .MuiTableCell-root {
-  border-bottom: 1px solid rgba(91, 33, 182, 0.08) !important;
+  border-bottom: 1px solid rgba(102, 45, 145, 0.08) !important;
   padding: 16px !important;
   font-size: 0.9rem !important;
   color: rgba(0, 0, 0, 0.87) !important;
@@ -48,8 +48,8 @@
 
 /* Pagination */
 .MuiTablePagination-root {
-  border-top: 2px solid rgba(91, 33, 182, 0.1) !important;
-  background: rgba(91, 33, 182, 0.02) !important;
+  border-top: 2px solid rgba(102, 45, 145, 0.1) !important;
+  background: rgba(102, 45, 145, 0.02) !important;
 }
 
 .MuiTablePagination-select {
@@ -66,8 +66,8 @@
 .dashboard-section-card {
   background: linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%) !important;
   border-radius: 20px !important;
-  border: 2px solid rgba(91, 33, 182, 0.1) !important;
-  box-shadow: 0 10px 40px rgba(91, 33, 182, 0.08) !important;
+  border: 2px solid rgba(102, 45, 145, 0.1) !important;
+  box-shadow: 0 10px 40px rgba(102, 45, 145, 0.08) !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   position: relative !important;
   overflow: hidden !important;
@@ -80,14 +80,14 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6);
+  background: linear-gradient(90deg, #662d91, #9e005d, #9e005d);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .dashboard-section-card:hover {
   transform: translateY(-8px) scale(1.01) !important;
-  box-shadow: 0 20px 60px rgba(91, 33, 182, 0.15) !important;
+  box-shadow: 0 20px 60px rgba(102, 45, 145, 0.15) !important;
 }
 
 .dashboard-section-card:hover::before {
@@ -97,7 +97,7 @@
 /* Titres de section */
 .dashboard-section-title {
   font-weight: 800 !important;
-  background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
+  background: linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -109,8 +109,8 @@
 .stats-card {
   background: linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%) !important;
   border-radius: 20px !important;
-  border: 2px solid rgba(91, 33, 182, 0.1) !important;
-  box-shadow: 0 10px 40px rgba(91, 33, 182, 0.08) !important;
+  border: 2px solid rgba(102, 45, 145, 0.1) !important;
+  box-shadow: 0 10px 40px rgba(102, 45, 145, 0.08) !important;
   padding: 24px !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   position: relative !important;
@@ -124,7 +124,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6);
+  background: linear-gradient(90deg, #662d91, #9e005d, #9e005d);
   animation: shimmer 3s infinite;
 }
 
@@ -135,7 +135,7 @@
 
 .stats-card:hover {
   transform: translateY(-8px) scale(1.02) !important;
-  box-shadow: 0 20px 60px rgba(91, 33, 182, 0.15) !important;
+  box-shadow: 0 20px 60px rgba(102, 45, 145, 0.15) !important;
 }
 
 /* Icon Wrapper pour stats */
@@ -143,31 +143,31 @@
   width: 70px !important;
   height: 70px !important;
   border-radius: 50% !important;
-  background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
+  background: linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  box-shadow: 0 8px 24px rgba(91, 33, 182, 0.25) !important;
+  box-shadow: 0 8px 24px rgba(102, 45, 145, 0.25) !important;
   transition: all 0.3s ease !important;
   margin-bottom: 16px !important;
 }
 
 .stats-icon-wrapper:hover {
   transform: scale(1.1) rotate(5deg) !important;
-  box-shadow: 0 12px 32px rgba(91, 33, 182, 0.35) !important;
+  box-shadow: 0 12px 32px rgba(102, 45, 145, 0.35) !important;
 }
 
 /* Progress bars */
 .MuiLinearProgress-root {
   border-radius: 8px !important;
   height: 10px !important;
-  background: rgba(91, 33, 182, 0.1) !important;
+  background: rgba(102, 45, 145, 0.1) !important;
 }
 
 .MuiLinearProgress-bar {
-  background: linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6) !important;
+  background: linear-gradient(90deg, #662d91, #9e005d, #9e005d) !important;
   border-radius: 8px !important;
-  box-shadow: 0 0 10px rgba(91, 33, 182, 0.5) !important;
+  box-shadow: 0 0 10px rgba(102, 45, 145, 0.5) !important;
 }
 
 /* Formulaires dans sections */
@@ -183,12 +183,12 @@
 
 .section-form .MuiOutlinedInput-root:hover {
   background: rgba(245, 243, 255, 0.8) !important;
-  box-shadow: 0 4px 12px rgba(91, 33, 182, 0.08) !important;
+  box-shadow: 0 4px 12px rgba(102, 45, 145, 0.08) !important;
 }
 
 .section-form .MuiOutlinedInput-root.Mui-focused {
   background: white !important;
-  box-shadow: 0 4px 12px rgba(91, 33, 182, 0.12) !important;
+  box-shadow: 0 4px 12px rgba(102, 45, 145, 0.12) !important;
   border-width: 2px !important;
 }
 
@@ -196,8 +196,8 @@
 .MuiAccordion-root {
   border-radius: 16px !important;
   margin-bottom: 16px !important;
-  border: 2px solid rgba(91, 33, 182, 0.1) !important;
-  box-shadow: 0 4px 12px rgba(91, 33, 182, 0.06) !important;
+  border: 2px solid rgba(102, 45, 145, 0.1) !important;
+  box-shadow: 0 4px 12px rgba(102, 45, 145, 0.06) !important;
 }
 
 .MuiAccordion-root::before {
@@ -216,7 +216,7 @@
 
 /* Tabs */
 .MuiTabs-root {
-  border-bottom: 2px solid rgba(91, 33, 182, 0.1) !important;
+  border-bottom: 2px solid rgba(102, 45, 145, 0.1) !important;
   margin-bottom: 24px !important;
 }
 
@@ -228,24 +228,24 @@
 }
 
 .MuiTab-root:hover {
-  background: rgba(91, 33, 182, 0.04) !important;
+  background: rgba(102, 45, 145, 0.04) !important;
   border-radius: 12px 12px 0 0 !important;
 }
 
 .MuiTab-root.Mui-selected {
-  color: #5B21B6 !important;
+  color: #662d91 !important;
   font-weight: 700 !important;
 }
 
 .MuiTabs-indicator {
   height: 3px !important;
-  background: linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6) !important;
+  background: linear-gradient(90deg, #662d91, #9e005d, #9e005d) !important;
   border-radius: 3px 3px 0 0 !important;
 }
 
 /* Dividers */
 .MuiDivider-root {
-  border-color: rgba(91, 33, 182, 0.12) !important;
+  border-color: rgba(102, 45, 145, 0.12) !important;
 }
 
 /* Badges */
@@ -256,8 +256,8 @@
 
 /* Avatars */
 .MuiAvatar-root {
-  border: 2px solid rgba(91, 33, 182, 0.1) !important;
-  box-shadow: 0 4px 12px rgba(91, 33, 182, 0.15) !important;
+  border: 2px solid rgba(102, 45, 145, 0.1) !important;
+  box-shadow: 0 4px 12px rgba(102, 45, 145, 0.15) !important;
 }
 
 /* List Items */
@@ -268,12 +268,12 @@
 }
 
 .MuiListItem-root:hover {
-  background: rgba(91, 33, 182, 0.04) !important;
+  background: rgba(102, 45, 145, 0.04) !important;
 }
 
 /* Stepper */
 .MuiStepLabel-root .Mui-active {
-  color: #5B21B6 !important;
+  color: #662d91 !important;
 }
 
 .MuiStepLabel-root .Mui-completed {
@@ -281,16 +281,16 @@
 }
 
 .MuiStepConnector-line {
-  border-color: rgba(91, 33, 182, 0.2) !important;
+  border-color: rgba(102, 45, 145, 0.2) !important;
 }
 
 /* Tooltips personnalisés */
 .MuiTooltip-tooltip {
-  background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
+  background: linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%) !important;
   border-radius: 8px !important;
   font-weight: 500 !important;
   padding: 8px 12px !important;
-  box-shadow: 0 4px 12px rgba(91, 33, 182, 0.25) !important;
+  box-shadow: 0 4px 12px rgba(102, 45, 145, 0.25) !important;
   font-size: 0.875rem !important;
 }
 
@@ -298,9 +298,9 @@
 .MuiSkeleton-root {
   background: linear-gradient(
     90deg,
-    rgba(91, 33, 182, 0.08) 0%,
-    rgba(91, 33, 182, 0.15) 50%,
-    rgba(91, 33, 182, 0.08) 100%
+    rgba(102, 45, 145, 0.08) 0%,
+    rgba(102, 45, 145, 0.15) 50%,
+    rgba(102, 45, 145, 0.08) 100%
   ) !important;
   background-size: 200% 100% !important;
   animation: skeleton-loading 1.5s ease-in-out infinite !important;
@@ -318,7 +318,7 @@
 }
 
 .MuiBreadcrumbs-separator {
-  color: rgba(91, 33, 182, 0.4) !important;
+  color: rgba(102, 45, 145, 0.4) !important;
 }
 
 /* Timeline */
@@ -328,12 +328,12 @@
 }
 
 .MuiTimelineDot-root {
-  background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
-  box-shadow: 0 4px 12px rgba(91, 33, 182, 0.25) !important;
+  background: linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%) !important;
+  box-shadow: 0 4px 12px rgba(102, 45, 145, 0.25) !important;
 }
 
 .MuiTimelineConnector-root {
-  background: linear-gradient(180deg, #5B21B6, rgba(91, 33, 182, 0.2)) !important;
+  background: linear-gradient(180deg, #662d91, rgba(102, 45, 145, 0.2)) !important;
 }
 
 /* Cards avec actions */
@@ -350,7 +350,7 @@
 
 .card-actions .MuiIconButton-root:hover {
   transform: scale(1.15) !important;
-  background: rgba(91, 33, 182, 0.08) !important;
+  background: rgba(102, 45, 145, 0.08) !important;
 }
 
 /* Empty states */
@@ -367,19 +367,19 @@
   width: 80px !important;
   height: 80px !important;
   border-radius: 50% !important;
-  background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
+  background: linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   margin-bottom: 24px !important;
-  box-shadow: 0 8px 24px rgba(91, 33, 182, 0.25) !important;
+  box-shadow: 0 8px 24px rgba(102, 45, 145, 0.25) !important;
 }
 
 .empty-state-title {
   font-weight: 700 !important;
   font-size: 1.5rem !important;
   margin-bottom: 12px !important;
-  background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
+  background: linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%) !important;
   background-clip: text !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;

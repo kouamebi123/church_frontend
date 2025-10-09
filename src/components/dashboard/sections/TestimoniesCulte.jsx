@@ -159,7 +159,7 @@ const TestimoniesCulte = () => {
             variant="h3" 
             sx={{ 
               fontWeight: 800,
-              background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+              background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               mb: 1
@@ -170,7 +170,7 @@ const TestimoniesCulte = () => {
           <Box sx={{ 
             width: 80, 
             height: 4, 
-            background: 'linear-gradient(90deg, #5B21B6, #7C3AED, #8B5CF6)',
+            background: 'linear-gradient(90deg, #662d91, #9e005d, #9e005d)',
             borderRadius: 2
           }} />
         </Box>
@@ -191,8 +191,8 @@ const TestimoniesCulte = () => {
           mb: 3,
           borderRadius: '20px',
           background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
-          border: '2px solid rgba(91, 33, 182, 0.1)',
-          boxShadow: '0 10px 40px rgba(91, 33, 182, 0.08)'
+          border: '2px solid rgba(102, 45, 145, 0.1)',
+          boxShadow: '0 10px 40px rgba(102, 45, 145, 0.08)'
         }}
       >
         <CardContent>
@@ -256,16 +256,16 @@ const TestimoniesCulte = () => {
                       : 'linear-gradient(145deg, #FFFFFF 0%, #F5F3FF 100%)',
                     border: testimony.isConfirmedToTestify 
                       ? '2px solid rgba(16, 185, 129, 0.3)' 
-                      : '2px solid rgba(91, 33, 182, 0.1)',
+                      : '2px solid rgba(102, 45, 145, 0.1)',
                     boxShadow: testimony.isConfirmedToTestify 
                       ? '0 8px 24px rgba(16, 185, 129, 0.15)' 
-                      : '0 4px 12px rgba(91, 33, 182, 0.06)',
+                      : '0 4px 12px rgba(102, 45, 145, 0.06)',
                     transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                     '&:hover': {
                       transform: 'translateY(-6px)',
                       boxShadow: testimony.isConfirmedToTestify 
                         ? '0 12px 36px rgba(16, 185, 129, 0.25)' 
-                        : '0 12px 36px rgba(91, 33, 182, 0.18)'
+                        : '0 12px 36px rgba(102, 45, 145, 0.18)'
                     }
                   }}
                 >
@@ -408,16 +408,16 @@ const TestimoniesCulte = () => {
         PaperProps={{
           sx: {
             borderRadius: '24px',
-            boxShadow: '0 20px 60px rgba(91, 33, 182, 0.15)',
+            boxShadow: '0 20px 60px rgba(102, 45, 145, 0.15)',
             background: 'rgba(255, 255, 255, 0.98)',
             backdropFilter: 'blur(20px)',
-            border: '2px solid rgba(91, 33, 182, 0.1)'
+            border: '2px solid rgba(102, 45, 145, 0.1)'
           }
         }}
       >
         <DialogTitle sx={{
           fontWeight: 700,
-          background: 'linear-gradient(135deg, #5B21B6, #7C3AED)',
+          background: 'linear-gradient(135deg, rgb(59, 20, 100) 0%, #662d91 50%, #9e005d 100%)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent'
         }}>
